@@ -97,8 +97,22 @@
    if (hrInp == 0){
 	   hrInp = hrInp+12; }
 
+ 
+ 
    var uno = hrInp.toString();
-   var dos = minInp.toString();
+   if (minInp == 0){	
+    
+   var temp = minInp.toString();
+   var dos = "00";
+   }
+   if (minInp > 0 && minInp < 10){	
+    
+   var temp = minInp.toString();
+   var dos = "0".concat(temp);
+   }
+   if (minInp >= 10){
+    dos = minInp.toString();
+   }
    var tres = meridiem;
    var res = uno.concat(":");
    var resTwo = res.concat(dos);
