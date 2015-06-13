@@ -27,15 +27,20 @@
 <script type = "text/javascript">
   document.getElementById("addForm").addBtn.onclick = addTwo;
  
-  function meridiemSwap(val){ // changing from am to pm and vise-versa
-  if (meridiem == "am")
-  	{meridiem = "pm";}
+
+  
+  function meridiemSwap(merVal){ // changing from am to pm and vise-versa
+  if (merVal == "am")
+  	{merVal = "pm";}
   
   else
-  {meridiem = "am";}
-  return meridiem; 	
+  {merVal = "am";}
+  return merVal; 	
  }
 
+
+  
+ 
  
  function addTwo()
   {
@@ -59,15 +64,25 @@
     var meridiem = one.substring(5, 7);
    }
   if (idxTwo == 1){
-    var hrInp = parseFloat(one.substring(0, 1));
-    var minInp = parseFloat(one.substring(2, 4));
+    var hrInpS = parseFloat(one.substring(0, 1));
+    var minInpS = parseFloat(one.substring(2, 4));
   }    
    else{
-    var hrInp = parseFloat(one.substring(0, 2));
-    var minInp = parseFloat(one.substring(3, 5));
+    var hrInpS = parseFloat(one.substring(0, 2));
+    var minInpS = parseFloat(one.substring(3, 5));
    }
- //  meridiem = meridiemSwap(meridiem);
-   alert(meridiem);
+
+  
+
+   if (hrInp == 12){
+   var temp = meridiemSwap(meridiem);
+   meridiem = temp;
+   }
+   alert(meridiem); 
+
+
+
+  
   } // ending addTwo
 
 </script>
