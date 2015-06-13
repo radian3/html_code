@@ -81,8 +81,30 @@
    hrInp = hrInp-hrInpS;
    minInp = minInp-minInpS;
    
+   if (minInp < 0){
+    hrInp = hrInp - (-1*Math.floor(minInp/60));
+    minInp = (minInp%60)+60;
+   }
    
+   if (hrInp < 0){
+    hrInp = hrInp + 12;
+    var temp = meridiemSwap(meridiem);
+    meridiem = temp;}
 
+   if (hrInp == 12){
+    var temp = meridiemSwap(meridiem);
+    meridiem = temp;}
+   if (hrInp == 0){
+	   hrInp = hrInp+12; }
+
+   var uno = hrInp.toString();
+   var dos = minInp.toString();
+   var tres = meridiem;
+   var res = uno.concat(":");
+   var resTwo = res.concat(dos);
+   var resThree = resTwo.concat(tres);
+  // alert (resThree);
+   elt.sum.value = resThree;
 
 
   
