@@ -9,9 +9,9 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-  <td> <input type = "text" name = "one" value = "" size = "20" /> </td> <td> Enter number one </td> </tr>
+  <td> <input type = "text" name = "one" value = "" size = "20" /> </td> <td> Enter desired finish time: </td> </tr>
   <tr>
-	  <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> Enter number two </td></tr>
+	  <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> Enter time for task 1: </td></tr>
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
@@ -20,24 +20,56 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Summation </td> </tr>
+   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Start time </td> </tr>
 </table>
 </form>
 
 <script type = "text/javascript">
   document.getElementById("addForm").addBtn.onclick = addTwo;
-  function addTwo()
+ 
+  function meridiemSwap(val){ // changing from am to pm and vise-versa
+  if (meridiem == "am")
+  	{meridiem = "pm";}
+  
+  else
+  {meridiem = "am";}
+  return meridiem; 	
+ }
+
+ 
+ function addTwo()
   {
 
    var sum = "";
    var elt = document.getElementById("addForm");      
-   var one = parseFloat (elt.one.value);
-   var two = parseFloat (elt.two.value);
-   elt.sum.value = 3;
+   var one = elt.one.value;
+   var idxOne = one.indexOf(":");
+   var two = elt.two.value;
+   var idxTwo = one.indexOf(":");
+ //  elt.sum.value = one+two;
 
+   if (idxOne == 1){
+    var hrInp = parseFloat(one.substring(0, 1));
+    var minInp = parseFloat(one.substring(2, 4));
+    var meridiem = one.substring(4, 6);
+  }    
+   else{
+    var hrInp = parseFloat(one.substring(0, 2));
+    var minInp = parseFloat(one.substring(3, 5));
+    var meridiem = one.substring(5, 7);
+   }
+  if (idxTwo == 1){
+    var hrInp = parseFloat(one.substring(0, 1));
+    var minInp = parseFloat(one.substring(2, 4));
+  }    
+   else{
+    var hrInp = parseFloat(one.substring(0, 2));
+    var minInp = parseFloat(one.substring(3, 5));
+   }
+ //  meridiem = meridiemSwap(meridiem);
+   alert(meridiem);
+  } // ending addTwo
 
-
-  }
 </script>
 
 
