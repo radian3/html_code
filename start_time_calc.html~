@@ -81,7 +81,8 @@
    hrInp = hrInp-hrInpS;
    minInp = minInp-minInpS;
    
-   
+   alert(hrInp);
+   alert(minInp); 
 
 
 
