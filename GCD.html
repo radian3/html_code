@@ -42,8 +42,17 @@
    var a = y;
    var b = x; 
    }  
-   elt.sum.value = a;
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b; 
 
+
+   }
+   elt.sum.value = b;
   }
 </script>
 
