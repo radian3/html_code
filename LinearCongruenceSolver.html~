@@ -23,7 +23,9 @@ ax &equiv; b (mod m) <br><br>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Values of x that satisfy the congruence </td> </tr>
+  <tr>
+	  <td> <input type = "text" name = "n" value = "" size = "20" /> </td> <td> Number of solutions </td></tr>
+   <tr> <td> <input type = "text" name = "sols" value = "" size = "20" /> </td><td> Values of x that satisfy the congruence </td> </tr>
 </table>
 </form>
 
@@ -32,11 +34,13 @@ ax &equiv; b (mod m) <br><br>
   function addTwo()
   {
 
-   var sum = "";
+   var sols = "";
+   var n = 0;
    var elt = document.getElementById("addForm");      
-   var one = parseFloat (elt.one.value);
-   var two = parseFloat (elt.two.value);
-   elt.sum.value = one+two 		;
+   var a = parseFloat (elt.a.value);
+   var b = parseFloat (elt.b.value);
+   var m = parseFloat (elt.m.value);
+   elt.sols.value = a+b+m; 		;
 
 
 
