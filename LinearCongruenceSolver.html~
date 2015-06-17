@@ -23,8 +23,6 @@ ax &equiv; b (mod m) <br><br>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-  <tr>
-	  <td> <input type = "text" name = "n" value = "" size = "20" /> </td> <td> Number of solutions </td></tr>
    <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Values of x that satisfy the congruence </td> </tr>
 </table>
 </form>
