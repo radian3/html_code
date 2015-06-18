@@ -18,7 +18,8 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Euler Phi Function value </td> </tr>
+   <tr> <td> <input type = "text" name = "n" value = "" size = "20" /> </td><td> Euler Phi Function value </td> </tr>
+   <tr> <td> <input type = "text" name = "sols" value = "" size = "20" /> </td><td> Numbers relatively prime to the input </td> </tr>
 </table>
 </form>
 
@@ -51,11 +52,26 @@
   function main()
   {
 
-   var sum = "";
+
    var elt = document.getElementById("addForm");      
    var inp = parseFloat (elt.inp.value);
-   elt.sum.value = inp;
+ 
+   
+   if (inp == 1){
+	   elt.n.value = 1;
+	   elt.sols.value = 1;
+	   return;}
 
+   var arrOfSols = new Array();
+   
+   for (var i = 1; i<inp; i++){
+
+     if (GCD(i, inp) == 1){
+     arrOfSols.push(i);}}
+   elt.n.value=arrOfSols.length;
+   elt.sols.value = arrOfSols.join(", ");
+    
+  
 
 
   }
