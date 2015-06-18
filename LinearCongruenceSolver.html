@@ -59,24 +59,34 @@ ax &equiv; b (mod m) <br><br>
   function addTwo()
   {
 
-   var sols = "";
-   var n = "";
+  // var sols = 0;
+   var numSols = "";
    var elt = document.getElementById("addForm");      
    var a = parseFloat (elt.a.value);
    var b = parseFloat (elt.b.value);
    var m = parseFloat (elt.m.value);
+   b = b%m;
+   a = a%m;
+   if (a==0){
+	   a = a+m;}
+   numSols = GCD(a, m);
+   if (b%numSols!=0){
+ //          alert("hi");		
+	   elt.n.value = 0;
+	   elt.sols.value = "No solution.";
+           return;}
+   elt.n.value = numSols;
    
- 
- 
- 
- 
- 
-   elt.n.value = GCD(a, m);
-   elt.sols.value = a+b+m; 		;
 
 
 
-  }
+
+
+   elt.sols.value = b; 		
+
+
+
+  } // closing addTwo
 </script>
 
 
