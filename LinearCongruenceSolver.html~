@@ -70,20 +70,32 @@ ax &equiv; b (mod m) <br><br>
    if (a==0){
 	   a = a+m;}
    numSols = GCD(a, m);
-   if (b%numSols!=0){
- //          alert("hi");		
+   if (b%numSols!=0){		
 	   elt.n.value = 0;
-	   elt.sols.value = "No value of x satisfies this congruence.";
+	   elt.sols.value = "No solution.";
            return;}
    elt.n.value = numSols;
    
+   // code here
+
+   var arrOfSols = new Array();
+   for (var i = 1; i < m; i++){
+    if((a*i-b)%m==0){
+     arrOfSols.push(i);
+     if (arrOfSols.length == numSols){
+      break;}}
+        
+
+   }
+  
 
 
 
 
-
-   elt.sols.value = b; 		
-
+   // end code
+   
+   elt.sols.value = a+m+b; 		
+ 
 
 
   } // closing addTwo
