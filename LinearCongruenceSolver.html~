@@ -84,9 +84,8 @@ ax &equiv; b (mod m) <br><br>
      arrOfSols.push(i);
      if (arrOfSols.length == numSols){
       break;}}
-        
-
    }
+   var solutions = arrOfSols.join(", ");
   
 
 
@@ -94,7 +93,7 @@ ax &equiv; b (mod m) <br><br>
 
    // end code
    
-   elt.sols.value = a+m+b; 		
+   elt.sols.value = solutions; 		
  
 
 
