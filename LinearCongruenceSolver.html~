@@ -30,16 +30,48 @@ ax &equiv; b (mod m) <br><br>
 </form>
 
 <script type = "text/javascript">
+  
+
+  function GCD(x, y)
+  {
+    
+   if (x > y){
+    var a = x;
+    var b = y;
+   }
+   else{
+   var a = y;
+   var b = x; 
+   }  
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b; 
+   }
+   return b;
+  }
+
+
   document.getElementById("addForm").addBtn.onclick = addTwo;
   function addTwo()
   {
 
    var sols = "";
-   var n = 0;
+   var n = "";
    var elt = document.getElementById("addForm");      
    var a = parseFloat (elt.a.value);
    var b = parseFloat (elt.b.value);
    var m = parseFloat (elt.m.value);
+   
+ 
+ 
+ 
+ 
+ 
+ 
    elt.sols.value = a+b+m; 		;
 
 
