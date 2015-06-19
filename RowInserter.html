@@ -47,18 +47,29 @@
   document.getElementById(temp).style.display = 'none';
   }
 
-  document.getElementById("addForm").addBtn.onclick = addTwo;
+  document.getElementById("addForm").addRow.onclick = addTwo;
   function addTwo()
   {
 
-   var sum = "";
-   var elt = document.getElementById("addForm");      
-   var one = parseFloat (elt.one.value);
-   var two = parseFloat (elt.two.value);
-   elt.sum.value = one+two 		;
-   document.getElementById("1").style.display = '';
-   document.getElementById("1,	").style.display = '';
+   
+   var elt = document.getElementById("addRow");      
+ //  var one = parseFloat (elt.one.value);
+ //  var two = parseFloat (elt.two.value);
+ //  elt.sum.value = one+two 		;
+ 
+   
+  for (var i = 2; i <= 15; i++){
+   var temp = i;
+   var temp = temp.toString();
+   
+  document.getElementById(temp).style.display = '';
+  var temp = temp.concat(",");
+  document.getElementById(temp).style.display = '';
+  }
 
+ //  document.getElementById("2").style.display = '';
+ //  document.getElementById("2,").style.display = '';
+ //  alert();
 
   }
 </script>
