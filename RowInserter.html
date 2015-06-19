@@ -10,7 +10,7 @@
 <table border = "0">
   <tr><td> <input type = "button" name = "addRow" value = "Add Row" /> </td>
    <td><input type = "reset" value = "Clear" style = "top: 53px; left: 210px; position: absolute;" /></td>
-  <td><input type = "button" name = "addBtn" value = "Calculate" style = "position: absolute; left: 100px; top: 53px;"/></td>
+  <td><input type = "button" name = "delRow" value = "Delete Row" style = "position: absolute; left: 100px; top: 53px;"/></td>
   <td> <input type = "text" name = "sum" value = "" size = "20" style = "position:absolute; top:30px; left: 500px;" /> </td> </tr>	
   
   <tr> <td id = "1"> Enter number one </td> <td> <input id = "1," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
@@ -47,8 +47,8 @@
   document.getElementById(temp).style.display = 'none';
   }
 
-  document.getElementById("addForm").addRow.onclick = addTwo;
-  function addTwo()
+  document.getElementById("addForm").addRow.onclick = addRows;
+  function addRows()
   {
 
    
@@ -73,6 +73,23 @@
  //  alert();
 
   }
+
+ document.getElementById("addForm").delRow.onclick = delRows;
+ function delRows()
+ {
+	 for (var i = 15; i >= 2; i--){
+   var temp = i;
+   var temp = temp.toString();
+   
+   if (document.getElementById(temp).style.display == ''){
+   document.getElementById(temp).style.display = 'none';
+   var temp = temp.concat(",");
+   document.getElementById(temp).style.display = 'none';
+   break;}} 	
+  
+
+
+ }
 </script>
 
 
