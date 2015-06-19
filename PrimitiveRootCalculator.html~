@@ -25,7 +25,7 @@
 
 <script type = "text/javascript">
 
-
+	
   function GCD(x, y)
   {
     
@@ -82,7 +82,7 @@
 
  
  
-   elt.sum.value = modulus; 		
+   elt.sum.value = Phi(modulus); 		
 
 
 

@@ -80,7 +80,11 @@
    var primitiveRootList = new Array();
    var order_candidates = new Array();
 
- 
+   
+   var phiOfModulus = Phi(modulus);
+   for (var exponent = 1; exponent <= Phi(phiOfModulus); exponent++){
+    if (phiOfModulus%exponent == 0){
+     order_candidates.push(exponent);}}	    
  
    elt.sum.value = Phi(modulus); 		
 
