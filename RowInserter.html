@@ -62,10 +62,11 @@
    var temp = i;
    var temp = temp.toString();
    
-  document.getElementById(temp).style.display = '';
-  var temp = temp.concat(",");
-  document.getElementById(temp).style.display = '';
-  }
+   if (document.getElementById(temp).style.display == 'none'){
+   document.getElementById(temp).style.display = '';
+   var temp = temp.concat(",");
+   document.getElementById(temp).style.display = '';
+   break;}}
 
  //  document.getElementById("2").style.display = '';
  //  document.getElementById("2,").style.display = '';
