@@ -80,8 +80,29 @@
    var primitiveRootList = new Array();
    var order_candidates = new Array();
 
- 
- 
+   
+   var phiOfModulus = Phi(modulus);
+   for (var exponent = 1; exponent <= Phi(phiOfModulus); exponent++){
+    if (phiOfModulus%exponent == 0){
+     order_candidates.push(exponent);}}
+
+
+//   
+   for (var base = 1; base <= modulus; base++){
+    if (GCD(base, modulus)!=1){
+	    continue;}
+    
+    for (var i = 0; i < order_candidates.length; i++){
+     
+     var exponent = order_candidates[i];
+     var value = Math.pow(base, exponent);
+     if (value%modulus == 1){
+      var order = exponent;
+      break;}}
+    if (order == phiOfModulus){
+	    primitiveRootList.push(base);}}
+
+   alert();
    elt.sum.value = Phi(modulus); 		
 
 
