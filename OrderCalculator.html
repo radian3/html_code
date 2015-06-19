@@ -21,23 +21,57 @@ a<sup>x</sup> &equiv; 1 (mod m) <br><br>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Order (x): </td> </tr>
+   <tr> <td> <input type = "text" name = "sol" value = "" size = "20" /> </td><td> Order (x): </td> </tr>
 </table>
 </form>
 
 <script type = "text/javascript">
+
+function GCD(x, y)
+  {
+    
+   if (x > y){
+    var a = x;
+    var b = y;
+   }
+   else{
+   var a = y;
+   var b = x; 
+   }  
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b; 
+   }
+   return b;
+  }
+	  
+
   document.getElementById("addForm").addBtn.onclick = main;
   function main()
   {
 
-   var sum = "";
+   
    var elt = document.getElementById("addForm");      
    var base = parseFloat (elt.one.value);
    var mod = parseFloat (elt.two.value);
-   elt.sum.value = base+mod;
+   
 
 
-
+   if (GCD(base, mod) !=1){
+	   elt.sol.value = "No solution.";
+	   return;}
+   
+   for (var i=1; i <= mod; i++){
+    var value = Math.pow(base, i);
+    if (value%mod==1){
+     var index = i;
+     break;}}     
+   elt.sol.value = index;
+	    
   }
 </script>
 
