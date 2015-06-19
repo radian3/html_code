@@ -82,18 +82,18 @@
 
    
    var phiOfModulus = Phi(modulus);
-   for (var exponent = 1; exponent <= Phi(phiOfModulus); exponent++){
+   for (var exponent = 1; exponent <= phiOfModulus; exponent++){
     if (phiOfModulus%exponent == 0){
      order_candidates.push(exponent);}}
 
-
+   alert(order_candidates);
 //   
    for (var base = 1; base <= modulus; base++){
     if (GCD(base, modulus)!=1){
 	    continue;}
     
     for (var i = 0; i < order_candidates.length; i++){
-     
+    
      var exponent = order_candidates[i];
      var value = Math.pow(base, exponent);
      if (value%modulus == 1){
@@ -102,8 +102,11 @@
     if (order == phiOfModulus){
 	    primitiveRootList.push(base);}}
 
-   alert();
-   elt.sum.value = Phi(modulus); 		
+   if (primitiveRootList.length == 0){
+    elt.sum.value = "No primitive roots found.";
+    return;}
+   
+   elt.sum.value = primitiveRootList.join(", "); 		
 
 
 
