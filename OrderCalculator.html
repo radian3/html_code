@@ -6,13 +6,13 @@
 </head>
 <body>
 <h3> Order Calculator </h3>
-a<sup>x</sup> &equiv; 1 (mod m) <br><br>
+ The order is the least positive integer, x, that satisfies the congruence: a<sup>x</sup> &equiv; 1 (mod m) <br><br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-  <td> <input type = "text" name = "one" value = "" size = "20" /> </td> <td> Enter a </td> </tr>
+  <td> Enter a </td>  <td> <input type = "text" name = "one" value = "" size = "20" /> </td></tr>
   <tr>
-	  <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> Enter m </td></tr>
+	</td> <td> Enter m </td>  <td> <input type = "text" name = "two" value = "" size = "20" /> </tr>
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
@@ -21,7 +21,7 @@ a<sup>x</sup> &equiv; 1 (mod m) <br><br>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sol" value = "" size = "20" /> </td><td> Order (x): </td> </tr>
+   <tr> <td> Order (x): </td> <td> <input type = "text" name = "sol" value = "" size = "20" /> </td> </tr>
 </table>
 </form>
 
@@ -71,7 +71,8 @@ function GCD(x, y)
      var index = i;
      break;}}     
    elt.sol.value = index;
-	    
+   
+
   }
 </script>
 

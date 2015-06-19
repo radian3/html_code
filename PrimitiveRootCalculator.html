@@ -1,0 +1,96 @@
+
+
+<html>
+<head>
+<title> Primitive Root Calculator </title>
+</head>
+<body>
+<h3> Primitive Root Calculator </h3>
+<form id = "addForm"  action = "" method = "post">
+<table border = "0">
+  <tr>
+  <td> <input type = "text" name = "one" value = "" size = "20" /> </td> <td> Enter modulus </td> </tr>
+
+  <tr>
+  <td>
+  <input type = "button" name = "addBtn" value = "Calculate" />
+  </td>
+  <td>
+  <input type = "reset" value = "Clear" />
+  </td>
+  </tr>
+   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Primitive roots </td> </tr>
+</table>
+</form>
+
+<script type = "text/javascript">
+
+	
+  function GCD(x, y)
+  {
+    
+   if (x > y){
+    var a = x;
+    var b = y;
+   }
+   else{
+   var a = y;
+   var b = x; 
+   }  
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b; 
+   }
+   return b;
+  }
+
+
+
+  function Phi(inp)
+  {
+
+ 
+   
+   if (inp == 1){
+	   return 1;}
+ 
+   var numSols = 0;
+   for (var i = 1; i<inp; i++){
+     if (GCD(i, inp) == 1){
+     numSols += 1;}}
+   return numSols;
+    
+  
+  }
+
+
+  document.getElementById("addForm").addBtn.onclick = addTwo;
+  function addTwo()
+  {
+
+   var sum = "";
+   var elt = document.getElementById("addForm");      
+   var modulus = parseFloat (elt.one.value);
+ 
+ 
+   var primitiveRootList = new Array();
+   var order_candidates = new Array();
+
+ 
+ 
+   elt.sum.value = Phi(modulus); 		
+
+
+
+  }
+</script>
+
+
+</body>
+</html>
+
+
