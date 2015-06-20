@@ -20,7 +20,7 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
 	  <td><input style = "position:absolute; top: 288px;" type = "button" name = "delRow" value = "Delete Row" /></td>
   <td><input style = "position:absolute; top: 288px; left:200px;" type = "button" name = "main" value = "Calculate" /></td>
   <td style = "position:absolute; top: 288px; left: 280px;"> Answer: </td> 
-  <td> <input style = "position:absolute; top: 288px; left: 340px;" type = "text" name = "one" value = "" size = "20" /> </td>
+  <td> <input style = "position:absolute; top: 288px; left: 340px;" type = "text" name = "solution" value = "" size = "30" /> </td>
   
   </tr>
   	
@@ -181,6 +181,7 @@ function inverse(a, m){
   var aVals = new Array();
   var mVals = new Array();
   for (var i = 1; i <= 15; i++){
+   
    var temp = i;
    var temp = temp.toString();
 	  if (document.getElementById(temp).style.display == 'none'){
@@ -193,7 +194,16 @@ function inverse(a, m){
 	  	  
 
   } 
-  
+
+  	
+  for (var j = 0; j<aVals.length-1; j++){
+   for (var i = j+1; i<aVals.length; i++){
+     
+     if (GCD(mVals[j], mVals[i]) != 1){
+     elt.solution.value = "Moduli are not relatively prime-no solution.";
+     return;}}}
+
+
   }
 
 
