@@ -19,9 +19,10 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
    
 	  <td><input style = "position:absolute; top: 288px;" type = "button" name = "delRow" value = "Delete Row" /></td>
   <td><input style = "position:absolute; top: 288px; left:200px;" type = "button" name = "main" value = "Calculate" /></td>
-  <td style = "position:absolute; top: 288px; left: 280px;"> Answer: </td> 
-  <td> <input style = "position:absolute; top: 288px; left: 340px;" type = "text" name = "solution" value = "" size = "31" /> </td>
-  
+  <td style = "position:absolute; top: 288px; left: 280px;"> Answer (x): </td> 
+  <td> <input style = "position:absolute; top: 288px; left: 365px;" type = "text" name = "solution" value = "" size = "31" /> </td>
+  <td style = "position:absolute; top: 318px; left: 280px;"> Modulus of answer: </td> 
+  <td> <input style = "position:absolute; top: 318px; left: 410px;" type = "text" name = "mod" value = "" size = "2" /> </td>
   </tr>
   	
   
@@ -201,6 +202,7 @@ function inverse(a, m){
      
      if (GCD(mVals[j], mVals[i]) != 1){
      elt.solution.value = "Moduli are not relatively prime-no solution.";
+     elt.mod.value = "N/A";
      return;}}}
   
   var inverseVals = new Array();
@@ -209,8 +211,11 @@ function inverse(a, m){
   for (var i = 0; i < aVals.length; i++){
    inverseVals.push(inverse((M/mVals[i]), mVals[i]));
    solutionVal += aVals[i]*inverseVals[i]*M/mVals[i];}
-  alert(inverseVals);
+  solutionVal = solutionVal%M;
+  
+  
   elt.solution.value = solutionVal; 
+  elt.mod.value = M;
   }
 
 
