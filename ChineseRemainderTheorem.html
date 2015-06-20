@@ -79,7 +79,32 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
 </form>
 
 <script type = "text/javascript">
-  for (var i = 2; i <= 15; i++){
+function GCD(x, y)
+  {
+    
+   if (x > y){
+    var a = x;
+    var b = y;
+   }
+   else{
+   var a = y;
+   var b = x; 
+   }  
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b; 
+   }
+   return b;
+  }
+
+
+
+
+   for (var i = 2; i <= 15; i++){
    var temp = i;
    var temp = temp.toString();
    
