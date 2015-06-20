@@ -18,7 +18,7 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
   <tr><td> <input style "position:absolute; width:20px;" type = "button" name = "addRow" value = "Add Row" /> </td>
    
 	  <td><input style = "position:absolute; top: 288px;" type = "button" name = "delRow" value = "Delete Row" /></td>
-  <td><input style = "position:absolute; top: 288px; left:200px;" type = "button" name = "calc" value = "Calculate" /></td>
+  <td><input style = "position:absolute; top: 288px; left:200px;" type = "button" name = "main" value = "Calculate" /></td>
   <td style = "position:absolute; top: 288px; left: 280px;"> Answer: </td> 
   <td> <input style = "position:absolute; top: 288px; left: 340px;" type = "text" name = "one" value = "" size = "20" /> </td>
   
@@ -172,6 +172,13 @@ function inverse(a, m){
 
 
  }
+
+ document.getElementById("addForm").main.onclick = main;
+ function main(){
+  alert();
+ }
+
+
 </script>
 
 

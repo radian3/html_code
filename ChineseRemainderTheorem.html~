@@ -101,7 +101,15 @@ function GCD(x, y)
    return b;
   }
 
+function inverse(a, m){
+ a = a%m;
+ for (var x0 = 1; x0<m; x0++){
+ if((a*x0-1)%m==0){
+  return x0%m;}}
+	 
 
+
+}
 
 
    for (var i = 2; i <= 15; i++){
