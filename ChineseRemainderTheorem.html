@@ -175,8 +175,23 @@ function inverse(a, m){
 
  document.getElementById("addForm").main.onclick = main;
  function main(){
-  alert();
- }
+
+  var elt = document.getElementById("addForm");     
+  var M = 1;
+  var aVals = new Array();
+  var mVals = new Array();
+  for (var i = 1; i <= 15; i++){
+   var temp = i;
+   var temp = temp.toString();
+	  if (document.getElementById(temp).style.display == 'none'){
+		  break;}
+	  else {
+                  var temp = temp.concat(",");
+		  aVals.push(parseFloat(document.getElementById(temp).value));}	  
+
+  } 
+  alert(aVals[0]+aVals[1]);
+  }
 
 
 </script>
