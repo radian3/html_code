@@ -187,10 +187,13 @@ function inverse(a, m){
 		  break;}
 	  else {
                   var temp = temp.concat(",");
-		  aVals.push(parseFloat(document.getElementById(temp).value));}	  
+		  aVals.push(parseFloat(document.getElementById(temp).value));
+	          var temp = temp.concat(",,");
+		  mVals.push(parseFloat(document.getElementById(temp).value));}
+	  	  
 
   } 
-  alert(aVals);
+  
   }
 
 
