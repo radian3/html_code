@@ -17,7 +17,12 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
 <table border = "0">
   <tr><td> <input style "position:absolute; width:20px;" type = "button" name = "addRow" value = "Add Row" /> </td>
    
-	  <td><input style = "position:absolute; top: 288px;" type = "button" name = "delRow" value = "Delete Row" /></td></tr>
+	  <td><input style = "position:absolute; top: 288px;" type = "button" name = "delRow" value = "Delete Row" /></td>
+  <td><input style = "position:absolute; top: 288px; left:200px;" type = "button" name = "calc" value = "Calculate" /></td>
+  <td style = "position:absolute; top: 288px; left: 280px;"> Answer: </td> 
+  <td> <input style = "position:absolute; top: 288px; left: 340px;" type = "text" name = "one" value = "" size = "20" /> </td>
+  
+  </tr>
   	
   
   <tr> <td id = "1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a<sub>1</sub>: </td> <td> <input id = "1," type = "text" name = "one" value = "" size = "1" /> </td> 
@@ -93,9 +98,7 @@ has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m
 
    
    var elt = document.getElementById("addRow");      
- //  var one = parseFloat (elt.one.value);
- //  var two = parseFloat (elt.two.value);
- //  elt.sum.value = one+two 		;
+
  
    
   for (var i = 2; i <= 15; i++){
