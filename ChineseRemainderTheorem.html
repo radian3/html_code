@@ -2,15 +2,22 @@
 
 <html>
 <head>
-<title> Chinese Remainder Theorem </title>
+<title> Chinese Remainder Theorem Calculator </title>
 </head>
 <body>
 <h3> Chinese Remainder Theorem </h3>
+Let m<sub>1</sub>, m<sub>2</sub>,...,m<sub>n</sub> be pairwise relatively prime integers. The system of congruences <br><br>
+x &equiv; a<sub>1</sub> (mod m<sub>1</sub>) <br> x &equiv; a<sub>2</sub> (mod m<sub>2</sub>) <br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. <br>
+x &equiv; a<sub>n</sub> (mod m<sub>n</sub>) <br><br>
+has a unique solution modulo the product of all of the moduli: (m<sub>1</sub>)(m<sub>2</sub>)...(m<sub>n</sub>)<br><br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr><td> <input type = "button" name = "addRow" value = "Add Row" /> </td>
    
-	  <td><input type = "button" name = "delRow" value = "Delete Row" style = "position: absolute; left: 100px; top: 53px;"/></td></tr>
+	  <td><input type = "button" name = "delRow" value = "Delete Row" /></td></tr>
   	
   
   <tr> <td id = "1"> Row 1 </td> <td> <input id = "1," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
