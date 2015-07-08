@@ -18,16 +18,16 @@ Enter the constants below:<br><br>
   <tr>
 	  <td>a:</td><td> <input type = "text" name = "one" value = "" size = "1" /> </td> <td> b: </td> </tr>
   <tr>
-	  <td>d:</td> <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> e: </td></tr>
+	  <td>d:</td> <td> <input type = "text" name = "two" value = "" size = "1" /> </td> <td> e: </td></tr>
   <tr>
   <td>
-  <input type = "button" name = "addBtn" value = "Calculate" />
+  <input type = "button" name = "addBtn" value = "Solve" />
   </td>
   <td>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-  <tr><td>x0:</td> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td></tr>
+  <tr><td>x0:</td> <td> <input type = "text" name = "sum" value = "" size = "1" /> </td></tr>
 </table>
 </form>
 
