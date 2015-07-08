@@ -8,9 +8,9 @@
 <h3> 3 Equations 3 Unknowns Solver </h3>
 Let <b>x</b>, <b>y</b>, and <b>z</b> be variables and a, b, y, j, d, e, f, k, g, h, i, and m be constants.<br>
 The the unique solution <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 3 equations<br>
-a<b>x</b> + b<b>y</b> + c<b>z</b> = j<br>
-d<b>x</b> + e<b>y</b> + f<b>z</b> = k<br>
-g<b>x</b> + h<b>y</b> + i<b>z</b> = m<br>
+a<b>x</b> + by + cz = j<br>
+dx + ey + fz = k<br>
+gx + hy + iz = m<br>
 is the point in which these 3 planes intersect.<br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
