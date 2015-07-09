@@ -37,15 +37,15 @@ Enter the 12 constants in the boxes below:<br><br>
 
   <tr>
   <td>
-  <input type = "button" name = "addBtn" value = "Solve" />
+  <input style = "position:absolute;" type = "button" name = "addBtn" value = "Solve" />
   </td>
   <td>
-  <input  type = "reset" value = "Clear" />
-  </td><td style = "position:absolute;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 3 boxes below. </td>
-  </tr>
-  <tr><td>x0:</td> <td> <input type = "text" name = "x0" value = "" size = "7" /> </td></tr>
-  <tr><td>y0:</td> <td> <input type = "text" name = "y0" value = "" size = "7" /> </td></tr>
-  <tr><td>z0:</td> <td> <input type = "text" name = "z0" value = "" size = "7" /> </td></tr>
+  <input  type = "reset" value = "Clear" style = "position:absolute; left:77px;" />
+  </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 3 boxes below. </td>
+  </tr><tr><td>&nbsp;</td></tr>
+  <tr><td style = "position:absolute;top:420px;">x0:</td> <td> <input style = "position:absolute; top:420px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:455px;">y0:</td> <td> <input style = "position:absolute; top:455px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:490px;">z0:</td> <td> <input style = "position: absolute; top:490px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
 </table>
 </form>
 
@@ -68,8 +68,7 @@ Enter the 12 constants in the boxes below:<br><br>
    var j = parseFloat (elt.j.value);
    var k = parseFloat (elt.k.value);
    var m = parseFloat (elt.m.value);
-//   var two = parseFloat (elt.two.value);
-//   elt.x0.value = a+b+c+d+e+f+g+h+i+j+k+m;
+
    var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
    var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
    var x = (j/a)-(b*y/a)-(c*z/a);
