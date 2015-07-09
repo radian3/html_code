@@ -16,24 +16,24 @@ Enter the constants below:<br><br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-	  <td>a:</td> <td> <input type = "text" name = "one" value = "" size = "1" /> </td> <td> b: </td>
+	  <td>a:</td> <td> <input type = "text" name = "a" value = "" size = "1" /> </td> <td> b: </td>
  
-	  <td> <input type = "text" name = "odne," value = "" size = "1" /> </td> <td>c:</td> 
-	  <td> <input type = "text" name = "onse,," value = "" size = "1" /> </td><td>j:</td>
-	  <td> <input type = "text" name = "oane,,," value = "" size = "1" /> </td> </tr>
+	  <td> <input type = "text" name = "b" value = "" size = "1" /> </td> <td>c:</td> 
+	  <td> <input type = "text" name = "c" value = "" size = "1" /> </td><td>j:</td>
+	  <td> <input type = "text" name = "j" value = "" size = "1" /> </td> </tr>
    <tr>
-	  <td>d:</td> <td> <input type = "text" name = "ohne" value = "" size = "1" /> </td> <td> e: </td>
+	  <td>d:</td> <td> <input type = "text" name = "d" value = "" size = "1" /> </td> <td> e: </td>
  
-	  <td> <input type = "text" name = "onfdae=" value = "" size = "1" /> </td> <td>f:</td> 
-	  <td> <input type = "text" name = "ofne==" value = "" size = "1" /> </td><td>k:</td>
-	  <td> <input type = "text" name = "onege===" value = "" size = "1" /> </td> </tr>
+	  <td> <input type = "text" name = "e" value = "" size = "1" /> </td> <td>f:</td> 
+	  <td> <input type = "text" name = "f" value = "" size = "1" /> </td><td>k:</td>
+	  <td> <input type = "text" name = "k" value = "" size = "1" /> </td> </tr>
 
    <tr>
-	  <td>g:</td> <td> <input type = "text" name = "onfe" value = "" size = "1" /> </td> <td> h: </td>
+	  <td>g:</td> <td> <input type = "text" name = "g" value = "" size = "1" /> </td> <td> h: </td>
  
-	  <td> <input type = "text" name = "two" value = "" size = "1" /> </td> <td>i:</td> 
-	  <td> <input type = "text" name = "onae-" value = "" size = "1" /> </td><td>m:</td>
-	  <td> <input type = "text" name = "ondge---" value = "" size = "1" /> </td> </tr>
+	  <td> <input type = "text" name = "h" value = "" size = "1" /> </td> <td>i:</td> 
+	  <td> <input type = "text" name = "i" value = "" size = "1" /> </td><td>m:</td>
+	  <td> <input type = "text" name = "m" value = "" size = "1" /> </td> </tr>
 
   <tr>
   <td>
@@ -43,7 +43,9 @@ Enter the constants below:<br><br>
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-  <tr><td>x0:</td> <td> <input type = "text" name = "sum" value = "" size = "1" /> </td></tr>
+  <tr><td>x0:</td> <td> <input type = "text" name = "x0" value = "" size = "1" /> </td></tr>
+  <tr><td>y0:</td> <td> <input type = "text" name = "y0" value = "" size = "1" /> </td></tr>
+  <tr><td>z0:</td> <td> <input type = "text" name = "z0" value = "" size = "1" /> </td></tr>
 </table>
 </form>
 
@@ -52,13 +54,28 @@ Enter the constants below:<br><br>
   function addTwo()
   {
 
-   var sum = "";
+  // var sum = "";
    var elt = document.getElementById("addForm");      
-   var one = parseFloat (elt.one.value);
+   var a = parseFloat (elt.a.value);
+   var b = parseFloat (elt.b.value);
+   var c = parseFloat (elt.c.value);
+   var d = parseFloat (elt.d.value);
+   var e = parseFloat (elt.e.value);
+   var f = parseFloat (elt.f.value);
+   var g = parseFloat (elt.g.value);
+   var h = parseFloat (elt.h.value);
+   var i = parseFloat (elt.i.value);
+   var j = parseFloat (elt.j.value);
+   var k = parseFloat (elt.k.value);
+   var m = parseFloat (elt.m.value);
 //   var two = parseFloat (elt.two.value);
-   elt.sum.value = one;
-
-
+//   elt.x0.value = a+b+c+d+e+f+g+h+i+j+k+m;
+   var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
+   var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
+   var x = (j/a)-(b*y/a)-(c*z/a);
+   elt.x0.value = x;
+   elt.y0.value = y;
+   elt.z0.value = z;
 
   }
 </script>
