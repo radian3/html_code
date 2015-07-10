@@ -2,17 +2,18 @@
 
 <html>
 <head>
-<title> 3 Equations 3 Unknowns Solver </title>
+<title> 4 Equations 4 Unknowns Solver </title>
 </head>
 <body>
-<h3> 3 Equations 3 Unknowns Solver </h3>
-Let <b>x</b>, <b>y</b>, and <b>z</b> be variables and a, b, c, j, d, e, f, k, g, h, i, and m be constants.<br>
-The the unique solution <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 3 equations<br>
-a<b>x</b> + b<b>y</b> + c<b>z</b> = j<br>
-d<b>x</b> + e<b>y</b> + f<b>z</b> = k<br>
-g<b>x</b> + h<b>y</b> + i<b>z</b> = m<br>
-is the point in which these 3 planes intersect.<br><br>
-Enter the 12 constants in the boxes below:<br><br>
+<h3> 4 Equations 4 Unknowns Solver </h3>
+Let <b>w</b>, <b>x</b>, <b>y</b>, and <b>z</b> be variables and a, b, c, d, e, f, g, h, i, j, k, w, l, m, n, o, p, q, r, s, and u be constants.<br>
+If there is a unique solution <b>w</b> = w0, <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 4 equations<br>
+a<b>w</b> + b<b>x</b> + c<b>y</b> + d<b>z</b> = e<br>
+f<b>w</b> + g<b>x</b> + h<b>y</b> + i<b>z</b> = j<br>
+k<b>w</b> + l<b>x</b> + m<b>y</b> + n<b>z</b> = o <br>
+p<b>w</b> + q<b>x</b> + r<b>y</b> + s<b>z</b> = u<br>
+
+Then this calculator will compute the point of intersection. Enter the 12 constants in the boxes below:<br><br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
