@@ -69,10 +69,26 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
 </form>
 
 <script type = "text/javascript">
-  document.getElementById("addForm").addBtn.onclick = addTwo;
+
+  function calc(a, b, c, j, d, e, f, k, g, h, i, m)
+{
+   var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
+   var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
+   var x = (j/a)-(b*y/a)-(c*z/a);
+   var arr1 = new Array ();
+   arr1.push(x);
+   arr1.push(y);
+   arr1.push(z);
+   return arr1;
+
+
+
+}
+  
+document.getElementById("addForm").addBtn.onclick = addTwo;
   function addTwo()
   {
-
+  
   // var sum = "";
    var elt = document.getElementById("addForm");      
    var a = parseFloat (elt.a.value);
@@ -86,11 +102,38 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
    var i = parseFloat (elt.i.value);
    var j = parseFloat (elt.j.value);
    var k = parseFloat (elt.k.value);
+   var l = parseFloat (elt.l.value);
    var m = parseFloat (elt.m.value);
+   var n = parseFloat (elt.n.value);
+   var o = parseFloat (elt.o.value);
+   var p = parseFloat (elt.p.value);
+   var q = parseFloat (elt.q.value);
+   var r = parseFloat (elt.r.value);
+   var s = parseFloat (elt.s.value);
+   var u = parseFloat (elt.u.value);
 
-   var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
-   var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
-   var x = (j/a)-(b*y/a)-(c*z/a);
+
+   var A = g-(f*b/a);
+   var B = (h-(f*c/a));
+   var D = i-(f*d/a);
+   var E = j-(f*e/a);
+   var F = l-(k*b/a);
+   var G = m-(k*c/a);
+   var H = n-(k*d/a);
+   var I = o-(k*e/a);
+   var J = q-(p*b/a);
+   var K = r-(p*c/a);
+   var L = s-(p*d/a);
+   var M = u-(p*e/a);
+   
+
+   var T = calc(A, B, D, E, F, G, H, I, J, K, L, M);
+   var x = T[0];
+   var y = T[1];
+   var z = T[2];
+   var w = (e/a)-(d*z/a)-(c*y/a)-(b*x)/a;
+   
+   elt.w0.value = w;
    elt.x0.value = x;
    elt.y0.value = y;
    elt.z0.value = z;
