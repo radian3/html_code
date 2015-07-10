@@ -21,22 +21,37 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
  
 	  <td> <input type = "text" name = "b" value = "" size = "1" /> </td> <td>c:</td> 
 	  <td> <input type = "text" name = "c" value = "" size = "1" /> </td><td>d:</td>
-	  <td> <input type = "text" name = "j" value = "" size = "1" /> </td>
+	  <td> <input type = "text" name = "d" value = "" size = "1" /> </td>
+	  <td>e:</td>
+	  <td> <input type = "text" name = "e" value = "" size = "1" /> </td>
  
   </tr>
    <tr>
-	  <td>f:</td> <td> <input type = "text" name = "d" value = "" size = "1" /> </td> <td> g: </td>
+	  <td>f:</td> <td> <input type = "text" name = "f" value = "" size = "1" /> </td> <td> g: </td>
  
-	  <td> <input type = "text" name = "e" value = "" size = "1" /> </td> <td>h:</td> 
-	  <td> <input type = "text" name = "f" value = "" size = "1" /> </td><td>i:</td>
-	  <td> <input type = "text" name = "k" value = "" size = "1" /> </td> </tr>
+	  <td> <input type = "text" name = "g" value = "" size = "1" /> </td> <td>h:</td> 
+	  <td> <input type = "text" name = "h" value = "" size = "1" /> </td><td>i:</td>
+	  <td> <input type = "text" name = "i" value = "" size = "1" /> </td>
+	  <td> j:</td>
+	  <td> <input type = "text" name = "j" value = "" size = "1" /> </td> </tr>
+
+    <tr>
+	  <td>k:</td> <td> <input type = "text" name = "k" value = "" size = "1" /> </td> <td> l: </td>
+ 
+	  <td> <input type = "text" name = "l" value = "" size = "1" /> </td> <td>m:</td> 
+	  <td> <input type = "text" name = "m" value = "" size = "1" /> </td><td>n:</td>
+	  <td> <input type = "text" name = "n" value = "" size = "1" /> </td>
+	  <td> o:</td>
+	  <td> <input type = "text" name = "o" value = "" size = "1" /> </td> </tr>
 
    <tr>
-	  <td>p:</td> <td> <input type = "text" name = "g" value = "" size = "1" /> </td> <td> q: </td>
+	  <td>p:</td> <td> <input type = "text" name = "p" value = "" size = "1" /> </td> <td> q: </td>
  
-	  <td> <input type = "text" name = "h" value = "" size = "1" /> </td> <td>r:</td> 
-	  <td> <input type = "text" name = "i" value = "" size = "1" /> </td><td>s:</td>
-	  <td> <input type = "text" name = "m" value = "" size = "1" /> </td> </tr>
+	  <td> <input type = "text" name = "q" value = "" size = "1" /> </td> <td>r:</td> 
+	  <td> <input type = "text" name = "r" value = "" size = "1" /> </td><td>s:</td>
+	  <td> <input type = "text" name = "s" value = "" size = "1" /> </td>
+	  <td> u:</td>
+	  <td> <input type = "text" name = "u" value = "" size = "1" /> </td> </tr>
 
   <tr>
   <td>
@@ -46,9 +61,10 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
   <input  type = "reset" value = "Clear" style = "position:absolute; left:77px;" />
   </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 3 boxes below. </td>
   </tr><tr><td>&nbsp;</td></tr>
-  <tr><td style = "position:absolute;top:420px;">x0:</td> <td> <input style = "position:absolute; top:420px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:455px;">y0:</td> <td> <input style = "position:absolute; top:455px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:490px;">z0:</td> <td> <input style = "position: absolute; top:490px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:435px;">w0:</td> <td> <input style = "position:absolute; top:435px; left: 33px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:470px;">x0:</td> <td> <input style = "position:absolute; top:470px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:505px;">y0:</td> <td> <input style = "position:absolute; top:505px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:540px;">z0:</td> <td> <input style = "position: absolute; top:540px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
 </table>
 </form>
 
@@ -70,7 +86,15 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
    var i = parseFloat (elt.i.value);
    var j = parseFloat (elt.j.value);
    var k = parseFloat (elt.k.value);
+   var l = parseFloat (elt.l.value);
    var m = parseFloat (elt.m.value);
+   var n = parseFloat (elt.n.value);
+   var o = parseFloat (elt.o.value);
+   var p = parseFloat (elt.p.value);
+   var q = parseFloat (elt.q.value);
+   var r = parseFloat (elt.r.value);
+   var s = parseFloat (elt.s.value);
+   var u = parseFloat (elt.u.value);
 
    var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
    var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
