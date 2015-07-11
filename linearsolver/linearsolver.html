@@ -4,15 +4,16 @@
 </head>
 <body>
 <h3> Linear Solver </h3>
-Let <b>v</b>, <b>w</b>, <b>x</b>, <b>y</b>, and <b>z</b> be variables. Also, for 1 &le; i &le; 5 and  i &isin; &Zeta;, let a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub>, d<sub>i</sub>, e<sub>i</sub>, and f<sub>i</sub> be constants.<br>
-If there is a unique solution <b>v</b> = v0, <b>w</b> = w0, <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 5 equations<br>
-a<sub>1</sub><b>v</b> + b<sub>1</sub><b>w</b> + c<sub>1</sub><b>x</b> + d<sub>1</sub><b>y</b> + e<sub>1</sub><b>z</b> = f<sub>1</sub><br>
-a<sub>2</sub><b>v</b> + b<sub>2</sub><b>w</b> + c<sub>2</sub><b>x</b> + d<sub>2</sub><b>y</b> + e<sub>2</sub><b>z</b> = f<sub>2</sub><br>
-a<sub>3</sub><b>v</b> + b<sub>3</sub><b>w</b> + c<sub>3</sub><b>x</b> + d<sub>3</sub><b>y</b> + e<sub>3</sub><b>z</b> = f<sub>3</sub><br>
-a<sub>4</sub><b>v</b> + b<sub>4</sub><b>w</b> + c<sub>4</sub><b>x</b> + d<sub>4</sub><b>y</b> + e<sub>4</sub><b>z</b> = f<sub>4</sub><br>
-a<sub>5</sub><b>v</b> + b<sub>5</sub><b>w</b> + c<sub>5</sub><b>x</b> + d<sub>5</sub><b>y</b> + e<sub>5</sub><b>z</b> = f<sub>5</sub><br>
+Let x<sub>1</sub>, ... , x<sub>10</sub> be variables. Also, for 1 &le; r &le; 10 and  r &isin; &Zeta;, let a<sub>r</sub>, b<sub>r</sub>, c<sub>r</sub>, d<sub>r</sub>, e<sub>r</sub>, f<sub>r</sub>, g<sub>r</sub>, h<sub>r</sub>, i<sub>r</sub>, j<sub>r</sub>, and k<sub>r</sub> be constants.<br>
 
-Then this calculator will compute the point of intersection. Enter the 30 constants in the boxes below:<br><br>
+
+This calculator will compute the point of intersection for up to 10 equations and 10 unknowns (if one exists). For example, <br> one equation one unknown would be:
+a<sub>1</sub>x<sub>1</sub> = b<sub>1</sub> or two equations two unknowns would be: 
+a<sub>1</sub>x<sub>1</sub> + b<sub>1</sub>x<sub>2</sub> = c<sub>1</sub> and 
+	a<sub>2</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> = c<sub>2</sub><br>
+	where x<sub>1</sub>,...,x<sub>10</sub> are calculated to satisfy the intersection of all equations.<br>
+	The n<sub>th</sub> column represents the coefficient for the variable x<sub>n</sub>.	Please enter the coefficients below:<br><br>
+
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
