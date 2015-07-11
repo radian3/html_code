@@ -366,10 +366,10 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d5").style.display = '';
    var temp = "d5".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("e5").style.display = ''
+   document.getElementById("e5").style.display = '';
    var temp = "e5".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("f5").style.display = ''
+   document.getElementById("f5").style.display = '';
    var temp = "f5".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
@@ -405,7 +405,7 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d6").style.display = '';
    var temp = "d6".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("e6").style.display = ''
+   document.getElementById("e6").style.display = '';
    var temp = "e6".concat(",");
    document.getElementById(temp).style.display = '';
    document.getElementById("f6").style.display = ''
@@ -447,13 +447,13 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d7").style.display = '';
    var temp = "d7".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("e7").style.display = ''
+   document.getElementById("e7").style.display = '';
    var temp = "e7".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("f7").style.display = ''
+   document.getElementById("f7").style.display = '';
    var temp = "f7".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("g7").style.display = ''
+   document.getElementById("g7").style.display = '';
    var temp = "g7".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
@@ -496,16 +496,16 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d8").style.display = '';
    var temp = "d8".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("e8").style.display = ''
+   document.getElementById("e8").style.display = '';
    var temp = "e8".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("f8").style.display = ''
+   document.getElementById("f8").style.display = '';
    var temp = "f8".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("g8").style.display = ''
+   document.getElementById("g8").style.display = '';
    var temp = "g8".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("h8").style.display = ''
+   document.getElementById("h8").style.display = '';
    var temp = "h8".concat(",");
    document.getElementById(temp).style.display = '';   
    return;}
@@ -550,19 +550,19 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d9").style.display = '';
    var temp = "d9".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("e9").style.display = ''
+   document.getElementById("e9").style.display = '';
    var temp = "e9".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("f9").style.display = ''
+   document.getElementById("f9").style.display = '';
    var temp = "f9".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("g9").style.display = ''
+   document.getElementById("g9").style.display = '';
    var temp = "g9".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("h9").style.display = ''
+   document.getElementById("h9").style.display = '';
    var temp = "h9".concat(",");
    document.getElementById(temp).style.display = '';   
-   document.getElementById("i9").style.display = ''
+   document.getElementById("i9").style.display = '';
    var temp = "i9".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
@@ -619,16 +619,16 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("f10").style.display = ''
    var temp = "f10".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("g10").style.display = ''
+   document.getElementById("g10").style.display = '';
    var temp = "g10".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("h10").style.display = ''
+   document.getElementById("h10").style.display = '';
    var temp = "h10".concat(",");
    document.getElementById(temp).style.display = '';   
-   document.getElementById("i10").style.display = ''
+   document.getElementById("i10").style.display = '';
    var temp = "i10".concat(",");
    document.getElementById(temp).style.display = '';
-   document.getElementById("j10").style.display = ''
+   document.getElementById("j10").style.display = '';
    var temp = "j10".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
@@ -639,7 +639,7 @@ for (var i = 2; i <= 10; i++){
 document.getElementById("addForm").delVars.onclick = delVars;
   function delVars()
   {
-  alert("del vars");
+  
    if (document.getElementById("a10").style.display == ''){
    document.getElementById("k1").style.display = 'none';
    var temp = "k1".concat(",");
@@ -684,22 +684,22 @@ document.getElementById("addForm").delVars.onclick = delVars;
    document.getElementById("d10").style.display = 'none';
    var temp = "d10".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("e10").style.display = 'none'
+   document.getElementById("e10").style.display = 'none';
    var temp = "e10".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("f10").style.display = 'none'
+   document.getElementById("f10").style.display = 'none';
    var temp = "f10".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("g10").style.display = 'none'
+   document.getElementById("g10").style.display = 'none';
    var temp = "g10".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("h10").style.display = 'none'
+   document.getElementById("h10").style.display = 'none';
    var temp = "h10".concat(",");
    document.getElementById(temp).style.display = 'none';   
-   document.getElementById("i10").style.display = 'none'
+   document.getElementById("i10").style.display = 'none';
    var temp = "i10".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("j10").style.display = 'none'
+   document.getElementById("j10").style.display = 'none';
    var temp = "j10".concat(",");
    document.getElementById(temp).style.display = 'none';
    return;}
@@ -746,16 +746,16 @@ document.getElementById("addForm").delVars.onclick = delVars;
    document.getElementById("d9").style.display = 'none';
    var temp = "d9".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("e9").style.display = 'none'
+   document.getElementById("e9").style.display = 'none';
    var temp = "e9".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("f9").style.display = 'none'
+   document.getElementById("f9").style.display = 'none';
    var temp = "f9".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("g9").style.display = 'none'
+   document.getElementById("g9").style.display = 'none';
    var temp = "g9".concat(",");
    document.getElementById(temp).style.display = 'none';
-   document.getElementById("h9").style.display = 'none'
+   document.getElementById("h9").style.display = 'none';
    var temp = "h9".concat(",");
    document.getElementById(temp).style.display = 'none';   
    document.getElementById("i9").style.display = 'none';
@@ -763,7 +763,57 @@ document.getElementById("addForm").delVars.onclick = delVars;
    document.getElementById(temp).style.display = 'none';
    return;}
 
-
+   if (document.getElementById("a8").style.display == ''){
+   document.getElementById("i1").style.display = 'none';
+   var temp = "i1".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i2").style.display = 'none';
+   var temp = "i2".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i3").style.display = 'none';
+   var temp = "i3".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i4").style.display = 'none';
+   var temp = "i4".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i5").style.display = 'none';
+   var temp = "i5".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i6").style.display = 'none';
+   var temp = "i6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i7").style.display = 'none';
+   var temp = "i7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("i8").style.display = 'none';
+   var temp = "i8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+       
+   document.getElementById("a8").style.display = 'none';
+   var temp = "a8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("b8").style.display = 'none';
+   var temp = "b8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("c8").style.display = 'none';
+   var temp = "c8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("d8").style.display = 'none';
+   var temp = "d8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("e8").style.display = 'none';
+   var temp = "e8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("f8").style.display = 'none';
+   var temp = "f8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g8").style.display = 'none';
+   var temp = "g8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h8").style.display = 'none';
+   var temp = "h8".concat(",");
+   document.getElementById(temp).style.display = 'none';   
+   return;}
 
   }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
