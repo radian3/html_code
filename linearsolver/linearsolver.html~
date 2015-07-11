@@ -41,7 +41,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>2</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>2</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>2</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>2</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>2</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -55,7 +56,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>3</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>3</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>3</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>3</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>3</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -69,7 +71,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>4</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>4</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>4</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>4</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>4</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -83,7 +86,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>5</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>5</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>5</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>5</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>5</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -97,7 +101,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>6</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>6</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>6</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>6</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>6</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -111,7 +116,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>7</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>7</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>7</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  	  
+	  <td>k<sub>7</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>7</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -125,7 +131,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>8</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>8</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>8</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>8</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>8</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -139,7 +146,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>9</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>9</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>9</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>9</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>9</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
 
    <tr>
@@ -153,7 +161,8 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td>h<sub>10</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
 	  <td>i<sub>10</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
 	  <td>j<sub>10</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  		  
+	  <td>k<sub>10</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
+	  <td>l<sub>10</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
   </tr>
  
    
