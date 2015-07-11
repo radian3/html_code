@@ -188,23 +188,32 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 
 for (var i = 2; i <= 10; i++){
   var t1 = "a".concat(i.toString());
-  alert(t1);
-  var t2 = "b";
-  var t3 = "c";
-  var t4 = "d";
-  var t5 = "e";
-  var t6 = "f";
-  var t7 = "g";
-  var t8 = "h";
-  var t9 = "i";
-  var t10 = "j";
-  var t11 = "k";
+  var t2 = "b".concat(i.toString());
+  var t3 = "c".concat(i.toString());
+  var t4 = "d".concat(i.toString());
+  var t5 = "e".concat(i.toString());
+  var t6 = "f".concat(i.toString());
+  var t7 = "g".concat(i.toString());
+  var t8 = "h".concat(i.toString());
+  var t9 = "i".concat(i.toString());
+  var t10 = "j".concat(i.toString());
+  var t11 = "k".concat(i.toString());
+  document.getElementById(t1).style.display = 'none';
+  document.getElementById(t2).style.display = 'none';
+  document.getElementById(t3).style.display = 'none';
+  document.getElementById(t4).style.display = 'none';
+  document.getElementById(t5).style.display = 'none';
+  document.getElementById(t6).style.display = 'none';
+  document.getElementById(t7).style.display = 'none';
+  document.getElementById(t8).style.display = 'none';
+  document.getElementById(t9).style.display = 'none';
+  document.getElementById(t10).style.display = 'none';
+  document.getElementById(t11).style.display = 'none';
+  alert();
    
- 
-   
-  document.getElementById(temp).style.display = 'none';
-  var temp = temp.concat(",");
-  document.getElementById(temp).style.display = 'none';
+//  document.getElementById(temp).style.display = 'none';
+//  var temp = temp.concat(",");
+ // document.getElementById(temp).style.display = 'none';
 }
   
 

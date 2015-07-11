@@ -38,7 +38,7 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 	  <td id = "d2,">d<sub>2</sub>:</td> <td> <input id = "d2" type = "text" name = "d2" value = "" size = "1" /> </td> 
 	  <td id = "e2,">e<sub>2</sub>:</td> <td> <input id = "e2" type = "text" name = "e2" value = "" size = "1" /> </td> 
 	  <td id = "f2,">f<sub>2</sub>:</td> <td> <input id = "f2" type = "text" name = "f2" value = "" size = "1" /> </td>
-	  <td id = "g2,">g<sub>2</sub>:</td> <td> <input id = "e2" type = "text" name = "g2" value = "" size = "1" /> </td>
+	  <td id = "g2,">g<sub>2</sub>:</td> <td> <input id = "g2" type = "text" name = "g2" value = "" size = "1" /> </td>
 	  <td id = "h2,">h<sub>2</sub>:</td> <td> <input id = "h2" type = "text" name = "h2" value = "" size = "1" /> </td> 
 	  <td id = "i2,">i<sub>2</sub>:</td> <td> <input id = "i2" type = "text" name = "i2" value = "" size = "1" /> </td> 
 	  <td id = "j2,">j<sub>2</sub>:</td> <td> <input id = "j2" type = "text" name = "j2" value = "" size = "1" /> </td>
@@ -198,12 +198,22 @@ for (var i = 2; i <= 10; i++){
   var t9 = "i".concat(i.toString());
   var t10 = "j".concat(i.toString());
   var t11 = "k".concat(i.toString());
-  alert(); 
- 
+  document.getElementById(t1).style.display = 'none';
+  document.getElementById(t2).style.display = 'none';
+  document.getElementById(t3).style.display = 'none';
+  document.getElementById(t4).style.display = 'none';
+  document.getElementById(t5).style.display = 'none';
+  document.getElementById(t6).style.display = 'none';
+  document.getElementById(t7).style.display = 'none';
+  document.getElementById(t8).style.display = 'none';
+  document.getElementById(t9).style.display = 'none';
+  document.getElementById(t10).style.display = 'none';
+  document.getElementById(t11).style.display = 'none';
+  alert();
    
-  document.getElementById(temp).style.display = 'none';
-  var temp = temp.concat(",");
-  document.getElementById(temp).style.display = 'none';
+//  document.getElementById(temp).style.display = 'none';
+//  var temp = temp.concat(",");
+ // document.getElementById(temp).style.display = 'none';
 }
   
 
