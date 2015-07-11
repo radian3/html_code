@@ -53,7 +53,10 @@
 
    
    var elt = document.getElementById("addRow");      
-
+ //  var one = parseFloat (elt.one.value);
+ //  var two = parseFloat (elt.two.value);
+ //  elt.sum.value = one+two 		;
+ 
    
   for (var i = 2; i <= 15; i++){
    var temp = i;
@@ -65,6 +68,9 @@
    document.getElementById(temp).style.display = '';
    break;}}
 
+ //  document.getElementById("2").style.display = '';
+ //  document.getElementById("2,").style.display = '';
+ //  alert();
 
   }
 
