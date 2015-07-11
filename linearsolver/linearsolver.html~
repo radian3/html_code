@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 <title> Linear Solver </title>
@@ -189,8 +187,6 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 </form>
 
 <script type = "text/javascript">
-
-
 for (var i = 2; i <= 10; i++){
   var t1 = "a".concat(i.toString());
   var t2 = "b".concat(i.toString());
@@ -238,7 +234,6 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t10).style.display = 'none';
   document.getElementById(t11).style.display = 'none';
   
-
 }
   var t1 = "c1";
   document.getElementById(t1).style.display = 'none';
@@ -276,19 +271,15 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t1).style.display = 'none';
   var t1 = t1.concat(",");
   document.getElementById(t1).style.display = 'none';
-
-
  document.getElementById("addForm").addVars.onclick = addVars;
   function addVars()
   {
   
  
   if (document.getElementById("a2").style.display == 'none'){
-
   document.getElementById("c1").style.display = '';
    var temp = "c1".concat(",");
    document.getElementById(temp).style.display = '';
-
        
   document.getElementById("a2").style.display = '';
    var temp = "a2".concat(",");
@@ -299,11 +290,8 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("c2").style.display = '';
    var temp = "c2".concat(",");
    document.getElementById(temp).style.display = '';
-
    
    return;}
-
-
   if (document.getElementById("a3").style.display == 'none'){
    document.getElementById("d1").style.display = '';
    var temp = "d1".concat(",");
@@ -311,7 +299,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("d2").style.display = '';
    var temp = "d2".concat(",");
    document.getElementById(temp).style.display = '';
-
        
   document.getElementById("a3").style.display = '';
    var temp = "a3".concat(",");
@@ -326,8 +313,6 @@ for (var i = 2; i <= 10; i++){
    var temp = "d3".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
-
   if (document.getElementById("a4").style.display == 'none'){
    document.getElementById("e1").style.display = '';
    var temp = "e1".concat(",");
@@ -338,7 +323,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("e3").style.display = '';
    var temp = "e3".concat(",");
    document.getElementById(temp).style.display = '';
-
        
   document.getElementById("a4").style.display = '';
    var temp = "a4".concat(",");
@@ -356,7 +340,6 @@ for (var i = 2; i <= 10; i++){
    var temp = "e4".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
   if (document.getElementById("a5").style.display == 'none'){
    document.getElementById("f1").style.display = '';
    var temp = "f1".concat(",");
@@ -370,7 +353,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("f4").style.display = '';
    var temp = "f4".concat(",");
    document.getElementById(temp).style.display = '';
-
        
   document.getElementById("a5").style.display = '';
    var temp = "a5".concat(",");
@@ -391,8 +373,6 @@ for (var i = 2; i <= 10; i++){
    var temp = "f5".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
-
   if (document.getElementById("a6").style.display == 'none'){
    document.getElementById("g1").style.display = '';
    var temp = "g1".concat(",");
@@ -412,9 +392,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("g6").style.display = '';
    var temp = "g6".concat(",");
    document.getElementById(temp).style.display = '';
-
-
-
        
    document.getElementById("a6").style.display = '';
    var temp = "a6".concat(",");
@@ -435,10 +412,7 @@ for (var i = 2; i <= 10; i++){
    var temp = "f6".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
-
   if (document.getElementById("a7").style.display == 'none'){
-
    document.getElementById("h1").style.display = '';
    var temp = "h1".concat(",");
    document.getElementById(temp).style.display = '';
@@ -460,9 +434,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("h7").style.display = '';
    var temp = "h7".concat(",");
    document.getElementById(temp).style.display = '';
-
-
-
        
    document.getElementById("a7").style.display = '';
    var temp = "a7".concat(",");
@@ -486,10 +457,8 @@ for (var i = 2; i <= 10; i++){
    var temp = "g7".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
   
  if (document.getElementById("a8").style.display == 'none'){
-
    document.getElementById("i1").style.display = '';
    var temp = "i1".concat(",");
    document.getElementById(temp).style.display = '';
@@ -514,9 +483,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("i8").style.display = '';
    var temp = "i8".concat(",");
    document.getElementById(temp).style.display = '';
-
-
-
        
    document.getElementById("a8").style.display = '';
    var temp = "a8".concat(",");
@@ -543,10 +509,7 @@ for (var i = 2; i <= 10; i++){
    var temp = "h8".concat(",");
    document.getElementById(temp).style.display = '';   
    return;}
-
-
   if (document.getElementById("a9").style.display == 'none'){
-
    document.getElementById("j1").style.display = '';
    var temp = "j1".concat(",");
    document.getElementById(temp).style.display = '';
@@ -574,9 +537,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("j9").style.display = '';
    var temp = "j9".concat(",");
    document.getElementById(temp).style.display = '';
-
-
-
        
    document.getElementById("a9").style.display = '';
    var temp = "a9".concat(",");
@@ -609,8 +569,7 @@ for (var i = 2; i <= 10; i++){
 
 
 
-    if (document.getElementById("a10").style.display == 'none'){
-
+   if (document.getElementById("a10").style.display == 'none'){
    document.getElementById("k1").style.display = '';
    var temp = "k1".concat(",");
    document.getElementById(temp).style.display = '';
@@ -641,9 +600,6 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("k10").style.display = '';
    var temp = "k10".concat(",");
    document.getElementById(temp).style.display = '';
-
-
-
        
    document.getElementById("a10").style.display = '';
    var temp = "a10".concat(",");
@@ -676,19 +632,143 @@ for (var i = 2; i <= 10; i++){
    var temp = "j10".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
-
-
-
   }
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 document.getElementById("addForm").delVars.onclick = delVars;
   function delVars()
   {
   alert("del vars");
+   if (document.getElementById("a10").style.display == ''){
+   document.getElementById("k1").style.display = 'none';
+   var temp = "k1".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k2").style.display = 'none';
+   var temp = "k2".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k3").style.display = 'none';
+   var temp = "k3".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k4").style.display = 'none';
+   var temp = "k4".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k5").style.display = 'none';
+   var temp = "k5".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k6").style.display = 'none';
+   var temp = "k6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k7").style.display = 'none';
+   var temp = "k7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k8").style.display = 'none';
+   var temp = "k8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k9").style.display = 'none';
+   var temp = "k9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("k10").style.display = 'none';
+   var temp = "k10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+       
+   document.getElementById("a10").style.display = 'none';
+   var temp = "a10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("b10").style.display = 'none';
+   var temp = "b10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("c10").style.display = 'none';
+   var temp = "c10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("d10").style.display = 'none';
+   var temp = "d10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("e10").style.display = 'none'
+   var temp = "e10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("f10").style.display = 'none'
+   var temp = "f10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g10").style.display = 'none'
+   var temp = "g10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h10").style.display = 'none'
+   var temp = "h10".concat(",");
+   document.getElementById(temp).style.display = 'none';   
+   document.getElementById("i10").style.display = 'none'
+   var temp = "i10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j10").style.display = 'none'
+   var temp = "j10".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   return;}
+
+
+    if (document.getElementById("a9").style.display == ''){
+   document.getElementById("j1").style.display = 'none';
+   var temp = "j1".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j2").style.display = 'none';
+   var temp = "j2".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j3").style.display = 'none';
+   var temp = "j3".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j4").style.display = 'none';
+   var temp = "j4".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j5").style.display = 'none';
+   var temp = "j5".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j6").style.display = 'none';
+   var temp = "j6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j7").style.display = 'none';
+   var temp = "j7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j8").style.display = 'none';
+   var temp = "j8".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("j9").style.display = 'none';
+   var temp = "j9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+       
+   document.getElementById("a9").style.display = 'none';
+   var temp = "a9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("b9").style.display = 'none';
+   var temp = "b9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("c9").style.display = 'none';
+   var temp = "c9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("d9").style.display = 'none';
+   var temp = "d9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("e9").style.display = 'none'
+   var temp = "e9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("f9").style.display = 'none'
+   var temp = "f9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g9").style.display = 'none'
+   var temp = "g9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h9").style.display = 'none'
+   var temp = "h9".concat(",");
+   document.getElementById(temp).style.display = 'none';   
+   document.getElementById("i9").style.display = 'none';
+   var temp = "i9".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   return;}
+
+
+
   }
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   function calc(a, b, c, j, d, e, f, k, g, h, i, m)
 {
    var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
@@ -699,7 +779,6 @@ document.getElementById("addForm").delVars.onclick = delVars;
    arr1.push(y);
    arr1.push(z);
    return arr1;}
-
    function calct(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u){
    
 	   
@@ -716,7 +795,6 @@ document.getElementById("addForm").delVars.onclick = delVars;
    var L = s-(p*d/a);
    var M = u-(p*e/a);
    
-
    var T = calc(A, B, D, E, F, G, H, I, J, K, L, M);
    var x = T[0];
    var y = T[1];
@@ -730,8 +808,6 @@ document.getElementById("addForm").delVars.onclick = delVars;
    arr2.push(z);
    return arr2;
     
-
-
 }
   
 document.getElementById("addForm").addBtn.onclick = addTwo;
@@ -753,21 +829,18 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    var d2 = parseFloat (elt.d2.value);
    var e2 = parseFloat (elt.e2.value);
    var f2 = parseFloat (elt.f2.value);
-
    var a3 = parseFloat (elt.a3.value);
    var b3 = parseFloat (elt.b3.value);
    var c3 = parseFloat (elt.c3.value);
    var d3 = parseFloat (elt.d3.value);
    var e3 = parseFloat (elt.e3.value);
    var f3 = parseFloat (elt.f3.value);
-
    var a4 = parseFloat (elt.a4.value);
    var b4 = parseFloat (elt.b4.value);
    var c4 = parseFloat (elt.c4.value);
    var d4 = parseFloat (elt.d4.value);
    var e4 = parseFloat (elt.e4.value);
    var f4 = parseFloat (elt.f4.value);
-
    var a5 = parseFloat (elt.a5.value);
    var b5 = parseFloat (elt.b5.value);
    var c5 = parseFloat (elt.c5.value);
@@ -775,27 +848,22 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    var e5 = parseFloat (elt.e5.value);
    var f5 = parseFloat (elt.f5.value);
    
-
    A2 = b2-a2*b1/a1;
    A3 = b3-a3*b1/a1;
    A4 = b4-a4*b1/a1;
    A5 = b5-a5*b1/a1;
-
    B2 = c2-a2*c1/a1;
    B3 = c3-a3*c1/a1;
    B4 = c4-a4*c1/a1;
    B5 = c5-a5*c1/a1;
-
    C2 = d2-a2*d1/a1;
    C3 = d3-a3*d1/a1;
    C4 = d4-a4*d1/a1;
    C5 = d5-a5*d1/a1;
-
    D2 = e2-a2*e1/a1;
    D3 = e3-a3*e1/a1;
    D4 = e4-a4*e1/a1;
    D5 = e5-a5*e1/a1;
-
    E2 = f2-a2*f1/a1;
    E3 = f3-a3*f1/a1;
    E4 = f4-a4*f1/a1;
@@ -818,17 +886,9 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    
    
   }
-
-
-
-
-
-
    
 </script>
 
 
 </body>
 </html>
-
-
