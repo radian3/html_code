@@ -18,151 +18,142 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-	  <td>a<sub>1</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>1</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>1</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>1</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>1</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>1</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>1</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>1</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>1</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>1</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
+	  <td id = "a1,">a<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "a1" value = "" size = "1" /> </td>
+	  <td id = "b1,">b<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "b1" value = "" size = "1" /> </td> 
+	  <td id = "c1,">c<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "c1" value = "" size = "1" /> </td> 
+	  <td id = "d1,">d<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "d1" value = "" size = "1" /> </td> 
+	  <td id = "e1,">e<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "e1" value = "" size = "1" /> </td> 
+	  <td id = "f1,">f<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "f1" value = "" size = "1" /> </td>
+	  <td id = "g1,">g<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "g1" value = "" size = "1" /> </td>
+	  <td id = "h1,">h<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "h1" value = "" size = "1" /> </td> 
+	  <td id = "i1,">i<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "i1" value = "" size = "1" /> </td> 
+	  <td id = "j1,">j<sub>1</sub>:</td> <td> <input id = "" type = "text" name = "j1" value = "" size = "1" /> </td> 
 	  		  
   </tr>
    <tr>
-	  <td>a<sub>2</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>2</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>2</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>2</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>2</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>2</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>2</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>2</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>2</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>2</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>2</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>2</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a2,">a<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "a2" value = "" size = "1" /> </td>
+	  <td id = "b2,">b<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "b2" value = "" size = "1" /> </td> 
+	  <td id = "c2,">c<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "c2" value = "" size = "1" /> </td> 
+	  <td id = "d2,">d<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "d2" value = "" size = "1" /> </td> 
+	  <td id = "e2,">e<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "e2" value = "" size = "1" /> </td> 
+	  <td id = "f2,">f<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "f2" value = "" size = "1" /> </td>
+	  <td id = "g2,">g<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "g2" value = "" size = "1" /> </td>
+	  <td id = "h2,">h<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "h2" value = "" size = "1" /> </td> 
+	  <td id = "i2,">i<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "i2" value = "" size = "1" /> </td> 
+	  <td id = "j2,">j<sub>2</sub>:</td> <td> <input id = "" type = "text" name = "j2" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>3</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>3</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>3</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>3</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>3</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>3</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>3</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>3</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>3</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>3</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>3</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>3</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a3,">a<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "a3" value = "" size = "1" /> </td>
+	  <td id = "b3,">b<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "b3" value = "" size = "1" /> </td> 
+	  <td id = "c3,">c<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "c3" value = "" size = "1" /> </td> 
+	  <td id = "d3,">d<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "d3" value = "" size = "1" /> </td> 
+	  <td id = "e3,">e<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "e3" value = "" size = "1" /> </td> 
+	  <td id = "f3,">f<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "f3" value = "" size = "1" /> </td>
+	  <td id = "g3,">g<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "g3" value = "" size = "1" /> </td>
+	  <td id = "h3,">h<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "h3" value = "" size = "1" /> </td> 
+	  <td id = "i3,">i<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "i3" value = "" size = "1" /> </td> 
+	  <td id = "j3,">j<sub>3</sub>:</td> <td> <input id = "" type = "text" name = "j3" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>4</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>4</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>4</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>4</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>4</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>4</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>4</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>4</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>4</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>4</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>4</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>4</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a4,">a<sub>4</sub>:</td> <td> <input id = ""type = "text" name = "a4" value = "" size = "1" /> </td>
+	  <td id = "b4,">b<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "b4" value = "" size = "1" /> </td> 
+	  <td id = "c4,">c<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "c4" value = "" size = "1" /> </td> 
+	  <td id = "d4,">d<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "d4" value = "" size = "1" /> </td> 
+	  <td id = "e4,">e<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "e4" value = "" size = "1" /> </td> 
+	  <td id = "f4,">f<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "f4" value = "" size = "1" /> </td>
+	  <td id = "g4,">g<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "g4" value = "" size = "1" /> </td>
+	  <td id = "h4,">h<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "h4" value = "" size = "1" /> </td> 
+	  <td id = "i4,">i<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "i4" value = "" size = "1" /> </td> 
+	  <td id = "j4,">j<sub>4</sub>:</td> <td> <input id = "" type = "text" name = "j4" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>5</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>5</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>5</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>5</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>5</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>5</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>5</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>5</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>5</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>5</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>5</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>5</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a5,">a<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "a5" value = "" size = "1" /> </td>
+	  <td id = "b5,">b<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "b5" value = "" size = "1" /> </td> 
+	  <td id = "c5,">c<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "c5" value = "" size = "1" /> </td> 
+	  <td id = "d5,">d<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "d5" value = "" size = "1" /> </td> 
+	  <td id = "e5,">e<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "e5" value = "" size = "1" /> </td> 
+	  <td id = "f5,">f<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "f5" value = "" size = "1" /> </td>
+	  <td id = "g5,">g<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "g5" value = "" size = "1" /> </td>
+	  <td id = "h5,">h<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "h5" value = "" size = "1" /> </td> 
+	  <td id = "i5,">i<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "i5" value = "" size = "1" /> </td> 
+	  <td id = "j5,">j<sub>5</sub>:</td> <td> <input id = "" type = "text" name = "j5" value = "" size = "1" /> </td> 
+	  		 
   </tr>
 
    <tr>
-	  <td>a<sub>6</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>6</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>6</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>6</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>6</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>6</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>6</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>6</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>6</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>6</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>6</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>6</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a6,">a<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "a6" value = "" size = "1" /> </td>
+	  <td id = "b6,">b<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "b6" value = "" size = "1" /> </td> 
+	  <td id = "c6,">c<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "c6" value = "" size = "1" /> </td> 
+	  <td id = "d6,">d<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "d6" value = "" size = "1" /> </td> 
+	  <td id = "e6,">e<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "e6" value = "" size = "1" /> </td> 
+	  <td id = "f6,">f<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "f6" value = "" size = "1" /> </td>
+	  <td id = "g6,">g<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "g6" value = "" size = "1" /> </td>
+	  <td id = "h6,">h<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "h6" value = "" size = "1" /> </td> 
+	  <td id = "i6,">i<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "i6" value = "" size = "1" /> </td> 
+	  <td id = "j6,">j<sub>6</sub>:</td> <td> <input id = "" type = "text" name = "j6" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>7</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>7</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>7</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>7</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>7</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>7</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>7</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>7</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>7</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>7</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>7</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>7</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a7,">a<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "a7" value = "" size = "1" /> </td>
+	  <td id = "b7,">b<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "b7" value = "" size = "1" /> </td> 
+	  <td id = "c7,">c<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "c7" value = "" size = "1" /> </td> 
+	  <td id = "d7,">d<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "d7" value = "" size = "1" /> </td> 
+	  <td id = "e7,">e<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "e7" value = "" size = "1" /> </td> 
+	  <td id = "f7,">f<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "f7" value = "" size = "1" /> </td>
+	  <td id = "g7,">g<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "g7" value = "" size = "1" /> </td>
+	  <td id = "h7,">h<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "h7" value = "" size = "1" /> </td> 
+	  <td id = "i7,">i<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "i7" value = "" size = "1" /> </td> 
+	  <td id = "j7,">j<sub>7</sub>:</td> <td> <input id = "" type = "text" name = "j7" value = "" size = "1" /> </td> 
+	  	  
   </tr>
 
    <tr>
-	  <td>a<sub>8</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>8</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>8</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>8</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>8</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>8</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>8</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>8</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>8</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>8</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>8</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>8</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a8,">a<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "a8" value = "" size = "1" /> </td>
+	  <td id = "b8,">b<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "b8" value = "" size = "1" /> </td> 
+	  <td id = "c8,">c<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "c8" value = "" size = "1" /> </td> 
+	  <td id = "d8,">d<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "d8" value = "" size = "1" /> </td> 
+	  <td id = "e8,">e<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "e8" value = "" size = "1" /> </td> 
+	  <td id = "f8,">f<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "f8" value = "" size = "1" /> </td>
+	  <td id = "g8,">g<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "g8" value = "" size = "1" /> </td>
+	  <td id = "h8,">h<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "h8" value = "" size = "1" /> </td> 
+	  <td id = "i8,">i<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "i8" value = "" size = "1" /> </td> 
+	  <td id = "j8,">j<sub>8</sub>:</td> <td> <input id = "" type = "text" name = "j8" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>9</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>9</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>9</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>9</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>9</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>9</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>9</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>9</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>9</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>9</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>9</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>9</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a9,">a<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "a9" value = "" size = "1" /> </td>
+	  <td id = "b9,">b<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "b9" value = "" size = "1" /> </td> 
+	  <td id = "c9,">c<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "c9" value = "" size = "1" /> </td> 
+	  <td id = "d9,">d<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "d9" value = "" size = "1" /> </td> 
+	  <td id = "e9,">e<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "e9" value = "" size = "1" /> </td> 
+	  <td id = "f9,">f<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "f9" value = "" size = "1" /> </td>
+	  <td id = "g9,">g<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "g9" value = "" size = "1" /> </td>
+	  <td id = "h9,">h<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "h9" value = "" size = "1" /> </td> 
+	  <td id = "i9,">i<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "i9" value = "" size = "1" /> </td> 
+	  <td id = "j9,">j<sub>9</sub>:</td> <td> <input id = "" type = "text" name = "j9" value = "" size = "1" /> </td> 
+	  		  
   </tr>
 
    <tr>
-	  <td>a<sub>10</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
-	  <td>b<sub>10</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
-	  <td>c<sub>10</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
-	  <td>d<sub>10</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
-	  <td>e<sub>10</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
-	  <td>f<sub>10</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>
-	  <td>g<sub>10</sub>:</td> <td> <input type = "text" name = "g1" value = "" size = "1" /> </td>
-	  <td>h<sub>10</sub>:</td> <td> <input type = "text" name = "h1" value = "" size = "1" /> </td> 
-	  <td>i<sub>10</sub>:</td> <td> <input type = "text" name = "i1" value = "" size = "1" /> </td> 
-	  <td>j<sub>10</sub>:</td> <td> <input type = "text" name = "j1" value = "" size = "1" /> </td> 
-	  <td>k<sub>10</sub>:</td> <td> <input type = "text" name = "k1" value = "" size = "1" /> </td> 
-	  <td>l<sub>10</sub>:</td> <td> <input type = "text" name = "l1" value = "" size = "1" /> </td>		  
+	  <td id = "a10,">a<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "a10" value = "" size = "1" /> </td>
+	  <td id = "b10,">b<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "b10" value = "" size = "1" /> </td> 
+	  <td id = "c10,">c<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "c10" value = "" size = "1" /> </td> 
+	  <td id = "d10,">d<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "d10" value = "" size = "1" /> </td> 
+	  <td id = "e10,">e<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "e10" value = "" size = "1" /> </td> 
+	  <td id = "f10,">f<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "f10" value = "" size = "1" /> </td>
+	  <td id = "g10,">g<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "g10" value = "" size = "1" /> </td>
+	  <td id = "h10,">h<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "h10" value = "" size = "1" /> </td> 
+	  <td id = "i10,">i<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "i10" value = "" size = "1" /> </td> 
+	  <td id = "j10,">j<sub>10</sub>:</td> <td> <input id = "" type = "text" name = "j10" value = "" size = "1" /> </td> 
+	  		  
   </tr>
  
    
