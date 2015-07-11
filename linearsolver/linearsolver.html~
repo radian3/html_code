@@ -276,20 +276,164 @@ for (var i = 2; i <= 10; i++){
   var t1 = t1.concat(",");
   document.getElementById(t1).style.display = 'none';
 
-///////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  document.getElementById("addForm").addVars.onclick = addVars;
   function addVars()
   {
-  alert("add vars");
+  
  
   if (document.getElementById("a2").style.display == 'none'){
-   document.getElementById("a2").style.display = '';
+
+  document.getElementById("c1").style.display = '';
+   var temp = "c1".concat(",");
+   document.getElementById(temp).style.display = '';
+
+       
+  document.getElementById("a2").style.display = '';
    var temp = "a2".concat(",");
    document.getElementById(temp).style.display = '';
+   document.getElementById("b2").style.display = '';
+   var temp = "b2".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("c2").style.display = '';
+   var temp = "c2".concat(",");
+   document.getElementById(temp).style.display = '';
+
+   
+   return;}
+
+
+  if (document.getElementById("a3").style.display == 'none'){
+   document.getElementById("d1").style.display = '';
+   var temp = "d1".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("d2").style.display = '';
+   var temp = "d2".concat(",");
+   document.getElementById(temp).style.display = '';
+
+       
+  document.getElementById("a3").style.display = '';
+   var temp = "a3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("b3").style.display = '';
+   var temp = "b3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("c3").style.display = '';
+   var temp = "c3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("d3").style.display = '';
+   var temp = "d3".concat(",");
+   document.getElementById(temp).style.display = '';
+   return;}
+
+
+  if (document.getElementById("a4").style.display == 'none'){
+   document.getElementById("e1").style.display = '';
+   var temp = "e1".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("e2").style.display = '';
+   var temp = "e2".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("e3").style.display = '';
+   var temp = "e3".concat(",");
+   document.getElementById(temp).style.display = '';
+
+       
+  document.getElementById("a4").style.display = '';
+   var temp = "a4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("b4").style.display = '';
+   var temp = "b4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("c4").style.display = '';
+   var temp = "c4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("d4").style.display = '';
+   var temp = "d4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("e4").style.display = ''
+   var temp = "e4".concat(",");
+   document.getElementById(temp).style.display = '';
+   return;}
+
+  if (document.getElementById("a5").style.display == 'none'){
+   document.getElementById("f1").style.display = '';
+   var temp = "f1".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("f2").style.display = '';
+   var temp = "f2".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("f3").style.display = '';
+   var temp = "f3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("f4").style.display = '';
+   var temp = "f4".concat(",");
+   document.getElementById(temp).style.display = '';
+
+       
+  document.getElementById("a5").style.display = '';
+   var temp = "a5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("b5").style.display = '';
+   var temp = "b5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("c5").style.display = '';
+   var temp = "c5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("d5").style.display = '';
+   var temp = "d5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("e5").style.display = ''
+   var temp = "e5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("f5").style.display = ''
+   var temp = "f5".concat(",");
+   document.getElementById(temp).style.display = '';
+   return;}
+
+
+  if (document.getElementById("a6").style.display == 'none'){
+   document.getElementById("g1").style.display = '';
+   var temp = "g1".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("g2").style.display = '';
+   var temp = "g2".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("g3").style.display = '';
+   var temp = "g3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("g4").style.display = '';
+   var temp = "g4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("g5").style.display = '';
+   var temp = "g5".concat(",");
+   document.getElementById(temp).style.display = '';
+
+       
+  document.getElementById("a5").style.display = '';
+   var temp = "a5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("b5").style.display = '';
+   var temp = "b5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("c5").style.display = '';
+   var temp = "c5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("d5").style.display = '';
+   var temp = "d5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("e5").style.display = ''
+   var temp = "e5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("f5").style.display = ''
+   var temp = "f5".concat(",");
+   document.getElementById(temp).style.display = '';
+   return;}
+
 
   }
 
-//////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   function calc(a, b, c, j, d, e, f, k, g, h, i, m)
 {
    var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
