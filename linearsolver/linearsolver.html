@@ -180,16 +180,17 @@ a<sub>1</sub>x<sub>1</sub> + b<sub>1</sub>x<sub>2</sub> = c<sub>1</sub> and
 
   </tr>
   <tr>
-	  <td style = "position:absolute;top:187px; left:960px;">x<sub>1</sub>:</td> <td> <input style = "position:absolute; top:187px; left: 980px;" type = "text" name = "x1" value = "" size = "7" /> </td>
-  <td style = "position:absolute;top:214px; left:960px;">x<sub>2</sub>:</td> <td> <input style = "position:absolute; top:214px; left: 980px;" type = "text" name = "x2" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:241px; left:960px;">x<sub>3</sub>:</td> <td> <input style = "position:absolute; top:241px; left: 980px;" type = "text" name = "x3" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:268px; left:960px;">x<sub>4</sub>:</td> <td> <input style = "position:absolute; top:268px; left: 980px;" type = "text" name = "x4" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:295px; left:960px;">x<sub>5</sub>:</td> <td> <input style = "position:absolute; top:295px; left: 980px;" type = "text" name = "x5" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:322px; left:960px;">x<sub>6</sub>:</td> <td> <input style = "position:absolute; top:322px; left: 980px;" type = "text" name = "x6" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:349px; left:960px;">x<sub>7</sub>:</td> <td> <input style = "position:absolute; top:349px; left: 980px;" type = "text" name = "x7" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:376px; left:960px;">x<sub>8</sub>:</td> <td> <input style = "position:absolute; top:376px; left: 980px;" type = "text" name = "x8" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:403px; left:960px;">x<sub>9</sub>:</td> <td> <input style = "position:absolute; top:403px; left: 980px;" type = "text" name = "x9" value = "" size = "7" /> </td>
-<td style = "position:absolute;top:430px; left:960px;">x<sub>10</sub>:</td> <td> <input style = "position:absolute; top:430px; left: 980px;" type = "text" name = "x10" value = "" size = "7" /> </td>
+<td id = "x1," style = "position:absolute;top:187px; left:960px;">x<sub>1</sub>:</td> <td> <input style = "position:absolute; top:187px; left: 980px;" type = "text" name = "x1" value = "" size = "7" id = "x1"/> </td>
+<td id = "x2,"  style = "position:absolute;top:214px; left:960px;">x<sub>2</sub>:</td> <td> <input style = "position:absolute; top:214px; left: 980px;" type = "text" name = "x2" value = "" size = "7" id = "x2" /> </td>
+<td id = "x3,"  style = "position:absolute;top:241px; left:960px;">x<sub>3</sub>:</td> <td> <input style = "position:absolute; top:241px; left: 980px;" type = "text" name = "x3" value = "" size = "7" id = "x3" /> </td>
+<td id = "x4,"  style = "position:absolute;top:268px; left:960px;">x<sub>4</sub>:</td> <td> <input style = "position:absolute; top:268px; left: 980px;" type = "text" name = "x4" value = "" size = "7" id = "x4" /> </td>
+<td id = "x5,"  style = "position:absolute;top:295px; left:960px;">x<sub>5</sub>:</td> <td> <input style = "position:absolute; top:295px; left: 980px;" type = "text" name = "x5" value = "" size = "7" id = "x5" /> </td>
+<td id = "x6,"  style = "position:absolute;top:322px; left:960px;">x<sub>6</sub>:</td> <td> <input style = "position:absolute; top:322px; left: 980px;" type = "text" name = "x6" value = "" size = "7" id = "x6" /> </td>
+<td id = "x7,"  style = "position:absolute;top:349px; left:960px;">x<sub>7</sub>:</td> <td> <input style = "position:absolute; top:349px; left: 980px;" type = "text" name = "x7" value = "" size = "7" id = "x7" /> </td>
+<td id = "x8,"  style = "position:absolute;top:376px; left:960px;">x<sub>8</sub>:</td> <td> <input style = "position:absolute; top:376px; left: 980px;" type = "text" name = "x8" value = "" size = "7" id = "x8" /> </td>
+<td id = "x9,"  style = "position:absolute;top:403px; left:960px;">x<sub>9</sub>:</td> <td> <input style = "position:absolute; top:403px; left: 980px;" type = "text" name = "x9" value = "" size = "7" id = "x9" /> </td>
+<td id = "x10,"  style = "position:absolute;top:430px; left:960px;">x<sub>10</sub>:</td> <td> <input style = "position:absolute; top:430px; left: 980px;" type = "text" name = "x10" value = "" size = "7" id = "x10" /> </td>
+</tr>
   
 
 
@@ -211,6 +212,7 @@ for (var i = 2; i <= 10; i++){
   var t9 = "i".concat(i.toString());
   var t10 = "j".concat(i.toString());
   var t11 = "k".concat(i.toString());
+  var t12 = "x".concat(i.toString());
   document.getElementById(t1).style.display = 'none';
   document.getElementById(t2).style.display = 'none';
   document.getElementById(t3).style.display = 'none';
@@ -222,6 +224,7 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t9).style.display = 'none';
   document.getElementById(t10).style.display = 'none';
   document.getElementById(t11).style.display = 'none';
+  document.getElementById(t12).style.display = 'none';
   var t1 = t1.concat(",");
   var t2 = t2.concat(",");
   var t3 = t3.concat(",");
@@ -233,7 +236,7 @@ for (var i = 2; i <= 10; i++){
   var t9 = t9.concat(",");
   var t10 = t10.concat(",");
   var t11 = t11.concat(",");
-  
+  var t12 = t12.concat(",");
   document.getElementById(t1).style.display = 'none';
   document.getElementById(t2).style.display = 'none';
   document.getElementById(t3).style.display = 'none';
@@ -245,7 +248,7 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t9).style.display = 'none';
   document.getElementById(t10).style.display = 'none';
   document.getElementById(t11).style.display = 'none';
-  
+  document.getElementById(t12).style.display = 'none';
 }
   var t1 = "c1";
   document.getElementById(t1).style.display = 'none';
@@ -284,7 +287,9 @@ for (var i = 2; i <= 10; i++){
   var t1 = t1.concat(",");
   document.getElementById(t1).style.display = 'none';
  document.getElementById("addForm").addVars.onclick = addVars;
-  function addVars()
+ 
+
+ function addVars()
   {
   
  
@@ -302,7 +307,12 @@ for (var i = 2; i <= 10; i++){
    document.getElementById("c2").style.display = '';
    var temp = "c2".concat(",");
    document.getElementById(temp).style.display = '';
-   
+
+   document.getElementById("x2").style.display = '';
+   var temp = "x2".concat(",");
+   document.getElementById(temp).style.display = '';
+
+ 
    return;}
   if (document.getElementById("a3").style.display == 'none'){
    document.getElementById("d1").style.display = '';
@@ -323,6 +333,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("d3").style.display = '';
    var temp = "d3".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x3").style.display = '';
+   var temp = "x3".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   if (document.getElementById("a4").style.display == 'none'){
@@ -350,6 +363,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("e4").style.display = ''
    var temp = "e4".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x4").style.display = '';
+   var temp = "x4".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   if (document.getElementById("a5").style.display == 'none'){
@@ -383,6 +399,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("f5").style.display = '';
    var temp = "f5".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x5").style.display = '';
+   var temp = "x5".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   if (document.getElementById("a6").style.display == 'none'){
@@ -422,6 +441,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("f6").style.display = ''
    var temp = "f6".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x6").style.display = '';
+   var temp = "x6".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   if (document.getElementById("a7").style.display == 'none'){
@@ -467,6 +489,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("g7").style.display = '';
    var temp = "g7".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x7").style.display = '';
+   var temp = "x7".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   
@@ -519,7 +544,10 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("h8").style.display = '';
    var temp = "h8".concat(",");
-   document.getElementById(temp).style.display = '';   
+   document.getElementById(temp).style.display = ''; 
+   document.getElementById("x8").style.display = '';
+   var temp = "x8".concat(",");
+   document.getElementById(temp).style.display = ''; 
    return;}
   if (document.getElementById("a9").style.display == 'none'){
    document.getElementById("j1").style.display = '';
@@ -576,6 +604,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';   
    document.getElementById("i9").style.display = '';
    var temp = "i9".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x9").style.display = '';
+   var temp = "x9".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
 
@@ -642,6 +673,9 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    document.getElementById("j10").style.display = '';
    var temp = "j10".concat(",");
+   document.getElementById(temp).style.display = '';
+   document.getElementById("x10").style.display = '';
+   var temp = "x10".concat(",");
    document.getElementById(temp).style.display = '';
    return;}
   }
