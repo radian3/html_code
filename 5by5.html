@@ -69,10 +69,11 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
   <input  type = "reset" value = "Clear" style = "position:absolute; left:77px;" />
   </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 4 boxes below. </td>
   </tr><tr><td>&nbsp;</td></tr>
-  <tr><td style = "position:absolute;top:435px;">w0:</td> <td> <input style = "position:absolute; top:435px; left: 33px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute;top:470px;">x0:</td> <td> <input style = "position:absolute; top:470px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:505px;">y0:</td> <td> <input style = "position:absolute; top:505px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:540px;">z0:</td> <td> <input style = "position: absolute; top:540px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:435px;">v0:</td> <td> <input style = "position:absolute; top:435px; left: 33px;" type = "text" name = "v0" value = "" size = "7" /> </td></tr> 
+  <tr><td style = "position:absolute;top:470px;">w0:</td> <td> <input style = "position:absolute; top:470px; left: 33px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:505px;">x0:</td> <td> <input style = "position:absolute; top:505px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:540px;">y0:</td> <td> <input style = "position:absolute; top:540px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:575px;">z0:</td> <td> <input style = "position: absolute; top:575px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
 </table>
 </form>
 
@@ -87,8 +88,38 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
    arr1.push(x);
    arr1.push(y);
    arr1.push(z);
-   return arr1;
+   return arr1;}
 
+   function calct(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u){
+   
+	   
+   var A = g-(f*b/a);
+   var B = (h-(f*c/a));
+   var D = i-(f*d/a);
+   var E = j-(f*e/a);
+   var F = l-(k*b/a);
+   var G = m-(k*c/a);
+   var H = n-(k*d/a);
+   var I = o-(k*e/a);
+   var J = q-(p*b/a);
+   var K = r-(p*c/a);
+   var L = s-(p*d/a);
+   var M = u-(p*e/a);
+   
+
+   var T = calc(A, B, D, E, F, G, H, I, J, K, L, M);
+   var x = T[0];
+   var y = T[1];
+   var z = T[2];
+   var w = (e/a)-(d*z/a)-(c*y/a)-(b*x)/a;
+   
+   var arr2 = new Array ();
+   arr2.push(w);
+   arr2.push(x);
+   arr2.push(y);
+   arr2.push(z);
+   return arr2;
+    
 
 
 }
@@ -134,6 +165,49 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    var e5 = parseFloat (elt.e5.value);
    var f5 = parseFloat (elt.f5.value);
    alert(a1+b1+c1+d1+e1+a2+b2+c2+d2+e2+a3+b3+c3+d3+e3+a4+b4+c4+d4+e4+a5+b5+c5+d5+e5);
+
+   A2 = b2-a2*b1/a1;
+   A3 = b3-a3*b1/a1;
+   A4 = b4-a4*b1/a1;
+   A5 = b5-a5*b1/a1;
+
+   B2 = c2-a2*c1/a1;
+   B3 = c3-a3*c1/a1;
+   B4 = c4-a4*c1/a1;
+   B5 = c5-a5*c1/a1;
+
+   C2 = d2-a2*d1/a1;
+   C3 = d3-a3*d1/a1;
+   C4 = d4-a4*d1/a1;
+   C5 = d5-a5*d1/a1;
+
+   D2 = e2-a2*e1/a1;
+   D3 = e3-a3*e1/a1;
+   D4 = e4-a4*e1/a1;
+   D5 = e5-a5*e1/a1;
+
+   E2 = f2-a2*f1/a1;
+   E3 = f3-a3*f1/a1;
+   E4 = f4-a4*f1/a1;
+   E5 = f5-a5*f1/a1;
+   alert("hey");
+   alert(A2+B2+C2+D2+E2+A3+B3+C3+D3+E3+A4+B4+C4+D4+E4+A5+B5+C5+D5+E5);
+   var solus = calct(A2, B2, C2, D2, E2, A3, B3, C3, D3, E3, A4, B4, C4, D4, E4, A5, B5, C5, D5, E5);
+   alert(solus);
+   alert("hi");
+   var w = solus[0];
+   var x = solus[1];
+   var y = solus[2];
+   var z = solus[3];
+   var v = ((f1-b1*w-c1*x-d1*y-e1*z)/a1);
+   
+   elt.v0.value = v;
+   elt.w0.value = w;
+   elt.x0.value = x;
+   elt.y0.value = y;
+   elt.z0.value = z;
+   
+   
   }
 
 
@@ -141,34 +215,7 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
 
 
 
-   function calc2(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u){
-   var A = g-(f*b/a);
-   var B = (h-(f*c/a));
-   var D = i-(f*d/a);
-   var E = j-(f*e/a);
-   var F = l-(k*b/a);
-   var G = m-(k*c/a);
-   var H = n-(k*d/a);
-   var I = o-(k*e/a);
-   var J = q-(p*b/a);
-   var K = r-(p*c/a);
-   var L = s-(p*d/a);
-   var M = u-(p*e/a);
    
-
-   var T = calc(A, B, D, E, F, G, H, I, J, K, L, M);
-   var x = T[0];
-   var y = T[1];
-   var z = T[2];
-   var w = (e/a)-(d*z/a)-(c*y/a)-(b*x)/a;
-   
-   var arr2 = new Array ();
-   arr2.push(w);
-   arr2.push(x);
-   arr2.push(y);
-   arr2.push(z);
-
-  }
 </script>
 
 
