@@ -6,14 +6,15 @@
 </head>
 <body>
 <h3> 5 Equations 5 Unknowns Solver </h3>
-Let <b>w</b>, <b>x</b>, <b>y</b>, and <b>z</b> be variables and a, b, c, d, e, f, g, h, i, j, k, w, l, m, n, o, p, q, r, s, and u be constants.<br>
-If there is a unique solution <b>w</b> = w0, <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 4 equations<br>
-a<b>w</b> + b<b>x</b> + c<b>y</b> + d<b>z</b> = e<br>
-f<b>w</b> + g<b>x</b> + h<b>y</b> + i<b>z</b> = j<br>
-k<b>w</b> + l<b>x</b> + m<b>y</b> + n<b>z</b> = o <br>
-p<b>w</b> + q<b>x</b> + r<b>y</b> + s<b>z</b> = u<br>
+Let <b>v</b>, <b>w</b>, <b>x</b>, <b>y</b>, and <b>z</b> be variables. Also, for 1 &le; i &le; 5 and  i &isin; &Zeta;, let a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub>, d<sub>i</sub>, e<sub>i</sub>, and f<sub>i</sub> be constants.<br>
+If there is a unique solution <b>v</b> = v0, <b>w</b> = w0, <b>x</b> = x0, <b>y</b> = y0, and <b>z</b> = z0 that satisfies the 5 equations<br>
+a<sub>1</sub><b>v</b> + b<sub>1</sub><b>w</b> + c<sub>1</sub><b>x</b> + d<sub>1</sub><b>y</b> + e<sub>1</sub><b>z</b> = f<sub>1</sub><br>
+a<sub>2</sub><b>v</b> + b<sub>2</sub><b>w</b> + c<sub>2</sub><b>x</b> + d<sub>2</sub><b>y</b> + e<sub>2</sub><b>z</b> = f<sub>2</sub><br>
+a<sub>3</sub><b>v</b> + b<sub>3</sub><b>w</b> + c<sub>3</sub><b>x</b> + d<sub>3</sub><b>y</b> + e<sub>3</sub><b>z</b> = f<sub>3</sub><br>
+a<sub>4</sub><b>v</b> + b<sub>4</sub><b>w</b> + c<sub>4</sub><b>x</b> + d<sub>4</sub><b>y</b> + e<sub>4</sub><b>z</b> = f<sub>4</sub><br>
+a<sub>5</sub><b>v</b> + b<sub>5</sub><b>w</b> + c<sub>5</sub><b>x</b> + d<sub>5</sub><b>y</b> + e<sub>5</sub><b>z</b> = f<sub>5</sub><br>
 
-Then this calculator will compute the point of intersection. Enter the 20 constants in the boxes below:<br><br>
+Then this calculator will compute the point of intersection. Enter the 30 constants in the boxes below:<br><br>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
@@ -69,11 +70,11 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
   <input  type = "reset" value = "Clear" style = "position:absolute; left:77px;" />
   </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 4 boxes below. </td>
   </tr><tr><td>&nbsp;</td></tr>
-  <tr><td style = "position:absolute;top:435px;">v0:</td> <td> <input style = "position:absolute; top:435px; left: 33px;" type = "text" name = "v0" value = "" size = "7" /> </td></tr> 
-  <tr><td style = "position:absolute;top:470px;">w0:</td> <td> <input style = "position:absolute; top:470px; left: 33px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute;top:505px;">x0:</td> <td> <input style = "position:absolute; top:505px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:540px;">y0:</td> <td> <input style = "position:absolute; top:540px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
-  <tr><td style = "position:absolute; top:575px;">z0:</td> <td> <input style = "position: absolute; top:575px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:455px;">v0:</td> <td> <input style = "position:absolute; top:435px; left: 33px;" type = "text" name = "v0" value = "" size = "7" /> </td></tr> 
+  <tr><td style = "position:absolute;top:490px;">w0:</td> <td> <input style = "position:absolute; top:470px; left: 33px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute;top:525px;">x0:</td> <td> <input style = "position:absolute; top:505px; left: 33px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:560px;">y0:</td> <td> <input style = "position:absolute; top:540px; left: 33px;" type = "text" name = "y0" value = "" size = "7" /> </td></tr>
+  <tr><td style = "position:absolute; top:595px;">z0:</td> <td> <input style = "position: absolute; top:595px; left: 33px;" type = "text" name = "z0" value = "" size = "7" /> </td></tr>
 </table>
 </form>
 
@@ -164,7 +165,7 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    var d5 = parseFloat (elt.d5.value);
    var e5 = parseFloat (elt.e5.value);
    var f5 = parseFloat (elt.f5.value);
-   alert(a1+b1+c1+d1+e1+a2+b2+c2+d2+e2+a3+b3+c3+d3+e3+a4+b4+c4+d4+e4+a5+b5+c5+d5+e5);
+   
 
    A2 = b2-a2*b1/a1;
    A3 = b3-a3*b1/a1;
@@ -190,17 +191,21 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    E3 = f3-a3*f1/a1;
    E4 = f4-a4*f1/a1;
    E5 = f5-a5*f1/a1;
-   alert("hey");
-   alert(A2+B2+C2+D2+E2+A3+B3+C3+D3+E3+A4+B4+C4+D4+E4+A5+B5+C5+D5+E5);
+   
    var solus = calct(A2, B2, C2, D2, E2, A3, B3, C3, D3, E3, A4, B4, C4, D4, E4, A5, B5, C5, D5, E5);
-   alert(solus);
-   alert("hi");
+   
+   
    var w = solus[0];
    var x = solus[1];
    var y = solus[2];
    var z = solus[3];
    var v = ((f1-b1*w-c1*x-d1*y-e1*z)/a1);
-
+   
+   elt.v0.value = v;
+   elt.w0.value = w;
+   elt.x0.value = x;
+   elt.y0.value = y;
+   elt.z0.value = z;
    
    
   }
