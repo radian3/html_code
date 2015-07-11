@@ -25,39 +25,39 @@ Then this calculator will compute the point of intersection. Enter the 20 consta
 	  <td>f<sub>1</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>  	  
   </tr>
   <tr>
-	  <td>a<sub>2</sub>:</td> <td> <input type = "text" name = "a2" value = "" size = "1" /> </td>
-	  <td>b<sub>2</sub>:</td> <td> <input type = "text" name = "b2" value = "" size = "1" /> </td> 
-	  <td>c<sub>2</sub>:</td> <td> <input type = "text" name = "c2" value = "" size = "1" /> </td> 
-	  <td>d<sub>2</sub>:</td> <td> <input type = "text" name = "d2" value = "" size = "1" /> </td> 
-	  <td>e<sub>2</sub>:</td> <td> <input type = "text" name = "e2" value = "" size = "1" /> </td> 
-	  <td>f<sub>2</sub>:</td> <td> <input type = "text" name = "f2" value = "" size = "1" /> </td>  	  
+	  <td>a<sub>2</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
+	  <td>b<sub>2</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
+	  <td>c<sub>2</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
+	  <td>d<sub>2</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
+	  <td>e<sub>2</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
+	  <td>f<sub>2</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>  	  
   </tr>
 
  <tr>
-	  <td>a<sub>3</sub>:</td> <td> <input type = "text" name = "a3" value = "" size = "1" /> </td>
-	  <td>b<sub>3</sub>:</td> <td> <input type = "text" name = "b3" value = "" size = "1" /> </td> 
-	  <td>c<sub>3</sub>:</td> <td> <input type = "text" name = "c3" value = "" size = "1" /> </td> 
-	  <td>d<sub>3</sub>:</td> <td> <input type = "text" name = "d3" value = "" size = "1" /> </td> 
-	  <td>e<sub>3</sub>:</td> <td> <input type = "text" name = "e3" value = "" size = "1" /> </td> 
-	  <td>f<sub>3</sub>:</td> <td> <input type = "text" name = "f3" value = "" size = "1" /> </td>  	  
+	  <td>a<sub>1</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
+	  <td>b<sub>1</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
+	  <td>c<sub>1</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
+	  <td>d<sub>1</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
+	  <td>e<sub>1</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
+	  <td>f<sub>1</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>  	  
   </tr>
 
  <tr>
-	  <td>a<sub>4</sub>:</td> <td> <input type = "text" name = "a4" value = "" size = "1" /> </td>
-	  <td>b<sub>4</sub>:</td> <td> <input type = "text" name = "b4" value = "" size = "1" /> </td> 
-	  <td>c<sub>4</sub>:</td> <td> <input type = "text" name = "c4" value = "" size = "1" /> </td> 
-	  <td>d<sub>4</sub>:</td> <td> <input type = "text" name = "d4" value = "" size = "1" /> </td> 
-	  <td>e<sub>4</sub>:</td> <td> <input type = "text" name = "e4" value = "" size = "1" /> </td> 
-	  <td>f<sub>4</sub>:</td> <td> <input type = "text" name = "f4" value = "" size = "1" /> </td>  	  
+	  <td>a<sub>1</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
+	  <td>b<sub>1</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
+	  <td>c<sub>1</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
+	  <td>d<sub>1</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
+	  <td>e<sub>1</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
+	  <td>f<sub>1</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>  	  
   </tr>
 
  <tr>
-	  <td>a<sub>5</sub>:</td> <td> <input type = "text" name = "a5" value = "" size = "1" /> </td>
-	  <td>b<sub>5</sub>:</td> <td> <input type = "text" name = "b5" value = "" size = "1" /> </td> 
-	  <td>c<sub>5</sub>:</td> <td> <input type = "text" name = "c5" value = "" size = "1" /> </td> 
-	  <td>d<sub>5</sub>:</td> <td> <input type = "text" name = "d5" value = "" size = "1" /> </td> 
-	  <td>e<sub>5</sub>:</td> <td> <input type = "text" name = "e5" value = "" size = "1" /> </td> 
-	  <td>f<sub>5</sub>:</td> <td> <input type = "text" name = "f5" value = "" size = "1" /> </td>  	  
+	  <td>a<sub>1</sub>:</td> <td> <input type = "text" name = "a1" value = "" size = "1" /> </td>
+	  <td>b<sub>1</sub>:</td> <td> <input type = "text" name = "b1" value = "" size = "1" /> </td> 
+	  <td>c<sub>1</sub>:</td> <td> <input type = "text" name = "c1" value = "" size = "1" /> </td> 
+	  <td>d<sub>1</sub>:</td> <td> <input type = "text" name = "d1" value = "" size = "1" /> </td> 
+	  <td>e<sub>1</sub>:</td> <td> <input type = "text" name = "e1" value = "" size = "1" /> </td> 
+	  <td>f<sub>1</sub>:</td> <td> <input type = "text" name = "f1" value = "" size = "1" /> </td>  	  
   </tr> 
  
    
