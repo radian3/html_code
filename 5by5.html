@@ -97,30 +97,23 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
   function addTwo()
   {
   
-  // var sum = "";
+  
    var elt = document.getElementById("addForm");      
-   var a = parseFloat (elt.a.value);
-   var b = parseFloat (elt.b.value);
-   var c = parseFloat (elt.c.value);
-   var d = parseFloat (elt.d.value);
-   var e = parseFloat (elt.e.value);
-   var f = parseFloat (elt.f.value);
-   var g = parseFloat (elt.g.value);
-   var h = parseFloat (elt.h.value);
-   var i = parseFloat (elt.i.value);
-   var j = parseFloat (elt.j.value);
-   var k = parseFloat (elt.k.value);
-   var l = parseFloat (elt.l.value);
-   var m = parseFloat (elt.m.value);
-   var n = parseFloat (elt.n.value);
-   var o = parseFloat (elt.o.value);
-   var p = parseFloat (elt.p.value);
-   var q = parseFloat (elt.q.value);
-   var r = parseFloat (elt.r.value);
-   var s = parseFloat (elt.s.value);
-   var u = parseFloat (elt.u.value);
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value);
+   var c1 = parseFloat (elt.c1.value);
+   var d1 = parseFloat (elt.d1.value);
+   var e1 = parseFloat (elt.e1.value);
+   var f1 = parseFloat (elt.f1.value);
+   alert(a1);
+  }
 
 
+
+
+
+
+   function calc2(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u){
    var A = g-(f*b/a);
    var B = (h-(f*c/a));
    var D = i-(f*d/a);
@@ -141,10 +134,11 @@ document.getElementById("addForm").addBtn.onclick = addTwo;
    var z = T[2];
    var w = (e/a)-(d*z/a)-(c*y/a)-(b*x)/a;
    
-   elt.w0.value = w;
-   elt.x0.value = x;
-   elt.y0.value = y;
-   elt.z0.value = z;
+   var arr2 = new Array ();
+   arr2.push(w);
+   arr2.push(x);
+   arr2.push(y);
+   arr2.push(z);
 
   }
 </script>
