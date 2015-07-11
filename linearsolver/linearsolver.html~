@@ -174,7 +174,11 @@ Then this calculator will compute the point of intersection. Enter the 30 consta
   <td>
   <input  type = "reset" value = "Clear" style = "position:absolute; left:77px;" />
   </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the 4 boxes below. </td>
-  </tr><tr><td>&nbsp;</td></tr>
+  </tr><tr><td>&nbsp;</td>
+
+  <td> <input style = "position:absolute; left:200px; top: 30px;" type = "button" name = "addVars" value = "Add Vars" /> </td>
+
+  </tr>
   <tr><td style = "position:absolute;top:455px; left:910px;">v0:</td> <td> <input style = "position:absolute; top:455px; left: 930px;" type = "text" name = "v0" value = "" size = "7" /> </td></tr> 
   <tr><td style = "position:absolute;top:490px;left:910px;">w0:</td> <td> <input style = "position:absolute; top:490px; left: 930px;" type = "text" name = "w0" value = "" size = "7" /> </td></tr>
   <tr><td style = "position:absolute;top:525px;left:910px;">x0:</td> <td> <input style = "position:absolute; top:525px; left: 930px;" type = "text" name = "x0" value = "" size = "7" /> </td></tr>
@@ -267,11 +271,20 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t1).style.display = 'none';
   var t1 = t1.concat(",");
   document.getElementById(t1).style.display = 'none';
+  var t1 = "k1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
 
+///////////////////
+ document.getElementById("addForm").addVars.onclick = addVars;
+  function addVars()
+  {
+  alert("add vars");
+ 
+  }
 
-
-
-
+//////////////////
   function calc(a, b, c, j, d, e, f, k, g, h, i, m)
 {
    var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
