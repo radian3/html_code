@@ -815,6 +815,92 @@ document.getElementById("addForm").delVars.onclick = delVars;
    document.getElementById(temp).style.display = 'none';   
    return;}
 
+    if (document.getElementById("a7").style.display == ''){
+   document.getElementById("h1").style.display = 'none';
+   var temp = "h1".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h2").style.display = 'none';
+   var temp = "h2".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h3").style.display = 'none';
+   var temp = "h3".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h4").style.display = 'none';
+   var temp = "h4".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h5").style.display = 'none';
+   var temp = "h5".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h6").style.display = 'none';
+   var temp = "h6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("h7").style.display = 'none';
+   var temp = "h7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+       
+   document.getElementById("a7").style.display = 'none';
+   var temp = "a7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("b7").style.display = 'none';
+   var temp = "b7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("c7").style.display = 'none';
+   var temp = "c7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("d7").style.display = 'none';
+   var temp = "d7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("e7").style.display = 'none';
+   var temp = "e7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("f7").style.display = 'none';
+   var temp = "f7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g7").style.display = 'none';
+   var temp = "g7".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   return;}
+
+     if (document.getElementById("a6").style.display == ''){
+   document.getElementById("g1").style.display = 'none';
+   var temp = "g1".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g2").style.display = 'none';
+   var temp = "g2".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g3").style.display = 'none';
+   var temp = "g3".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g4").style.display = 'none';
+   var temp = "g4".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g5").style.display = 'none';
+   var temp = "g5".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("g6").style.display = 'none';
+   var temp = "g6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+       
+   document.getElementById("a6").style.display = 'none';
+   var temp = "a6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("b6").style.display = 'none';
+   var temp = "b6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("c6").style.display = 'none';
+   var temp = "c6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("d6").style.display = 'none';
+   var temp = "d6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("e6").style.display = 'none';
+   var temp = "e6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   document.getElementById("f6").style.display = 'none';
+   var temp = "f6".concat(",");
+   document.getElementById(temp).style.display = 'none';
+   return;}
+
   }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
