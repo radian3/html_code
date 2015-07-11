@@ -231,14 +231,42 @@ for (var i = 2; i <= 10; i++){
   document.getElementById(t8).style.display = 'none';
   document.getElementById(t9).style.display = 'none';
   document.getElementById(t10).style.display = 'none';
-  document.getElementById(t11).style.display = 'none';alert();
-
-   
-//  document.getElementById(temp).style.display = 'none';
-//  var temp = temp.concat(",");
- // document.getElementById(temp).style.display = 'none';
-}
+  document.getElementById(t11).style.display = 'none';
   
+
+}
+  var t1 = "c1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "d1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "e1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "f1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "g1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "h1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "i1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
+  var t1 = "j1";
+  document.getElementById(t1).style.display = 'none';
+  var t1 = t1.concat(",");
+  document.getElementById(t1).style.display = 'none';
 
 
 
