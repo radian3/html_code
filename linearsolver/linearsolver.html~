@@ -1274,6 +1274,52 @@ return arr2;
 function ssix(a1, b1, c1, d1, e1, f1, g1, a2, b2, c2, d2, e2, f2, g2, a3, b3, c3, d3, e3, f3, g3, a4, b4, c4, d4, e4, f4, g4, a5, b5, c5, d5, e5, f5, g5, a6, b6, c6, d6, e6, f6, g6){
 
 
+if (a1 == 0){
+ if (a2 != 0){
+ a2 = [a1, a1 = a2][0];
+ b2 = [b1, b1 = b2][0];
+ c2 = [c1, c1 = c2][0];
+ d2 = [d1, d1 = d2][0];
+ e2 = [e1, e1 = e2][0];
+ f2 = [f1, f1 = f2][0];
+ g2 = [g1, g1 = g2][0];}
+ else if (a3 != 0){
+ a3 = [a1, a1 = a3][0];
+ b3 = [b1, b1 = b3][0];
+ c3 = [c1, c1 = c3][0];
+ d3 = [d1, d1 = d3][0];
+ e3 = [e1, e1 = e3][0];
+ f3 = [f1, f1 = f3][0];
+ g3 = [g1, g1 = g3][0];}
+ else if (a4 != 0){
+ a4 = [a1, a1 = a4][0];
+ b4 = [b1, b1 = b4][0];
+ c4 = [c1, c1 = c4][0];
+ d4 = [d1, d1 = d4][0];
+ e4 = [e1, e1 = e4][0];
+ f4 = [f1, f1 = f4][0];
+ g4 = [g1, g1 = g4][0];}
+ else if (a5 != 0){
+ a5 = [a1, a1 = a5][0];
+ b5 = [b1, b1 = b5][0];
+ c5 = [c1, c1 = c5][0];
+ d5 = [d1, d1 = d5][0];
+ e5 = [e1, e1 = e5][0];
+ f5 = [f1, f1 = f5][0];
+ g5 = [g1, g1 = g5][0];}
+ else{
+ a6 = [a1, a1 = a6][0];
+ b6 = [b1, b1 = b6][0];
+ c6 = [c1, c1 = c6][0];
+ d6 = [d1, d1 = d6][0];
+ e6 = [e1, e1 = e6][0];
+ f6 = [f1, f1 = f6][0];
+ g6 = [g1, g1 = g6][0];}
+
+	}
+
+
+
 var A1 = b2-(a2*b1/a1);
 var B1 = c2-(a2*c1/a1);
 var C1 = d2-(a2*d1/a1);
@@ -1316,7 +1362,7 @@ var x3 = arr1[1];
 var x4 = arr1[2];
 var x5 = arr1[3];
 var x6 = arr1[4];
-var x1 = (f1/a1)-(b1*x2/a1)-(c1*x3/a1)-(d1*x4/a1)-(e1*x5/a1)-(g1*x6/a1);
+var x1 = (g1/a1)-(b1*x2/a1)-(c1*x3/a1)-(d1*x4/a1)-(e1*x5/a1)-(f1*x6/a1);
 arr2.push(x1);
 arr2.push(x2);
 arr2.push(x3);
@@ -1600,7 +1646,14 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.d6.value = Math.floor((Math.random() * 30) + 1);
    elt.e6.value = Math.floor((Math.random() * 30) + 1);
    elt.f6.value = Math.floor((Math.random() * 30) + 1);
-   elt.g6.value = Math.floor((Math.random() * 30) + 1);   
+   elt.g6.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a1.value = 0;
+//   elt.a2.value = 0; 
+//   elt.a3.value = 0; 
+//   elt.a4.value = 0; 
+//   elt.a5.value = 0; 
+//   elt.a6.value = 0;    
    
    var a1 = parseFloat (elt.a1.value);
    var b1 = parseFloat (elt.b1.value);
@@ -1659,7 +1712,7 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.x4.value = sols[3];
    elt.x5.value = sols[4];
    elt.x6.value = sols[5];
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5])-g1)<0.5){alert();
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5])-g1)<0.5){
    if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5])-g2)<0.5){
    if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5])-g3)<0.5){
    if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5])-g4)<0.5){
