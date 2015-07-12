@@ -1078,8 +1078,66 @@ document.getElementById("addForm").delVars.onclick = delVars;
    return;}
 
   }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
+
+function sone(a1, b1){
+ arr2 = new Array();
+ arr2.push(b1/a1);
+ return arr2; 
+}
+
+function stwo(a1, b1, c1, a2, b2, c2){
+
+
+if (a1 == 0){
+ a2 = [a1, a1 = a2][0];
+ b2 = [b1, b1 = b2][0];
+ c2 = [c1, c1 = c2][0];
+	}
+var A1 = b2-(a2*b1/a1);
+var B1 = c2-(a2*c1/a1);
+arr1 = sone(A1, B1);
+arr2 = new Array();
+var x2 = arr1[0];
+var x1 = (c1/a1)-(b1*x2/a1)
+arr2.push(x1);
+arr2.push(x2);
+return arr2;
+}
+
+function sthree(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3){
+
+if (a1 == 0){
+ if (a2 != 0){
+ a2 = [a1, a1 = a2][0];
+ b2 = [b1, b1 = b2][0];
+ c2 = [c1, c1 = c2][0];
+ d2 = [d1, d1 = d2][0];}
+ else{
+ a3 = [a1, a1 = a3][0];
+ b3 = [b1, b1 = b3][0];
+ c3 = [c1, c1 = c3][0];
+ d3 = [d1, d1 = d3][0];}
+	}
+
+
+var A1 = b2-(a2*b1/a1);
+var B1 = c2-(a2*c1/a1);
+var C1 = d2-(a2*d1/a1);
+var A2 = b3-(a3*b1/a1);
+var B2 = c3-(a3*c1/a1);
+var C2 = d3-(a3*d1/a1);	
+arr1 = stwo(A1, B1, C1, A2, B2, C2);
+arr2 = new Array();
+var x2 = arr1[0];
+var x3 = arr1[1];
+var x1 = (d1/a1)-(b1*x2/a1)-(c1*x3/a1);
+arr2.push(x1);
+arr2.push(x2);
+arr2.push(x3);
+return arr2;
+}
+  
   
 document.getElementById("addForm").addBtn.onclick = main;
   function main()
@@ -1088,15 +1146,82 @@ document.getElementById("addForm").addBtn.onclick = main;
   
    var elt = document.getElementById("addForm");      
    if (document.getElementById("a2").style.display == 'none'){
-    alert(1);	   
+//   elt.a1.value = Math.floor((Math.random() * 10) + 1);
+//   elt.b1.value = Math.floor((Math.random() * 10) + 1);   
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value); 
+    sols = sone(a1, b1);
+    elt.x1.value = sols[0];
+    var x1 = sols[0];
+//    if (Math.abs((a1*x1)-b1)<0.1){
+//	alert("worked");}   
+    return;
+
    }
   
-   //  var a1 = parseFloat (elt.a1.value);
+   if (document.getElementById("a3").style.display == 'none'){
+   elt.a1.value = Math.floor((Math.random() * 30) + 1);
+   elt.b1.value = Math.floor((Math.random() * 30) + 1);
+   elt.c1.value = Math.floor((Math.random() * 30) + 1);
+   elt.a2.value = Math.floor((Math.random() * 30) + 1);
+   elt.b2.value = Math.floor((Math.random() * 30) + 1);
+   elt.c2.value = Math.floor((Math.random() * 30) + 1);
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value);
+   var c1 = parseFloat (elt.c1.value);
+   var a2 = parseFloat (elt.a2.value);
+   var b2 = parseFloat (elt.b2.value);
+   var c2 = parseFloat (elt.c2.value);
+   sols = stwo(a1, b1, c1, a2, b2, c2);
+   elt.x1.value = sols[0];
+   elt.x2.value = sols[1];
+   if (Math.abs((a1*sols[0]+b1*sols[1])-c1)<0.00001){
+   if (Math.abs((a2*sols[0]+b2*sols[1])-c2)<0.00001){	   
+	   alert("worked");}}
+  
+   }
+
+  if (document.getElementById("a4").style.display == 'none'){
+   elt.a1.value = Math.floor((Math.random() * 30) + 1);
+   elt.b1.value = Math.floor((Math.random() * 30) + 1);
+   elt.c1.value = Math.floor((Math.random() * 30) + 1);
+   elt.d1.value = Math.floor((Math.random() * 30) + 1);
+   elt.a2.value = Math.floor((Math.random() * 30) + 1);
+   elt.b2.value = Math.floor((Math.random() * 30) + 1);
+   elt.c2.value = Math.floor((Math.random() * 30) + 1);
+   elt.d2.value = Math.floor((Math.random() * 30) + 1);
+   elt.a3.value = Math.floor((Math.random() * 30) + 1);
+   elt.b3.value = Math.floor((Math.random() * 30) + 1);
+   elt.c3.value = Math.floor((Math.random() * 30) + 1);
+   elt.d3.value = Math.floor((Math.random() * 30) + 1);
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value);
+   var c1 = parseFloat (elt.c1.value);
+   var d1 = parseFloat (elt.d1.value);
+   var a2 = parseFloat (elt.a2.value);
+   var b2 = parseFloat (elt.b2.value);
+   var c2 = parseFloat (elt.c2.value);
+   var d2 = parseFloat (elt.d2.value);
+   var a3 = parseFloat (elt.a3.value);
+   var b3 = parseFloat (elt.b3.value);
+   var c3 = parseFloat (elt.c3.value);
+   var d3 = parseFloat (elt.d3.value);
+   sols = sthree(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3);
+   
+   elt.x1.value = sols[0];
+   elt.x2.value = sols[1];
+   elt.x3.value = sols[2];
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2])-d1)<0.1){
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2])-d2)<0.1){
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2])-d3)<0.1){
+	   alert("worked");}}}
+  
+   }
+
+
   
   }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+ 
 </script>
 
 
