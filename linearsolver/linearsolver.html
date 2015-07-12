@@ -679,9 +679,7 @@ for (var i = 2; i <= 10; i++){
    document.getElementById(temp).style.display = '';
    return;}
   }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 document.getElementById("addForm").delVars.onclick = delVars;
   function delVars()
   {
@@ -1080,127 +1078,25 @@ document.getElementById("addForm").delVars.onclick = delVars;
    return;}
 
   }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  function calc(a, b, c, j, d, e, f, k, g, h, i, m)
-{
-   var z = ((m-(g*j/a))-((h-(g*b/a))*(k-(d*j/a))/(e-(d*b/a))))/((i-(g*c/a))-((h-(g*b/a))*(f-(d*c/a))/(e-(d*b/a))));
-   var y = ((k-(d*j/a))/(e-(d*b/a)))-((f-(d*c/a))*z/(e-(d*b/a)));
-   var x = (j/a)-(b*y/a)-(c*z/a);
-   var arr1 = new Array ();
-   arr1.push(x);
-   arr1.push(y);
-   arr1.push(z);
-   return arr1;}
-   function calct(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u){
-   
-	   
-   var A = g-(f*b/a);
-   var B = (h-(f*c/a));
-   var D = i-(f*d/a);
-   var E = j-(f*e/a);
-   var F = l-(k*b/a);
-   var G = m-(k*c/a);
-   var H = n-(k*d/a);
-   var I = o-(k*e/a);
-   var J = q-(p*b/a);
-   var K = r-(p*c/a);
-   var L = s-(p*d/a);
-   var M = u-(p*e/a);
-   
-   var T = calc(A, B, D, E, F, G, H, I, J, K, L, M);
-   var x = T[0];
-   var y = T[1];
-   var z = T[2];
-   var w = (e/a)-(d*z/a)-(c*y/a)-(b*x)/a;
-   
-   var arr2 = new Array ();
-   arr2.push(w);
-   arr2.push(x);
-   arr2.push(y);
-   arr2.push(z);
-   return arr2;
-    
-}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
   
-document.getElementById("addForm").addBtn.onclick = addTwo;
-  function addTwo()
+document.getElementById("addForm").addBtn.onclick = main;
+  function main()
   {
   
   
    var elt = document.getElementById("addForm");      
-   var a1 = parseFloat (elt.a1.value);
-   var b1 = parseFloat (elt.b1.value);
-   var c1 = parseFloat (elt.c1.value);
-   var d1 = parseFloat (elt.d1.value);
-   var e1 = parseFloat (elt.e1.value);
-   var f1 = parseFloat (elt.f1.value);
-   
-   var a2 = parseFloat (elt.a2.value);
-   var b2 = parseFloat (elt.b2.value);
-   var c2 = parseFloat (elt.c2.value);
-   var d2 = parseFloat (elt.d2.value);
-   var e2 = parseFloat (elt.e2.value);
-   var f2 = parseFloat (elt.f2.value);
-   var a3 = parseFloat (elt.a3.value);
-   var b3 = parseFloat (elt.b3.value);
-   var c3 = parseFloat (elt.c3.value);
-   var d3 = parseFloat (elt.d3.value);
-   var e3 = parseFloat (elt.e3.value);
-   var f3 = parseFloat (elt.f3.value);
-   var a4 = parseFloat (elt.a4.value);
-   var b4 = parseFloat (elt.b4.value);
-   var c4 = parseFloat (elt.c4.value);
-   var d4 = parseFloat (elt.d4.value);
-   var e4 = parseFloat (elt.e4.value);
-   var f4 = parseFloat (elt.f4.value);
-   var a5 = parseFloat (elt.a5.value);
-   var b5 = parseFloat (elt.b5.value);
-   var c5 = parseFloat (elt.c5.value);
-   var d5 = parseFloat (elt.d5.value);
-   var e5 = parseFloat (elt.e5.value);
-   var f5 = parseFloat (elt.f5.value);
-   
-   A2 = b2-a2*b1/a1;
-   A3 = b3-a3*b1/a1;
-   A4 = b4-a4*b1/a1;
-   A5 = b5-a5*b1/a1;
-   B2 = c2-a2*c1/a1;
-   B3 = c3-a3*c1/a1;
-   B4 = c4-a4*c1/a1;
-   B5 = c5-a5*c1/a1;
-   C2 = d2-a2*d1/a1;
-   C3 = d3-a3*d1/a1;
-   C4 = d4-a4*d1/a1;
-   C5 = d5-a5*d1/a1;
-   D2 = e2-a2*e1/a1;
-   D3 = e3-a3*e1/a1;
-   D4 = e4-a4*e1/a1;
-   D5 = e5-a5*e1/a1;
-   E2 = f2-a2*f1/a1;
-   E3 = f3-a3*f1/a1;
-   E4 = f4-a4*f1/a1;
-   E5 = f5-a5*f1/a1;
-   
-   var solus = calct(A2, B2, C2, D2, E2, A3, B3, C3, D3, E3, A4, B4, C4, D4, E4, A5, B5, C5, D5, E5);
-   
-   
-   var w = solus[0];
-   var x = solus[1];
-   var y = solus[2];
-   var z = solus[3];
-   var v = ((f1-b1*w-c1*x-d1*y-e1*z)/a1);
-   
-   elt.v0.value = v;
-   elt.w0.value = w;
-   elt.x0.value = x;
-   elt.y0.value = y;
-   elt.z0.value = z;
-   
-   
+   if (document.getElementById("a2").style.display == 'none'){
+    alert(1);	   
+   }
+  
+   //  var a1 = parseFloat (elt.a1.value);
+  
   }
-   
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 </script>
 
 
