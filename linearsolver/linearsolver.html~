@@ -1190,6 +1190,50 @@ return arr2;
 }
   
 
+function sfive(a1, b1, c1, d1, e1, f1, a2, b2, c2, d2, e2, f2, a3, b3, c3, d3, e3, f3, a4, b4, c4, d4, e4, f4, a5, b5, c5, d5, e5, f5){
+var A1 = b2-(a2*b1/a1);
+var B1 = c2-(a2*c1/a1);
+var C1 = d2-(a2*d1/a1);
+var D1 = e2-(a2*e1/a1);
+var E1 = f2-(a2*f1/a1); 
+
+var A2 = b3-(a3*b1/a1);
+var B2 = c3-(a3*c1/a1);
+var C2 = d3-(a3*d1/a1);
+var D2 = e3-(a3*e1/a1);
+var E2 = f3-(a3*f1/a1);//alert(A2+B2+C2+D2+E2);
+
+var A3 = b4-(a4*b1/a1);
+var B3 = c4-(a4*c1/a1);
+var C3 = d4-(a4*d1/a1);
+var D3 = e4-(a4*e1/a1);
+var E3 = f4-(a4*f1/a1);//alert(A3+B3+C3+D3+E3);
+
+var A4 = b5-(a5*b1/a1);
+var B4 = c5-(a5*c1/a1);
+var C4 = d5-(a5*d1/a1);
+var D4 = e5-(a5*e1/a1);
+var E4 = f5-(a5*f1/a1);alert(A4);
+alert(a4);
+
+
+arr1 = sfour(A1, B1, C1, D1, E1, A2, B2, C2, D2, E2, A3, B3, C3, D3, E3, A4, B4, C4, D4, E4);
+arr2 = new Array(); //alert(A1+B1+C1+D1+E1+A2+B2+C2+D2+E2+A3+B3+C3+D3+E3+A4+B4+C4+D4+E4);
+var x2 = arr1[0];
+var x3 = arr1[1];
+var x4 = arr1[2];
+var x5 = arr1[3];
+var x1 = (f1/a1)-(b1*x2/a1)-(c1*x3/a1)-(d1*x4/a1)-(e1*x5/a1);
+arr2.push(x1);
+arr2.push(x2);
+arr2.push(x3);
+arr2.push(x4);
+arr2.push(x5);
+return arr2;
+
+
+}
+
 
 
   
@@ -1274,13 +1318,11 @@ document.getElementById("addForm").addBtn.onclick = main;
 
  if (document.getElementById("a5").style.display == 'none'){
    elt.a1.value = Math.floor((Math.random() * 30) + 1);
-   elt.a1.value = 0;
    elt.b1.value = Math.floor((Math.random() * 30) + 1);
    elt.c1.value = Math.floor((Math.random() * 30) + 1);
    elt.d1.value = Math.floor((Math.random() * 30) + 1);
    elt.e1.value = Math.floor((Math.random() * 30) + 1);
    elt.a2.value = Math.floor((Math.random() * 30) + 1);
-   elt.a2.value = 0;
    elt.b2.value = Math.floor((Math.random() * 30) + 1);
    elt.c2.value = Math.floor((Math.random() * 30) + 1);
    elt.d2.value = Math.floor((Math.random() * 30) + 1);
@@ -1289,7 +1331,6 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.b3.value = Math.floor((Math.random() * 30) + 1);
    elt.c3.value = Math.floor((Math.random() * 30) + 1);
    elt.d3.value = Math.floor((Math.random() * 30) + 1);
-   elt.a3.value = 0;
    elt.e3.value = Math.floor((Math.random() * 30) + 1);
    elt.a4.value = Math.floor((Math.random() * 30) + 1);
    elt.b4.value = Math.floor((Math.random() * 30) + 1);
@@ -1329,6 +1370,86 @@ document.getElementById("addForm").addBtn.onclick = main;
    if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3])-e4)<0.1){	   
  
 	   alert("worked");}}}}
+  
+   }
+
+  if (document.getElementById("a6").style.display == 'none'){
+   elt.a1.value = Math.floor((Math.random() * 30) + 1);
+   elt.b1.value = Math.floor((Math.random() * 30) + 1);
+   elt.c1.value = Math.floor((Math.random() * 30) + 1);
+   elt.d1.value = Math.floor((Math.random() * 30) + 1);
+   elt.e1.value = Math.floor((Math.random() * 30) + 1);
+   elt.f1.value = Math.floor((Math.random() * 30) + 1);
+   elt.a2.value = Math.floor((Math.random() * 30) + 1);
+   elt.b2.value = Math.floor((Math.random() * 30) + 1);
+   elt.c2.value = Math.floor((Math.random() * 30) + 1);
+   elt.d2.value = Math.floor((Math.random() * 30) + 1);
+   elt.e2.value = Math.floor((Math.random() * 30) + 1);
+   elt.f2.value = Math.floor((Math.random() * 30) + 1);
+   elt.a3.value = Math.floor((Math.random() * 30) + 1);
+   elt.b3.value = Math.floor((Math.random() * 30) + 1);
+   elt.c3.value = Math.floor((Math.random() * 30) + 1);
+   elt.d3.value = Math.floor((Math.random() * 30) + 1);
+   elt.e3.value = Math.floor((Math.random() * 30) + 1);
+   elt.f3.value = Math.floor((Math.random() * 30) + 1);
+   elt.a4.value = Math.floor((Math.random() * 30) + 1);
+   elt.b4.value = Math.floor((Math.random() * 30) + 1);
+   elt.c4.value = Math.floor((Math.random() * 30) + 1);
+   elt.d4.value = Math.floor((Math.random() * 30) + 1);
+   elt.e4.value = Math.floor((Math.random() * 30) + 1);
+   elt.f4.value = Math.floor((Math.random() * 30) + 1);   
+   elt.a5.value = Math.floor((Math.random() * 30) + 1);
+   elt.b5.value = Math.floor((Math.random() * 30) + 1);
+   elt.c5.value = Math.floor((Math.random() * 30) + 1);
+   elt.d5.value = Math.floor((Math.random() * 30) + 1);
+   elt.e5.value = Math.floor((Math.random() * 30) + 1);
+   elt.f5.value = Math.floor((Math.random() * 30) + 1);
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value);
+   var c1 = parseFloat (elt.c1.value);
+   var d1 = parseFloat (elt.d1.value);
+   var e1 = parseFloat (elt.e1.value);
+   var f1 = parseFloat (elt.f1.value); 
+   var a2 = parseFloat (elt.a2.value);
+   var b2 = parseFloat (elt.b2.value);
+   var c2 = parseFloat (elt.c2.value);
+   var d2 = parseFloat (elt.d2.value);
+   var e2 = parseFloat (elt.e2.value);
+   var f2 = parseFloat (elt.f2.value); 
+   var a3 = parseFloat (elt.a3.value);
+   var b3 = parseFloat (elt.b3.value);
+   var c3 = parseFloat (elt.c3.value);
+   var d3 = parseFloat (elt.d3.value);
+   var e3 = parseFloat (elt.e3.value);
+   var f3 = parseFloat (elt.f3.value); 
+   var a4 = parseFloat (elt.a4.value);
+   var b4 = parseFloat (elt.b4.value);
+   var c4 = parseFloat (elt.c4.value);
+   var d4 = parseFloat (elt.d4.value);
+   var e4 = parseFloat (elt.e4.value);
+   var f4 = parseFloat (elt.f4.value); 
+   var a5 = parseFloat (elt.a5.value);
+   var b5 = parseFloat (elt.b5.value);
+   var c5 = parseFloat (elt.c5.value);
+   var d5 = parseFloat (elt.d5.value);
+   var e5 = parseFloat (elt.e5.value);
+   var f5 = parseFloat (elt.f5.value);
+ 
+   sols = sfive(a1, b1, c1, d1, e1, f1, a2, b2, c2, d2, e2, f2, a3, b3, c3, d3, e3, f3, a4, b4, c4, d4, e4, f4, a5, b5, c5, d5, e5, f5);
+   
+   elt.x1.value = sols[0];
+   elt.x2.value = sols[1];
+   elt.x3.value = sols[2];
+   elt.x4.value = sols[3];
+   elt.x5.value = sols[4];
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4])-f1)<0.1){
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4])-f2)<0.1){
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4])-f3)<0.1){
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4])-f4)<0.1){
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4])-f5)<0.1){	   
+   
+ 
+	   alert("worked");}}}}}
   
    }
 
