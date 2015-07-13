@@ -3,16 +3,17 @@
 <title> Linear Solver </title>
 </head>
 <body>
-<h3> Linear Solver </h3>
-Let x<sub>1</sub>, ... , x<sub>10</sub> be variables. Also, for 1 &le; r &le; 10 and  r &isin; &Zeta;, let a<sub>r</sub>, b<sub>r</sub>, c<sub>r</sub>, d<sub>r</sub>, e<sub>r</sub>, f<sub>r</sub>, g<sub>r</sub>, h<sub>r</sub>, i<sub>r</sub>, j<sub>r</sub>, and k<sub>r</sub> be constants.<br>
+<h1 style = "position:absolute;left: 250px;"> Linear Solver </h1><br><br><br><br>
+Let x<sub>1</sub>, ... , x<sub>10</sub> be variables. Let 1 &le; r &le; 10 and  r &isin; &Zeta;, let a<sub>r</sub>, b<sub>r</sub>, c<sub>r</sub>, d<sub>r</sub>, e<sub>r</sub>, f<sub>r</sub>, g<sub>r</sub>, h<sub>r</sub>, i<sub>r</sub>, j<sub>r</sub>, and k<sub>r</sub> be constants.<br>
+<h2 style = "position:absolute; left: 965px; top:16px;"> Example </h2>
 
-<h2 style = "position:absolute; left: 965px;"> Solutions </h2>
-This calculator will compute the point of intersection for up to 10 equations and 10 unknowns (if one exists). For example, <br> one equation one unknown would be:
-a<sub>1</sub>x<sub>1</sub> = b<sub>1</sub> or two equations two unknowns would be: 
-a<sub>1</sub>x<sub>1</sub> + b<sub>1</sub>x<sub>2</sub> = c<sub>1</sub> and 
-	a<sub>2</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> = c<sub>2</sub><br>
-	where x<sub>1</sub>,...,x<sub>10</sub> are calculated to satisfy the intersection of all equations.<br>
-	The n<sub>th</sub> column represents the coefficient for the variable x<sub>n</sub> (except the right-most column).	Please enter the coefficients below:<br><br>
+<p style = "position:absolute; left: 936px; top:81px;"> a<sub>1</sub>x<sub>1</sub> + b<sub>1</sub>x<sub>2</sub> + c<sub>1</sub>x<sub>3</sub> = d<sub>1</sub> </p>
+<p style = "position:absolute; left: 936px; top:101px;"> a<sub>2</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + c<sub>2</sub>x<sub>3</sub> = d<sub>2</sub> </p>
+<p style = "position:absolute; left: 936px; top:121px;"> a<sub>3</sub>x<sub>1</sub> + b<sub>3</sub>x<sub>2</sub> + c<sub>3</sub>x<sub>3</sub> = d<sub>3</sub> </p>
+
+<h2 style = "position:absolute; left: 965px; top:180px;"> Solutions </h2>
+This calculator will compute the point of intersection (if one exists) for up to 10 equations and 10 unknowns. <br>
+The n<sub>th</sub> column represents the coefficient for the variable x<sub>n</sub> (except the right-most column).	Click "Add Dimension"<br>until you get to the number of equations you want. After that, enter the coefficients below and click "Solve."<br><br><br><br><br>
 
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
@@ -175,21 +176,21 @@ a<sub>1</sub>x<sub>1</sub> + b<sub>1</sub>x<sub>2</sub> = c<sub>1</sub> and
   </td><td style = "position:absolute; left: 144px;"> Press "Solve" to the left to compute the answer. The answer will then be displayed in the boxes to the right. </td>
   </tr><tr><td>&nbsp;</td>
 
-  <td> <input style = "position:absolute; left:200px; top: 20px;" type = "button" name = "addVars" value = "Add Vars" /> </td>
-  <td> <input style = "position:absolute; left:300px; top: 20px;" type = "button" name = "delVars" value = "Del Vars" /> </td>
+  <td> <input style = "position:absolute; left:220px; top: 204px;" type = "button" name = "addVars" value = "Add Dimension" /> </td>
+  <td> <input style = "position:absolute; left:360px; top: 204px;" type = "button" name = "delVars" value = "Subtract Dimension" /> </td>
 
   </tr>
   <tr>
-<td id = "x1," style = "position:absolute;top:187px; left:960px;">x<sub>1</sub>:</td> <td> <input style = "position:absolute; top:187px; left: 980px;" type = "text" name = "x1" value = "" size = "7" id = "x1"/> </td>
-<td id = "x2,"  style = "position:absolute;top:214px; left:960px;">x<sub>2</sub>:</td> <td> <input style = "position:absolute; top:214px; left: 980px;" type = "text" name = "x2" value = "" size = "7" id = "x2" /> </td>
-<td id = "x3,"  style = "position:absolute;top:241px; left:960px;">x<sub>3</sub>:</td> <td> <input style = "position:absolute; top:241px; left: 980px;" type = "text" name = "x3" value = "" size = "7" id = "x3" /> </td>
-<td id = "x4,"  style = "position:absolute;top:268px; left:960px;">x<sub>4</sub>:</td> <td> <input style = "position:absolute; top:268px; left: 980px;" type = "text" name = "x4" value = "" size = "7" id = "x4" /> </td>
-<td id = "x5,"  style = "position:absolute;top:295px; left:960px;">x<sub>5</sub>:</td> <td> <input style = "position:absolute; top:295px; left: 980px;" type = "text" name = "x5" value = "" size = "7" id = "x5" /> </td>
-<td id = "x6,"  style = "position:absolute;top:322px; left:960px;">x<sub>6</sub>:</td> <td> <input style = "position:absolute; top:322px; left: 980px;" type = "text" name = "x6" value = "" size = "7" id = "x6" /> </td>
-<td id = "x7,"  style = "position:absolute;top:349px; left:960px;">x<sub>7</sub>:</td> <td> <input style = "position:absolute; top:349px; left: 980px;" type = "text" name = "x7" value = "" size = "7" id = "x7" /> </td>
-<td id = "x8,"  style = "position:absolute;top:376px; left:960px;">x<sub>8</sub>:</td> <td> <input style = "position:absolute; top:376px; left: 980px;" type = "text" name = "x8" value = "" size = "7" id = "x8" /> </td>
-<td id = "x9,"  style = "position:absolute;top:403px; left:960px;">x<sub>9</sub>:</td> <td> <input style = "position:absolute; top:403px; left: 980px;" type = "text" name = "x9" value = "" size = "7" id = "x9" /> </td>
-<td id = "x10,"  style = "position:absolute;top:430px; left:960px;">x<sub>10</sub>:</td> <td> <input style = "position:absolute; top:430px; left: 980px;" type = "text" name = "x10" value = "" size = "7" id = "x10" /> </td>
+<td id = "x1," style = "position:absolute;top:259px; left:960px;">x<sub>1</sub>:</td> <td> <input style = "position:absolute; top:259px; left: 980px;" type = "text" name = "x1" value = "" size = "7" id = "x1"/> </td>
+<td id = "x2,"  style = "position:absolute;top:286px; left:960px;">x<sub>2</sub>:</td> <td> <input style = "position:absolute; top:286px; left: 980px;" type = "text" name = "x2" value = "" size = "7" id = "x2" /> </td>
+<td id = "x3,"  style = "position:absolute;top:313px; left:960px;">x<sub>3</sub>:</td> <td> <input style = "position:absolute; top:313px; left: 980px;" type = "text" name = "x3" value = "" size = "7" id = "x3" /> </td>
+<td id = "x4,"  style = "position:absolute;top:340px; left:960px;">x<sub>4</sub>:</td> <td> <input style = "position:absolute; top:340px; left: 980px;" type = "text" name = "x4" value = "" size = "7" id = "x4" /> </td>
+<td id = "x5,"  style = "position:absolute;top:367px; left:960px;">x<sub>5</sub>:</td> <td> <input style = "position:absolute; top:367px; left: 980px;" type = "text" name = "x5" value = "" size = "7" id = "x5" /> </td>
+<td id = "x6,"  style = "position:absolute;top:394px; left:960px;">x<sub>6</sub>:</td> <td> <input style = "position:absolute; top:394px; left: 980px;" type = "text" name = "x6" value = "" size = "7" id = "x6" /> </td>
+<td id = "x7,"  style = "position:absolute;top:421px; left:960px;">x<sub>7</sub>:</td> <td> <input style = "position:absolute; top:421px; left: 980px;" type = "text" name = "x7" value = "" size = "7" id = "x7" /> </td>
+<td id = "x8,"  style = "position:absolute;top:448px; left:960px;">x<sub>8</sub>:</td> <td> <input style = "position:absolute; top:448px; left: 980px;" type = "text" name = "x8" value = "" size = "7" id = "x8" /> </td>
+<td id = "x9,"  style = "position:absolute;top:475px; left:960px;">x<sub>9</sub>:</td> <td> <input style = "position:absolute; top:475px; left: 980px;" type = "text" name = "x9" value = "" size = "7" id = "x9" /> </td>
+<td id = "x10,"  style = "position:absolute;top:502px; left:960px;">x<sub>10</sub>:</td> <td> <input style = "position:absolute; top:502px; left: 980px;" type = "text" name = "x10" value = "" size = "7" id = "x10" /> </td>
 </tr>
   
 
@@ -2053,15 +2054,15 @@ document.getElementById("addForm").addBtn.onclick = main;
   
    var elt = document.getElementById("addForm");      
    if (document.getElementById("a2").style.display == 'none'){
-//   elt.a1.value = Math.floor((Math.random() * 10) + 1);
-//   elt.b1.value = Math.floor((Math.random() * 10) + 1);   
+   elt.a1.value = Math.floor((Math.random() * 30) + 1);
+   elt.b1.value = Math.floor((Math.random() * 30) + 1);   
    var a1 = parseFloat (elt.a1.value);
    var b1 = parseFloat (elt.b1.value); 
     sols = sone(a1, b1);
     elt.x1.value = sols[0];
     var x1 = sols[0];
-//    if (Math.abs((a1*x1)-b1)<0.1){
-//	alert("worked");}   
+    if (Math.abs((a1*x1)-b1)<0.1){
+	alert("worked");}   
     return;
    }
   
@@ -2081,8 +2082,8 @@ document.getElementById("addForm").addBtn.onclick = main;
    sols = stwo(a1, b1, c1, a2, b2, c2);
    elt.x1.value = sols[0];
    elt.x2.value = sols[1];
-   if (Math.abs((a1*sols[0]+b1*sols[1])-c1)<0.00001){
-   if (Math.abs((a2*sols[0]+b2*sols[1])-c2)<0.00001){	   
+   if (Math.abs((a1*sols[0]+b1*sols[1])-c1)<0.1){
+   if (Math.abs((a2*sols[0]+b2*sols[1])-c2)<0.1){	   
 	   alert("worked");}}
    return;
    }
@@ -2356,13 +2357,13 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.x4.value = sols[3];
    elt.x5.value = sols[4];
    elt.x6.value = sols[5]; 
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5])-g1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5])-g1)<0.1){
 	 
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5])-g2)<0.5){
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5])-g3)<0.5){
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5])-g4)<0.5){
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5])-g5)<0.5){
-   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5])-g6)<0.5){	   
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5])-g2)<0.1){
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5])-g3)<0.1){
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5])-g4)<0.1){
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5])-g5)<0.1){
+   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5])-g6)<0.1){	   
 	   
    
  
@@ -2687,14 +2688,14 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.x7.value = sols[6];
    elt.x8.value = sols[7];
    
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7])-i1)<0.5){ 
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7])-i2)<0.5){ 
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7])-i3)<0.5){ 
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7])-i4)<0.5){ 
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7])-i5)<0.5){ 
-   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7])-i6)<0.5){ 
-   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7])-i7)<0.5){ 
-   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7])-i8)<0.5){ 	    
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7])-i1)<0.1){ 
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7])-i2)<0.1){ 
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7])-i3)<0.1){ 
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7])-i4)<0.1){ 
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7])-i5)<0.1){ 
+   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7])-i6)<0.1){ 
+   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7])-i7)<0.1){ 
+   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7])-i8)<0.1){ 	    
  	   
 	   
 	   
@@ -2921,15 +2922,15 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.x8.value = sols[7];
    elt.x9.value = sols[8];
    
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8])-j1)<0.5){
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8])-j2)<0.5){ 
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8])-j3)<0.5){
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8])-j4)<0.5){ 
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8])-j5)<0.5){
-   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8])-j6)<0.5){ 
-   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8])-j7)<0.5){ 
-   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8])-j8)<0.5){ 
-   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8])-j9)<0.5){ 	   
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8])-j1)<0.1){
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8])-j2)<0.1){ 
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8])-j3)<0.1){
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8])-j4)<0.1){ 
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8])-j5)<0.1){
+   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8])-j6)<0.1){ 
+   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8])-j7)<0.1){ 
+   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8])-j8)<0.1){ 
+   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8])-j9)<0.1){ 	   
  	    
  	   
 	   
@@ -3200,16 +3201,16 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.x9.value = sols[8];
    elt.x10.value = sols[9]; 
    
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8]+j2*sols[9])-k2)<0.5){
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8]+j3*sols[9])-k3)<0.5){
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8]+j4*sols[9])-k4)<0.5){
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8]+j5*sols[9])-k5)<0.5){
-   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8]+j6*sols[9])-k6)<0.5){
-   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8]+j7*sols[9])-k7)<0.5){
-   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8]+j8*sols[9])-k8)<0.5){
-   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8]+j9*sols[9])-k9)<0.5){
-   if (Math.abs((a10*sols[0]+b10*sols[1]+c10*sols[2]+d10*sols[3]+e10*sols[4]+f10*sols[5]+g10*sols[6]+h10*sols[7]+i10*sols[8]+j10*sols[9])-k10)<0.5){	   
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.1){
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8]+j2*sols[9])-k2)<0.1){
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8]+j3*sols[9])-k3)<0.1){
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8]+j4*sols[9])-k4)<0.1){
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8]+j5*sols[9])-k5)<0.1){
+   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8]+j6*sols[9])-k6)<0.1){
+   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8]+j7*sols[9])-k7)<0.1){
+   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8]+j8*sols[9])-k8)<0.1){
+   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8]+j9*sols[9])-k9)<0.1){
+   if (Math.abs((a10*sols[0]+b10*sols[1]+c10*sols[2]+d10*sols[3]+e10*sols[4]+f10*sols[5]+g10*sols[6]+h10*sols[7]+i10*sols[8]+j10*sols[9])-k10)<0.1){	   
  	   
  	    
  	   
