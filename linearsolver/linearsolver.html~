@@ -1799,6 +1799,11 @@ return arr2;
 }
 
 
+function sten(a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1){
+	alert();
+}
+
+
 
 document.getElementById("addForm").addBtn.onclick = main;
   function main()
@@ -2559,15 +2564,7 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.i9.value = Math.floor((Math.random() * 30) + 1);
    elt.j9.value = Math.floor((Math.random() * 30) + 1);    
    
-   elt.a1.value = 0;
-   elt.a2.value = 0;
-   elt.a3.value = 0;
-   elt.a4.value = 0;
-   elt.a5.value = 0;
-   elt.a6.value = 0;
-   elt.a7.value = 0;
- //  elt.a8.value = 0;
-   elt.a9.value = 0;
+
 
 
    var a1 = parseFloat (elt.a1.value);
@@ -2699,6 +2696,288 @@ if (document.getElementById("a8").style.display == 'none'){
    
  
 	   alert("worked");}}}}}}}}}
+   return;
+   }
+
+
+
+     if (document.getElementById("a10").style.display == ''){
+   elt.a1.value = Math.floor((Math.random() * 30) + 1);
+   elt.b1.value = Math.floor((Math.random() * 30) + 1);
+   elt.c1.value = Math.floor((Math.random() * 30) + 1);
+   elt.d1.value = Math.floor((Math.random() * 30) + 1);
+   elt.e1.value = Math.floor((Math.random() * 30) + 1);
+   elt.f1.value = Math.floor((Math.random() * 30) + 1);
+   elt.g1.value = Math.floor((Math.random() * 30) + 1);
+   elt.h1.value = Math.floor((Math.random() * 30) + 1);
+   elt.i1.value = Math.floor((Math.random() * 30) + 1);
+   elt.j1.value = Math.floor((Math.random() * 30) + 1);
+   elt.k1.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a2.value = Math.floor((Math.random() * 30) + 1);
+   elt.b2.value = Math.floor((Math.random() * 30) + 1);
+   elt.c2.value = Math.floor((Math.random() * 30) + 1);
+   elt.d2.value = Math.floor((Math.random() * 30) + 1);
+   elt.e2.value = Math.floor((Math.random() * 30) + 1);
+   elt.f2.value = Math.floor((Math.random() * 30) + 1);
+   elt.g2.value = Math.floor((Math.random() * 30) + 1);
+   elt.h2.value = Math.floor((Math.random() * 30) + 1);
+   elt.i2.value = Math.floor((Math.random() * 30) + 1);
+   elt.j2.value = Math.floor((Math.random() * 30) + 1);
+   elt.k2.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a3.value = Math.floor((Math.random() * 30) + 1);
+   elt.b3.value = Math.floor((Math.random() * 30) + 1);
+   elt.c3.value = Math.floor((Math.random() * 30) + 1);
+   elt.d3.value = Math.floor((Math.random() * 30) + 1);
+   elt.e3.value = Math.floor((Math.random() * 30) + 1);
+   elt.f3.value = Math.floor((Math.random() * 30) + 1);
+   elt.g3.value = Math.floor((Math.random() * 30) + 1);
+   elt.h3.value = Math.floor((Math.random() * 30) + 1);
+   elt.i3.value = Math.floor((Math.random() * 30) + 1);
+   elt.j3.value = Math.floor((Math.random() * 30) + 1);
+   elt.k3.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a4.value = Math.floor((Math.random() * 30) + 1);
+   elt.b4.value = Math.floor((Math.random() * 30) + 1);
+   elt.c4.value = Math.floor((Math.random() * 30) + 1);
+   elt.d4.value = Math.floor((Math.random() * 30) + 1);
+   elt.e4.value = Math.floor((Math.random() * 30) + 1);
+   elt.f4.value = Math.floor((Math.random() * 30) + 1);
+   elt.g4.value = Math.floor((Math.random() * 30) + 1);
+   elt.h4.value = Math.floor((Math.random() * 30) + 1); 
+   elt.i4.value = Math.floor((Math.random() * 30) + 1);
+   elt.j4.value = Math.floor((Math.random() * 30) + 1);
+   elt.k4.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a5.value = Math.floor((Math.random() * 30) + 1);
+   elt.b5.value = Math.floor((Math.random() * 30) + 1);
+   elt.c5.value = Math.floor((Math.random() * 30) + 1);
+   elt.d5.value = Math.floor((Math.random() * 30) + 1);
+   elt.e5.value = Math.floor((Math.random() * 30) + 1);
+   elt.f5.value = Math.floor((Math.random() * 30) + 1);
+   elt.g5.value = Math.floor((Math.random() * 30) + 1);
+   elt.h5.value = Math.floor((Math.random() * 30) + 1);
+   elt.i5.value = Math.floor((Math.random() * 30) + 1);
+   elt.j5.value = Math.floor((Math.random() * 30) + 1);
+   elt.k5.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a6.value = Math.floor((Math.random() * 30) + 1);
+   elt.b6.value = Math.floor((Math.random() * 30) + 1);
+   elt.c6.value = Math.floor((Math.random() * 30) + 1);
+   elt.d6.value = Math.floor((Math.random() * 30) + 1);
+   elt.e6.value = Math.floor((Math.random() * 30) + 1);
+   elt.f6.value = Math.floor((Math.random() * 30) + 1);
+   elt.g6.value = Math.floor((Math.random() * 30) + 1);
+   elt.h6.value = Math.floor((Math.random() * 30) + 1);
+   elt.i6.value = Math.floor((Math.random() * 30) + 1);
+   elt.j6.value = Math.floor((Math.random() * 30) + 1);
+   elt.k6.value = Math.floor((Math.random() * 30) + 1);
+
+   elt.a7.value = Math.floor((Math.random() * 30) + 1);
+   elt.b7.value = Math.floor((Math.random() * 30) + 1);
+   elt.c7.value = Math.floor((Math.random() * 30) + 1);
+   elt.d7.value = Math.floor((Math.random() * 30) + 1);
+   elt.e7.value = Math.floor((Math.random() * 30) + 1);
+   elt.f7.value = Math.floor((Math.random() * 30) + 1);
+   elt.g7.value = Math.floor((Math.random() * 30) + 1);
+   elt.h7.value = Math.floor((Math.random() * 30) + 1); 
+   elt.i7.value = Math.floor((Math.random() * 30) + 1);  
+   elt.j7.value = Math.floor((Math.random() * 30) + 1);
+   elt.k7.value = Math.floor((Math.random() * 30) + 1);
+   
+   elt.a8.value = Math.floor((Math.random() * 30) + 1);
+   elt.b8.value = Math.floor((Math.random() * 30) + 1);
+   elt.c8.value = Math.floor((Math.random() * 30) + 1);
+   elt.d8.value = Math.floor((Math.random() * 30) + 1);
+   elt.e8.value = Math.floor((Math.random() * 30) + 1);
+   elt.f8.value = Math.floor((Math.random() * 30) + 1);
+   elt.g8.value = Math.floor((Math.random() * 30) + 1);
+   elt.h8.value = Math.floor((Math.random() * 30) + 1); 
+   elt.i8.value = Math.floor((Math.random() * 30) + 1);
+   elt.j8.value = Math.floor((Math.random() * 30) + 1);  
+   elt.k8.value = Math.floor((Math.random() * 30) + 1); 
+
+   elt.a9.value = Math.floor((Math.random() * 30) + 1);
+   elt.b9.value = Math.floor((Math.random() * 30) + 1);
+   elt.c9.value = Math.floor((Math.random() * 30) + 1);
+   elt.d9.value = Math.floor((Math.random() * 30) + 1);
+   elt.e9.value = Math.floor((Math.random() * 30) + 1);
+   elt.f9.value = Math.floor((Math.random() * 30) + 1);
+   elt.g9.value = Math.floor((Math.random() * 30) + 1);
+   elt.h9.value = Math.floor((Math.random() * 30) + 1); 
+   elt.i9.value = Math.floor((Math.random() * 30) + 1);
+   elt.j9.value = Math.floor((Math.random() * 30) + 1);   
+   elt.k9.value = Math.floor((Math.random() * 30) + 1); 
+
+   elt.a10.value = Math.floor((Math.random() * 30) + 1);
+   elt.b10.value = Math.floor((Math.random() * 30) + 1);
+   elt.c10.value = Math.floor((Math.random() * 30) + 1);
+   elt.d10.value = Math.floor((Math.random() * 30) + 1);
+   elt.e10.value = Math.floor((Math.random() * 30) + 1);
+   elt.f10.value = Math.floor((Math.random() * 30) + 1);
+   elt.g10.value = Math.floor((Math.random() * 30) + 1);
+   elt.h10.value = Math.floor((Math.random() * 30) + 1);
+   elt.i10.value = Math.floor((Math.random() * 30) + 1);
+   elt.j10.value = Math.floor((Math.random() * 30) + 1);
+   elt.k10.value = Math.floor((Math.random() * 30) + 1);   
+   
+
+
+
+   var a1 = parseFloat (elt.a1.value);
+   var b1 = parseFloat (elt.b1.value);
+   var c1 = parseFloat (elt.c1.value);
+   var d1 = parseFloat (elt.d1.value);
+   var e1 = parseFloat (elt.e1.value);
+   var f1 = parseFloat (elt.f1.value); 
+   var g1 = parseFloat (elt.g1.value);
+   var h1 = parseFloat (elt.h1.value);
+   var i1 = parseFloat (elt.i1.value);
+   var j1 = parseFloat (elt.j1.value);
+   var k1 = parseFloat (elt.k1.value);
+
+   var a2 = parseFloat (elt.a2.value);
+   var b2 = parseFloat (elt.b2.value);
+   var c2 = parseFloat (elt.c2.value);
+   var d2 = parseFloat (elt.d2.value);
+   var e2 = parseFloat (elt.e2.value);
+   var f2 = parseFloat (elt.f2.value); 
+   var g2 = parseFloat (elt.g2.value);
+   var h2 = parseFloat (elt.h2.value);
+   var i2 = parseFloat (elt.i2.value);
+   var j2 = parseFloat (elt.j2.value);
+   var k2 = parseFloat (elt.k2.value);
+
+   var a3 = parseFloat (elt.a3.value);
+   var b3 = parseFloat (elt.b3.value);
+   var c3 = parseFloat (elt.c3.value);
+   var d3 = parseFloat (elt.d3.value);
+   var e3 = parseFloat (elt.e3.value);
+   var f3 = parseFloat (elt.f3.value); 
+   var g3 = parseFloat (elt.g3.value);
+   var h3 = parseFloat (elt.h3.value);
+   var i3 = parseFloat (elt.i3.value);
+   var j3 = parseFloat (elt.j3.value);
+   var k3 = parseFloat (elt.k3.value);
+
+   var a4 = parseFloat (elt.a4.value);
+   var b4 = parseFloat (elt.b4.value);
+   var c4 = parseFloat (elt.c4.value);
+   var d4 = parseFloat (elt.d4.value);
+   var e4 = parseFloat (elt.e4.value);
+   var f4 = parseFloat (elt.f4.value); 
+   var g4 = parseFloat (elt.g4.value);
+   var h4 = parseFloat (elt.h4.value);
+   var i4 = parseFloat (elt.i4.value);
+   var j4 = parseFloat (elt.j4.value);
+   var k4 = parseFloat (elt.k4.value);
+
+   var a5 = parseFloat (elt.a5.value);
+   var b5 = parseFloat (elt.b5.value);
+   var c5 = parseFloat (elt.c5.value);
+   var d5 = parseFloat (elt.d5.value);
+   var e5 = parseFloat (elt.e5.value);
+   var f5 = parseFloat (elt.f5.value); 
+   var g5 = parseFloat (elt.g5.value);
+   var h5 = parseFloat (elt.h5.value);
+   var i5 = parseFloat (elt.i5.value);
+   var j5 = parseFloat (elt.j5.value);
+   var k5 = parseFloat (elt.k5.value);
+
+   var a6 = parseFloat (elt.a6.value);
+   var b6 = parseFloat (elt.b6.value);
+   var c6 = parseFloat (elt.c6.value);
+   var d6 = parseFloat (elt.d6.value);
+   var e6 = parseFloat (elt.e6.value);
+   var f6 = parseFloat (elt.f6.value); 
+   var g6 = parseFloat (elt.g6.value);
+   var h6 = parseFloat (elt.h6.value);
+   var i6 = parseFloat (elt.i6.value);
+   var j6 = parseFloat (elt.j6.value);
+   var k6 = parseFloat (elt.k6.value);
+
+   var a7 = parseFloat (elt.a7.value);
+   var b7 = parseFloat (elt.b7.value);
+   var c7 = parseFloat (elt.c7.value);
+   var d7 = parseFloat (elt.d7.value);
+   var e7 = parseFloat (elt.e7.value);
+   var f7 = parseFloat (elt.f7.value); 
+   var g7 = parseFloat (elt.g7.value);
+   var h7 = parseFloat (elt.h7.value);
+   var i7 = parseFloat (elt.i7.value);
+   var j7 = parseFloat (elt.j7.value);
+   var k7 = parseFloat (elt.k7.value);
+
+   var a8 = parseFloat (elt.a8.value);
+   var b8 = parseFloat (elt.b8.value);
+   var c8 = parseFloat (elt.c8.value);
+   var d8 = parseFloat (elt.d8.value);
+   var e8 = parseFloat (elt.e8.value);
+   var f8 = parseFloat (elt.f8.value); 
+   var g8 = parseFloat (elt.g8.value);
+   var h8 = parseFloat (elt.h8.value);
+   var i8 = parseFloat (elt.i8.value); 
+   var j8 = parseFloat (elt.j8.value);  
+   var k8 = parseFloat (elt.k8.value);
+
+   var a9 = parseFloat (elt.a9.value);
+   var b9 = parseFloat (elt.b9.value);
+   var c9 = parseFloat (elt.c9.value);
+   var d9 = parseFloat (elt.d9.value);
+   var e9 = parseFloat (elt.e9.value);
+   var f9 = parseFloat (elt.f9.value); 
+   var g9 = parseFloat (elt.g9.value);
+   var h9 = parseFloat (elt.h9.value);
+   var i9 = parseFloat (elt.i9.value); 
+   var j9 = parseFloat (elt.j9.value);
+   var k9 = parseFloat (elt.k9.value);   
+
+   var a10 = parseFloat (elt.a10.value);
+   var b10 = parseFloat (elt.b10.value);
+   var c10 = parseFloat (elt.c10.value);
+   var d10 = parseFloat (elt.d10.value);
+   var e10 = parseFloat (elt.e10.value);
+   var f10 = parseFloat (elt.f10.value); 
+   var g10 = parseFloat (elt.g10.value);
+   var h10 = parseFloat (elt.h10.value);
+   var i10 = parseFloat (elt.i10.value); 
+   var j10 = parseFloat (elt.j10.value);
+   var k10 = parseFloat (elt.k10.value); 
+
+  
+   
+   sols = sten(a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1);
+  
+   elt.x1.value = sols[0];
+   elt.x2.value = sols[1];
+   elt.x3.value = sols[2];
+   elt.x4.value = sols[3];
+   elt.x5.value = sols[4];
+   elt.x6.value = sols[5];
+   elt.x7.value = sols[6];
+   elt.x8.value = sols[7];
+   elt.x9.value = sols[8];
+   elt.x10.value = sols[9]; 
+   
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){	   
+ 	   
+ 	    
+ 	   
+	   
+	   
+   
+ 
+	   alert("worked");}}}}}}}}}}
    return;
    }
 
