@@ -3180,16 +3180,16 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.x9.value = sols[8];
    elt.x10.value = sols[9]; 
    
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){alert();
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8]+j2*sols[9])-k2)<0.5){
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8]+j3*sols[9])-k3)<0.5){
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8]+j4*sols[9])-k4)<0.5){
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8]+j5*sols[9])-k5)<0.5){
-   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8]+j6*sols[9])-k6)<0.5){
-   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8]+j7*sols[9])-k7)<0.5){
-   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8]+j8*sols[9])-k8)<0.5){
-   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8]+j9*sols[9])-k9)<0.5){
-   if (Math.abs((a10*sols[0]+b10*sols[1]+c10*sols[2]+d10*sols[3]+e10*sols[4]+f10*sols[5]+g10*sols[6]+h10*sols[7]+i10*sols[8]+j10*sols[9])-k10)<0.5){	   
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8]+j1*sols[9])-k1)<0.5){alert(1);
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8]+j2*sols[9])-k2)<0.5){alert(1);
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8]+j3*sols[9])-k3)<0.5){alert(1);
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8]+j4*sols[9])-k4)<0.5){alert(1);
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8]+j5*sols[9])-k5)<0.5){alert(1);
+   if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8]+j6*sols[9])-k6)<0.5){alert(1);
+   if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8]+j7*sols[9])-k7)<0.5){alert(1);
+   if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8]+j8*sols[9])-k8)<0.5){alert(1);
+   if (Math.abs((a9*sols[0]+b9*sols[1]+c9*sols[2]+d9*sols[3]+e9*sols[4]+f9*sols[5]+g9*sols[6]+h9*sols[7]+i9*sols[8]+j9*sols[9])-k9)<0.5){alert(1);
+   if (Math.abs((a10*sols[0]+b10*sols[1]+c10*sols[2]+d10*sols[3]+e10*sols[4]+f10*sols[5]+g10*sols[6]+h10*sols[7]+i10*sols[8]+j10*sols[9])-k10)<0.5){alert(1);	   
  	   
  	    
  	   
