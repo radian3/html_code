@@ -1596,7 +1596,6 @@ return arr2;
 
 function snine(a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, a3, b3, c3, d3, e3, f3, g3, h3, i3, j3, a4, b4, c4, d4, e4, f4, g4, h4, i4, j4, a5, b5, c5, d5, e5, f5, g5, h5, i5, j5, a6, b6, c6, d6, e6, f6, g6, h6, i6, j6, a7, b7, c7, d7, e7, f7, g7, h7, i7, j7, a8, b8, c8, d8, e8, f8, g8, h8, i8, j8, a9, b9, c9, d9, e9, f9, g9, h9, i9, j9){
 
-	
 if (a1 == 0){
  if (a2 != 0){
  a2 = [a1, a1 = a2][0];
@@ -1608,6 +1607,7 @@ if (a1 == 0){
  g2 = [g1, g1 = g2][0];
  h2 = [h1, h1 = h2][0];
  i2 = [i1, i1 = i2][0];
+ j2 = [j1, j1 = j2][0];
  }
  else if (a3 != 0){
  a3 = [a1, a1 = a3][0];
@@ -1618,7 +1618,8 @@ if (a1 == 0){
  f3 = [f1, f1 = f3][0];
  g3 = [g1, g1 = g3][0];
  h3 = [h1, h1 = h3][0];
- i3 = [i1, i1 = i3][0];}
+ i3 = [i1, i1 = i3][0];
+ j3 = [j1, j1 = j3][0];}
  else if (a4 != 0){
  a4 = [a1, a1 = a4][0];
  b4 = [b1, b1 = b4][0];
@@ -1628,7 +1629,8 @@ if (a1 == 0){
  f4 = [f1, f1 = f4][0];
  g4 = [g1, g1 = g4][0];
  h4 = [h1, h1 = h4][0];
- i4 = [i1, i1 = i4][0];}
+ i4 = [i1, i1 = i4][0];
+ j4 = [j1, j1 = j4][0];}
  else if (a5 != 0){
  a5 = [a1, a1 = a5][0];
  b5 = [b1, b1 = b5][0];
@@ -1638,7 +1640,8 @@ if (a1 == 0){
  f5 = [f1, f1 = f5][0];
  g5 = [g1, g1 = g5][0];
  h5 = [h1, h1 = h5][0];
- i5 = [i1, i1 = i5][0];}
+ i5 = [i1, i1 = i5][0];
+ j5 = [j1, j1 = j5][0];}
  else if (a6 != 0){
  a6 = [a1, a1 = a6][0];
  b6 = [b1, b1 = b6][0];
@@ -1648,7 +1651,8 @@ if (a1 == 0){
  f6 = [f1, f1 = f6][0];
  g6 = [g1, g1 = g6][0];
  h6 = [h1, h1 = h6][0];
- i6 = [i1, i1 = i6][0];}
+ i6 = [i1, i1 = i6][0];
+ j6 = [j1, j1 = j6][0];}
  else if (a7 != 0){
  a7 = [a1, a1 = a7][0];
  b7 = [b1, b1 = b7][0];
@@ -1658,8 +1662,9 @@ if (a1 == 0){
  f7 = [f1, f1 = f7][0];
  g7 = [g1, g1 = g7][0];
  h7 = [h1, h1 = h7][0];
- i7 = [i1, i1 = i7][0];}
- else{
+ i7 = [i1, i1 = i7][0];
+ j7 = [j1, j1 = j7][0];}
+ else if (a8 != 0){
  a8 = [a1, a1 = a8][0];
  b8 = [b1, b1 = b8][0];
  c8 = [c1, c1 = c8][0];
@@ -1668,8 +1673,22 @@ if (a1 == 0){
  f8 = [f1, f1 = f8][0];
  g8 = [g1, g1 = g8][0];
  h8 = [h1, h1 = h8][0];
- i8 = [i1, i1 = i8][0];}
+ i8 = [i1, i1 = i8][0];
+ j8 = [j1, j1 = j8][0];}
+ else{
+ a9 = [a1, a1 = a9][0];
+ b9 = [b1, b1 = b9][0];
+ c9 = [c1, c1 = c9][0];
+ d9 = [d1, d1 = d9][0];
+ e9 = [e1, e1 = e9][0];
+ f9 = [f1, f1 = f9][0];
+ g9 = [g1, g1 = g9][0];
+ h9 = [h1, h1 = h9][0];
+ i9 = [i1, i1 = i9][0];
+ j9 = [j1, j1 = j9][0];
+ }
 	}
+
 var A1 = b2-(a2*b1/a1);
 var B1 = c2-(a2*c1/a1);
 var C1 = d2-(a2*d1/a1);
@@ -1678,7 +1697,7 @@ var E1 = f2-(a2*f1/a1);
 var F1 = g2-(a2*g1/a1);
 var G1 = h2-(a2*h1/a1);
 var H1 = i2-(a2*i1/a1);
-var I1 = i2-(a2*j1/a1);
+var I1 = j2-(a2*j1/a1);
 
 var A2 = b3-(a3*b1/a1);
 var B2 = c3-(a3*c1/a1);
@@ -1688,7 +1707,7 @@ var E2 = f3-(a3*f1/a1);
 var F2 = g3-(a3*g1/a1);
 var G2 = h3-(a3*h1/a1);
 var H2 = i3-(a3*i1/a1);
-var I2 = i3-(a3*j1/a1);
+var I2 = j3-(a3*j1/a1);
 
 var A3 = b4-(a4*b1/a1);
 var B3 = c4-(a4*c1/a1);
@@ -2540,6 +2559,15 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.i9.value = Math.floor((Math.random() * 30) + 1);
    elt.j9.value = Math.floor((Math.random() * 30) + 1);    
    
+   elt.a1.value = 0;
+   elt.a2.value = 0;
+   elt.a3.value = 0;
+   elt.a4.value = 0;
+   elt.a5.value = 0;
+   elt.a6.value = 0;
+   elt.a7.value = 0;
+ //  elt.a8.value = 0;
+   elt.a9.value = 0;
 
 
    var a1 = parseFloat (elt.a1.value);
@@ -2655,11 +2683,11 @@ if (document.getElementById("a8").style.display == 'none'){
    elt.x8.value = sols[7];
    elt.x9.value = sols[8];
    
-   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8])-j1)<0.5){alert(1);
-   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8])-j2)<0.5){alert(2); 
-   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8])-j3)<0.5){alert(3); 
-   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8])-j4)<0.5){alert(4); 
-   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8])-j5)<0.5){alert(5); 
+   if (Math.abs((a1*sols[0]+b1*sols[1]+c1*sols[2]+d1*sols[3]+e1*sols[4]+f1*sols[5]+g1*sols[6]+h1*sols[7]+i1*sols[8])-j1)<0.5){
+   if (Math.abs((a2*sols[0]+b2*sols[1]+c2*sols[2]+d2*sols[3]+e2*sols[4]+f2*sols[5]+g2*sols[6]+h2*sols[7]+i2*sols[8])-j2)<0.5){ 
+   if (Math.abs((a3*sols[0]+b3*sols[1]+c3*sols[2]+d3*sols[3]+e3*sols[4]+f3*sols[5]+g3*sols[6]+h3*sols[7]+i3*sols[8])-j3)<0.5){
+   if (Math.abs((a4*sols[0]+b4*sols[1]+c4*sols[2]+d4*sols[3]+e4*sols[4]+f4*sols[5]+g4*sols[6]+h4*sols[7]+i4*sols[8])-j4)<0.5){ 
+   if (Math.abs((a5*sols[0]+b5*sols[1]+c5*sols[2]+d5*sols[3]+e5*sols[4]+f5*sols[5]+g5*sols[6]+h5*sols[7]+i5*sols[8])-j5)<0.5){
    if (Math.abs((a6*sols[0]+b6*sols[1]+c6*sols[2]+d6*sols[3]+e6*sols[4]+f6*sols[5]+g6*sols[6]+h6*sols[7]+i6*sols[8])-j6)<0.5){ 
    if (Math.abs((a7*sols[0]+b7*sols[1]+c7*sols[2]+d7*sols[3]+e7*sols[4]+f7*sols[5]+g7*sols[6]+h7*sols[7]+i7*sols[8])-j7)<0.5){ 
    if (Math.abs((a8*sols[0]+b8*sols[1]+c8*sols[2]+d8*sols[3]+e8*sols[4]+f8*sols[5]+g8*sols[6]+h8*sols[7]+i8*sols[8])-j8)<0.5){ 
