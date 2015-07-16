@@ -81,6 +81,17 @@
 
   }
 
+
+
+function meridiemSwap(merVal){ // changing from am to pm and vise-versa
+  if (merVal == "am")
+  	{merVal = "pm";}
+  
+  else
+  {merVal = "am";}
+  return merVal; 	
+ }
+
  document.getElementById("addForm").delRow.onclick = delRows;
  function delRows()
  {
@@ -103,30 +114,30 @@
 
  
  function subTime(hrInp, minInp, hrInpS, minInpS, meridiem){
- alert(0);
+ 
  if (hrInp == 12){
-   alert("b");
-   var tat = meridiemSwap(meridiem); alert("c");
+   
+   var tat = meridiemSwap(meridiem); 
    meridiem = tat;
    }
- alert("a");
+ 
    hrInp = hrInp-hrInpS;
    minInp = minInp-minInpS;
-    alert(1);
+    
    if (minInp < 0){
     hrInp = hrInp - (-1*Math.floor(minInp/60));
     minInp = (minInp%60)+60;
    }
-   alert(2);
+   
    if (hrInp < 0){
     hrInp = hrInp + 12;
     var temp = meridiemSwap(meridiem);
     meridiem = temp;}
-   alert(3);
+   
    if (hrInp == 12){
     var temp = meridiemSwap(meridiem);
     meridiem = temp;}
-   alert(4);
+   
    if (hrInp == 0){
 	   hrInp = hrInp+12; }
 
@@ -202,11 +213,12 @@ function main()
     var hrInpS = parseFloat(two.substring(0, 2));
     var minInpS = parseFloat(two.substring(3, 5));
    }
-  alert(i);
+  
   var vals = subTime(hrInp, minInp, hrInpS, minInpS, meridiem);
-  alert("done");
+  
   var hrInp = vals[0];
   var minInp = vals[1]; 
+//  var meridiem = vals[4];
 
 
  }
