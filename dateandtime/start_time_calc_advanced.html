@@ -18,19 +18,19 @@
   
   <tr> <td id = "1"> Task 1 </td> <td> <input id = "1," type = "text" name = "task1" value = "" size = "20" /> </td> </tr>
   <tr> <td id = "2"> Task 2 </td> <td> <input id = "2," type = "text" name = "task2" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "3"> Task 3 </td> <td> <input id = "3," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "4"> Task 4 </td> <td> <input id = "4," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "5"> Task 5 </td> <td> <input id = "5," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "6"> Task 6 </td> <td> <input id = "6," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "7"> Task 7 </td> <td> <input id = "7," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "8"> Task 8 </td> <td> <input id = "8," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "9"> Task 9 </td> <td> <input id = "9," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "10"> Task 10 </td> <td> <input id = "10," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "11"> Task 11 </td> <td> <input id = "11," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "12"> Task 12 </td> <td> <input id = "12," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "13"> Task 13 </td> <td> <input id = "13," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "14"> Task 14 </td> <td> <input id = "14," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
-  <tr> <td id = "15"> Task 15 </td> <td> <input id = "15," type = "text" name = "one" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "3"> Task 3 </td> <td> <input id = "3," type = "text" name = "task3" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "4"> Task 4 </td> <td> <input id = "4," type = "text" name = "task4" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "5"> Task 5 </td> <td> <input id = "5," type = "text" name = "task5" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "6"> Task 6 </td> <td> <input id = "6," type = "text" name = "task6" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "7"> Task 7 </td> <td> <input id = "7," type = "text" name = "task7" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "8"> Task 8 </td> <td> <input id = "8," type = "text" name = "task8" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "9"> Task 9 </td> <td> <input id = "9," type = "text" name = "task9" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "10"> Task 10 </td> <td> <input id = "10," type = "text" name = "task10" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "11"> Task 11 </td> <td> <input id = "11," type = "text" name = "task11" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "12"> Task 12 </td> <td> <input id = "12," type = "text" name = "task12" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "13"> Task 13 </td> <td> <input id = "13," type = "text" name = "task13" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "14"> Task 14 </td> <td> <input id = "14," type = "text" name = "task14" value = "" size = "20" /> </td> </tr>
+  <tr> <td id = "15"> Task 15 </td> <td> <input id = "15," type = "text" name = "task15" value = "" size = "20" /> </td> </tr>
 <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
@@ -81,6 +81,17 @@
 
   }
 
+
+
+function meridiemSwap(merVal){ // changing from am to pm and vise-versa
+  if (merVal == "am")
+  	{merVal = "pm";}
+  
+  else
+  {merVal = "am";}
+  return merVal; 	
+ }
+
  document.getElementById("addForm").delRow.onclick = delRows;
  function delRows()
  {
@@ -101,31 +112,36 @@
  document.getElementById("addForm").addBtn.onclick = main;
 
 
-
+ 
  function subTime(hrInp, minInp, hrInpS, minInpS, meridiem){
+ alert(0);
  if (hrInp == 12){
-   var temp = meridiemSwap(meridiem);
-   meridiem = temp;
+   alert("b");
+   var tat = meridiemSwap(meridiem); alert("c");
+   meridiem = tat;
    }
+ alert("a");
    hrInp = hrInp-hrInpS;
    minInp = minInp-minInpS;
-   
+    alert(1);
    if (minInp < 0){
     hrInp = hrInp - (-1*Math.floor(minInp/60));
     minInp = (minInp%60)+60;
    }
-   
+   alert(2);
    if (hrInp < 0){
     hrInp = hrInp + 12;
     var temp = meridiemSwap(meridiem);
     meridiem = temp;}
+   alert(3);
    if (hrInp == 12){
     var temp = meridiemSwap(meridiem);
     meridiem = temp;}
+   alert(4);
    if (hrInp == 0){
 	   hrInp = hrInp+12; }
 
-
+   
    var arr1 = new Array();
    arr1.push(hrInp);
    arr1.push(minInp);
@@ -181,11 +197,11 @@ function main()
    var st = "task";
    var temp = i;
    var st = st.concat(temp.toString());
-//   var two = elt."task1".value;alert(2);
+
    var two = document.getElementById(i.toString().concat(",")).value;
- //  var two = document.getElementById(",").value;
-   var idxTwo = two.indexOf(":");alert();
-   alert(two);
+
+   var idxTwo = two.indexOf(":");
+
 
 
 
@@ -197,9 +213,9 @@ function main()
     var hrInpS = parseFloat(two.substring(0, 2));
     var minInpS = parseFloat(two.substring(3, 5));
    }
-
+  alert(i);
   var vals = subTime(hrInp, minInp, hrInpS, minInpS, meridiem);
-  
+  alert("done");
   var hrInp = vals[0];
   var minInp = vals[1]; 
 
