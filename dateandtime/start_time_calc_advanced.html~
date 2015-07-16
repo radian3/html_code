@@ -149,6 +149,23 @@ function main()
    var two = elt.task1.value;
    var idxTwo = two.indexOf(":");
 
+   var numTasks = 15;
+   for (var i = 15; i>0; i--){
+
+   var idx = i;
+   var idx = idx.toString();
+
+
+   if (document.getElementById(idx).style.display == ''){
+    break;}
+   else{
+	   numTasks = numTasks-1;}
+   }
+   alert(numTasks);
+
+
+
+
    if (idxOne == 1){
     var hrInp = parseFloat(one.substring(0, 1));
     var minInp = parseFloat(one.substring(2, 4));
@@ -168,8 +185,10 @@ function main()
     var minInpS = parseFloat(two.substring(3, 5));
    }
 
-  subTime(hrInp, minInp, hrInpS, minInpS, meridiem);
-
+  var vals = subTime(hrInp, minInp, hrInpS, minInpS, meridiem);
+  
+  var hrInp = vals[0];
+  var minInp = vals[1]; 
 
 var uno = hrInp.toString();
    if (minInp == 0){	
