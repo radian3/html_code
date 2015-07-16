@@ -9,7 +9,7 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
  
-	<tr> <td id = "0"> Finish time:  </td> <td> <input id = "1," type = "text" name = "userInp" value = "" size = "20" /> </td> </tr>
+	<tr> <td id = "0"> Finish time:  </td> <td> <input id = "1,," type = "text" name = "userInp" value = "" size = "20" /> </td> </tr>
 
        	<tr><td> <input type = "button" name = "addRow" value = "Add Task" /> </td>
    
@@ -146,8 +146,7 @@ function main()
    var elt = document.getElementById("addForm");      
    var one = elt.userInp.value;
    var idxOne = one.indexOf(":");
-   var two = elt.task1.value;
-   var idxTwo = two.indexOf(":");
+
 
    var numTasks = 15;
    for (var i = 15; i>0; i--){
@@ -176,6 +175,20 @@ function main()
     var minInp = parseFloat(one.substring(3, 5));
     var meridiem = one.substring(5, 7);
    }
+
+ 
+ for (var i = 1; i <= numTasks; i++){
+   var st = "task";
+   var temp = i;
+   var st = st.concat(temp.toString());
+//   var two = elt."task1".value;alert(2);
+   var two = document.getElementById(i.toString().concat(",")).value;
+ //  var two = document.getElementById(",").value;
+   var idxTwo = two.indexOf(":");alert();
+   alert(two);
+
+
+
   if (idxTwo == 1){
     var hrInpS = parseFloat(two.substring(0, 1));
     var minInpS = parseFloat(two.substring(2, 4));
@@ -190,7 +203,11 @@ function main()
   var hrInp = vals[0];
   var minInp = vals[1]; 
 
-var uno = hrInp.toString();
+
+ }
+  
+  
+  var uno = hrInp.toString();
    if (minInp == 0){	
     
    var temp = minInp.toString();
