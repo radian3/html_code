@@ -210,8 +210,8 @@ function main()
    else{
 	   numTasks = numTasks-1;}
    }
- //  var counter = numTasks;
-   var counter = 1;
+   var counter = numTasks;
+
 
 
    if (idxOne == 1){
@@ -290,7 +290,7 @@ function main()
    if(counter == 3){ elt.sol3.value = resThree;}
    if(counter == 2){ elt.sol2.value = resThree;}
    if(counter == 1){ elt.sol1.value = resThree;}
-   counter++;
+   counter--;
  }
 
 
