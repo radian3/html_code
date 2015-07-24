@@ -1,0 +1,110 @@
+
+
+<html>
+<head>
+<title> Day Of Week Calculator </title>
+</head>
+<body>
+<h3> Day Of Week Calculator </h3>
+<form id = "addForm"  action = "" method = "post">
+<table border = "0">
+  <tr>
+  <td> Enter date (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
+
+  <tr>
+  <td>
+  <input type = "button" name = "addBtn" value = "Calculate" />
+  </td>
+  <td>
+  <input type = "reset" value = "Clear" />
+  </td>
+  </tr>
+   <tr><td> Day Of Week </td> <td> <input type = "text" name = "dayOfWeek" value = "" size = "20" /> </td> </tr>
+</table>
+</form>
+
+<script type = "text/javascript">
+  document.getElementById("addForm").addBtn.onclick = main;
+ 
+
+  
+
+
+ function getDayOfWeek(month, day, year){
+  if (month >= 3 && month <= 12){
+   var a = month - 2;}
+  else{
+   a = month + 10;}
+  var b = day;
+  var c2 = year%10;
+  var c1 = (Math.floor(year/10))%10;
+  var c3 = c2+c1*10;
+  
+  if (month == 1 || month == 2){
+   var c = c3-1;}
+  else{
+   var c = c3;}
+
+  if (c == 0){
+   if (month == 1 || month == 2){
+    var d = Math.floor(year/100)-1;}
+   else{
+    var d = Math.floor(year/100);}}
+
+  else{
+ 
+  var d = Math.floor(year/100);}
+  var w = Math.floor((13*a-1)/5) 
+  var x = Math.floor(c/4) 
+  var y = Math.floor(d/4) 
+  var z = w + x + y + b + c - 2 * d 
+  var r = z % 7 
+  var r = (r + 7) % 7 
+
+  if (r == 0){
+   return 0;}
+  else if (r == 1){
+   return 1;}
+  else if (r == 2){
+   return 2;}
+  else if (r == 3){
+   return 3;}
+  else if (r == 4){
+   return 4;}
+  else if (r == 5){
+   return 5;}
+  else if (r == 6){
+   return 6;}  
+
+ 
+
+ }  
+ 
+ 
+ function main()
+  {
+ var elt = document.getElementById("addForm"); 
+ var dateVal = elt.dateVal.value;
+  
+ var month = parseFloat(dateVal.substring(0, 2));
+ var day =  parseFloat(dateVal.substring(3, 5));
+ var year =  parseFloat(dateVal.substring(6, 10));
+
+ var idx = getDayOfWeek(month, day, year);
+ var dayArr = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+ elt.dayOfWeek.value = dayArr[idx];
+
+
+   
+
+
+  
+  } // ending addTwo
+
+</script>
+
+
+</body>
+</html>
+
+
