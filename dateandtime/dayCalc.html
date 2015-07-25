@@ -60,10 +60,6 @@
 function getDays(month, day, year, monthVal, dayVal, yearVal){
 var numDays = 0;
 var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-
-
-
-
 while (month != monthVal || year != yearVal) // we will keep iterating until we have the month and year correct, then we'll add the days after
   { 	
   	 if (month == 2 && (year%4==0) && (year==0 || (year)%4==0) ) // checking if leap year and february
@@ -78,17 +74,9 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
 	   year += 1; // we reached the new year so we add 1 to the year	 	
 	 }
   } // closing while loop
-
-
-
-
  numDays += dayVal-day; 
-
-
-
-	
 	return numDays;
-}
+} // done with getDays
 
 
 
@@ -96,11 +84,6 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  function main()
   {
  var elt = document.getElementById("addForm"); 
- elt.startDateVal.value = "07/25/2015";
- elt.finishDateVal.value = "09/04/2021";
-
-
-
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
   
