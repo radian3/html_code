@@ -57,38 +57,57 @@
 
 
 
-function subtractDays(daysToAdd, month, day, year){
- var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+function subtractDays(daysToSub, month, day, year){
+
+
+var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
  var daysLeft = daylist[month]-day;
- 
- var daysToAdd = parseInt(daysToAdd);
-while (daysLeft < daysToAdd) 
-  {
-  	daysToAdd -= daysLeft; 
-  	day = 0;
-  	month += 1; 
-  	if (month > 12) {
-  		month = 1;
-  		year += 1;}
+ var daysToSub = parseInt(daysToSub);
+while (true){ 
+  if (day >= daysToSub){ 
+  	day -= daysToSub;
+  	break;}
+  
+  
+ else{ // more days left to subtract than what we have left in the month
+  	daysToSub -= day;
+  	month -= 1;
+  	if (month < 1){ // checking if we are going from january to decemeber, if so, we need to go back a year
+  		month = 12;
+		year -= 1;}}
+
+
 
 
    if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
-	   {daysLeft = 29-day;}
+	   {day = 29;}
 	 else 
-	 {daysLeft = daylist[month];}
-  
-  }
-day += daysToAdd;
-
-
-
-var retArr = new Array(month, day, year);
-return retArr;
-
-  } // ending addDays
+	 {day = daylist[month];}}
+// done with while loop
+  if (day == 0){ 
+    month -= 1;
+  	if (month < 1){
+  		month = 12;
+		year -= 1;}
+	day = daylist[month];
+ }	
+ var answer = new Array(month, day, year);
  
+ return answer;
+ 
+	
+	}// done with the subtractDays funct
+
+
+
+
+
+
+
  function main()
   {
+
+
  var elt = document.getElementById("addForm"); 
  var dateVal = elt.dateVal.value;
   
@@ -100,13 +119,14 @@ return retArr;
 
 
 
-   
 
 
+subtractDays(daysToSub, month, day, year);
   var result = subtractDays(daysToSub, month, day, year); 
 
   var finalDate = dateToString(result[0], result[1], result[2]);
   elt.finishDate.value = finalDate;
+
   } // ending addTwo
 
 </script>
