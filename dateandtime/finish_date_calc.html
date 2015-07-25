@@ -9,7 +9,7 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-  <td> Date (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
+  <td> Start date (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
 <tr>
   <td> # of days to add: </td> <td> <input type = "text" name = "daysAdded" value = "" size = "20" /> </td> </tr>
 
@@ -33,10 +33,35 @@
   
 
 
+  function dateToString(month, day, year){
+  
+  var dateString = "";	  
+
+  if (month <10){
+   var dateString = dateString.concat("0");
+   var dateString = dateString.concat(month);}
+  else{
+   var dateString = dateString.concat(month);}
+  var dateString = dateString.concat("/");
+  if (day < 10){
+   var dateString = dateString.concat("0");
+   var dateString = dateString.concat(day);}
+  else{
+   var dateString = dateString.concat(day);}
+  var dateString = dateString.concat("/");
+  var dateString = dateString.concat(year); 
+  return dateString;
+
+  }
+
+
+
+
 function addDays(daysToAdd, month, day, year){
  var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
- var daysLeft = month[daylist]-day;
-
+ var daysLeft = daylist[month]-day;
+ 
+ var daysToAdd = parseInt(daysToAdd);
 while (daysLeft < daysToAdd) 
   {
   	daysToAdd -= daysLeft; 
@@ -45,22 +70,21 @@ while (daysLeft < daysToAdd)
   	if (month > 12) {
   		month = 1;
   		year += 1;}
-alert(1);
+
 
    if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
 	   {daysLeft = 29-day;}
 	 else 
-	 {daysLeft = month[daylist];}
+	 {daysLeft = daylist[month];}
   
   }
 day += daysToAdd;
 
 
 
-alert();	
+var retArr = new Array(month, day, year);
+return retArr;
 
-
- return 2;
   } // ending addDays
  
  function main()
@@ -73,13 +97,16 @@ alert();
  var year =  parseFloat(dateVal.substring(6, 10));
  var daysAdded = elt.daysAdded.value;
  
- elt.finishDate.value = 3;
+
 
 
    
 
 
-  x = addDays(daysAdded, month, day, year);
+  var result = addDays(daysAdded, month, day, year); 
+
+  var finalDate = dateToString(result[0], result[1], result[2]);
+  elt.finishDate.value = finalDate;
   } // ending addTwo
 
 </script>
