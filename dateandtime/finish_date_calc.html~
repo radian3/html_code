@@ -11,7 +11,7 @@
   <tr>
   <td> Date (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
 <tr>
-  <td> # of days to add: </td> <td> <input type = "text" name = "addDays" value = "" size = "20" /> </td> </tr>
+  <td> # of days to add: </td> <td> <input type = "text" name = "daysAdded" value = "" size = "20" /> </td> </tr>
 
 
   <tr>
@@ -33,7 +33,35 @@
   
 
 
- 
+function addDays(daysToAdd, month, day, year){
+ var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+ var daysLeft = month[daylist]-day;
+
+while (daysLeft < daysToAdd) 
+  {
+  	daysToAdd -= daysLeft; 
+  	day = 0;
+  	month += 1; 
+  	if (month > 12) {
+  		month = 1;
+  		year += 1;}
+alert(1);
+
+   if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
+	   {daysLeft = 29-day;}
+	 else 
+	 {daysLeft = month[daylist];}
+  
+  }
+day += daysToAdd;}
+
+
+
+alert();	
+
+
+ return 2;
+  } // ending addDays
  
  function main()
   {
@@ -43,14 +71,15 @@
  var month = parseFloat(dateVal.substring(0, 2));
  var day =  parseFloat(dateVal.substring(3, 5));
  var year =  parseFloat(dateVal.substring(6, 10));
-
+ var daysAdded = elt.daysAdded.value;
+ 
  elt.finishDate.value = 3;
 
 
    
 
 
-  
+  x = addDays(daysAdded, month, day, year);
   } // ending addTwo
 
 </script>

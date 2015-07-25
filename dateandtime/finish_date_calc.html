@@ -33,8 +33,31 @@
   
 
 
-  function addDays(daysToAdd, month, day, year){
-alert();
+function addDays(daysToAdd, month, day, year){
+ var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+ var daysLeft = month[daylist]-day;
+
+while (daysLeft < daysToAdd) 
+  {
+  	daysToAdd -= daysLeft; 
+  	day = 0;
+  	month += 1; 
+  	if (month > 12) {
+  		month = 1;
+  		year += 1;}
+alert(1);
+
+   if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
+	   {daysLeft = 29-day;}
+	 else 
+	 {daysLeft = month[daylist];}
+  
+  }
+day += daysToAdd;
+
+
+
+alert();	
 
 
  return 2;
