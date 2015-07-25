@@ -58,8 +58,7 @@
 
 
 function subtractDays(daysToSub, month, day, year){
-
-
+	
 var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
  var daysLeft = daylist[month]-day;
  var daysToSub = parseInt(daysToSub);
@@ -67,18 +66,13 @@ while (true){
   if (day >= daysToSub){ 
   	day -= daysToSub;
   	break;}
-  
-  
+   
  else{ // more days left to subtract than what we have left in the month
   	daysToSub -= day;
   	month -= 1;
   	if (month < 1){ // checking if we are going from january to decemeber, if so, we need to go back a year
   		month = 12;
 		year -= 1;}}
-
-
-
-
    if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
 	   {day = 29;}
 	 else 
@@ -116,18 +110,11 @@ while (true){
  var year =  parseFloat(dateVal.substring(6, 10));
  var daysToSub = elt.daysToSub.value;
  
-
-
-
-
-
-subtractDays(daysToSub, month, day, year);
   var result = subtractDays(daysToSub, month, day, year); 
-
   var finalDate = dateToString(result[0], result[1], result[2]);
   elt.finishDate.value = finalDate;
 
-  } // ending addTwo
+  } // ending main
 
 </script>
 
