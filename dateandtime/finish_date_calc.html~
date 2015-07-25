@@ -1,0 +1,62 @@
+
+
+<html>
+<head>
+<title> Finish Date Calculator </title>
+</head>
+<body>
+<h3> Finish Date Calculator </h3>
+<form id = "addForm"  action = "" method = "post">
+<table border = "0">
+  <tr>
+  <td> Date (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
+<tr>
+  <td> # of days to add: </td> <td> <input type = "text" name = "addDays" value = "" size = "20" /> </td> </tr>
+
+
+  <tr>
+  <td>
+  <input type = "button" name = "addBtn" value = "Calculate" />
+  </td>
+  <td>
+  <input type = "reset" value = "Clear" />
+  </td>
+  </tr>
+   <tr><td> Finish Date: </td> <td> <input type = "text" name = "finishDate" value = "" size = "20" /> </td> </tr>
+</table>
+</form>
+
+<script type = "text/javascript">
+  document.getElementById("addForm").addBtn.onclick = main;
+ 
+
+  
+
+
+ 
+ 
+ function main()
+  {
+ var elt = document.getElementById("addForm"); 
+ var dateVal = elt.dateVal.value;
+  
+ var month = parseFloat(dateVal.substring(0, 2));
+ var day =  parseFloat(dateVal.substring(3, 5));
+ var year =  parseFloat(dateVal.substring(6, 10));
+
+ elt.finishDate.value = 3;
+
+
+   
+
+
+  
+  } // ending addTwo
+
+</script>
+
+
+</body>
+</html>
+
+
