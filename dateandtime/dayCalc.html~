@@ -22,7 +22,8 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr><td> Finish Date: </td> <td> <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
+   <tr><td> time passed: </td> <td> <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
+   <tr><td> # of days: </td> <td> <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
 </table>
 </form>
 
@@ -79,18 +80,24 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
 } // done with getDays
 
 
-
+function output(numDays){
+if (numDays < 7){ // checking if the two dates the user entered were less than a week apart 
+ return numDays.toString().concat(" days");}
+else if (numDays < 365){ // checking if the two dates were more than a week apart but less than a year apart
+ return Math.floor(numDays/7).toString().concat(" weeks ").concat((numDays%7).toString()).concat(" days");}
+else{ // this means the user entered two dates that were a year or further apart  	
+ return Math.floor(numDays/365).toString().concat(" years ").concat(Math.floor(((numDays%365)/7)).toString()).concat(" weeks ").concat(((numDays%265)%7).toString()).concat(" days");}
+ 
+}
  
  function main()
   {
  var elt = document.getElementById("addForm"); 
- elt.startDateVal.value = "07/25/2015";
- elt.finishDateVal.value = "09/04/2021";
-
-
 
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
+ if (finishDateVal == ''){
+	 return;}
   
  var month = parseFloat(startDateVal.substring(0, 2));
  var day =  parseFloat(startDateVal.substring(3, 5));
@@ -101,7 +108,9 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  var yearVal =  parseFloat(finishDateVal.substring(6, 10));
 
   var result = getDays(month, day, year, monthVal, dayVal, yearVal);
-  elt.daysCalculated.value = result;
+  
+  elt.daysCalculated.value = output(result);
+  elt.dayscomputed.value = result;
   } // ending addTwo
 
 </script>
