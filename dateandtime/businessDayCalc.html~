@@ -134,7 +134,7 @@ return retArr;
  
  function main()
   {
-   
+  
    var elt = document.getElementById("addForm");      
    
 
@@ -164,45 +164,36 @@ return retArr;
 	  workDays.push(0)}
  }
  
- if (workDays[dayOfWeek] == 0){
-	 totalDays -= 1;}
- else{ 
-	 index = (dayOfWeek+6)%7;
-	 totalDays += 1;
- }
 
- 
+
+
  while (businessDayCounter < daysAdded) // computing the total number of days that pass by during the business day period
  {
-	 
-  if (workDays[index] == 1) // checking if a business day
-  {
-  	businessDayCounter += 1; // adding to the number of business days
-	  } 	
-  totalDays += 1; // adding to the total number of days in the time period
-  index += 1;
-  if (index > 6) // checking if we reached the last day of the week
-  {
-  	index = 0; // resetting to the first day of the week
-		}	  
-  } 
- 
-var indexTwo = (dayOfWeek-1)%7; // getting the day of the week
+  
+
+  
+  
+  dayOfWeek += 1;
+
+  if (dayOfWeek > 6){
+	  dayOfWeek = 0;}
+  if (workDays[dayOfWeek] == 1){
+	  businessDayCounter += 1;}
+  totalDays += 1;  
  
  
- 
- if (workDays[indexTwo] != 1)// if first day was not business day, sub 1
- {
- 	totalDays -= 1;
 
  }
+
+ 
  
   
  var result = addDays(totalDays, month, day, year);
  var finalDate = dateToString(result[0], result[1], result[2]);
 
  elt.finishDate.value = finalDate; 
-  } // ending main
+ 
+ } // ending main
 
 </script>
 
