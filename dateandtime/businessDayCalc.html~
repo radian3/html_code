@@ -11,7 +11,46 @@
   <tr>
 	  <td>Enter date of day informed of busines day wait (mm/dd/yyyy): </td><td> <input type = "text" name = "one" value = "" size = "20" /> </td></tr>
   <tr>
-	  <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> Enter time for task 1: </td></tr>
+	  <td>Enter the amount of business days needed after the first date: </td> <td> <input type = "text" name = "two" value = "" size = "20" /> </td></tr>
+
+  <tr><td> Is Sunday a business day?   
+        <input name = "connection1" type = "radio"
+	       value = "y1" id = "y1" /> Yes <input name = "connection1" type = "radio"
+	       value = "n1" id = "n1" /> No
+      </td></tr>
+  <tr><td> Is Monday a business day?   
+        <input name = "connection2" type = "radio"
+	       value = "y2" id = "y2" /> Yes <input name = "connection2" type = "radio"
+	       value = "n2" id = "n2" /> No
+      </td></tr>
+        <tr><td> Is Tuesday a business day?   
+        <input name = "connection3" type = "radio"
+	       value = "y3" id = "y3" /> Yes <input name = "connection3" type = "radio"
+	       value = "n3" id = "n3" /> No
+      </td></tr>
+        <tr><td> Is Wednesday a business day?   
+        <input name = "connection4" type = "radio"
+	       value = "y4" id = "y4" /> Yes <input name = "connection4" type = "radio"
+	       value = "n4" id = "n4" /> No
+      </td></tr>
+        <tr><td> Is Thursday a business day?   
+        <input name = "connection5" type = "radio"
+	       value = "y5" id = "y5" /> Yes <input name = "connection5" type = "radio"
+	       value = "n5" id = "n5" /> No
+      </td></tr>
+        <tr><td> Is Friday a business day?   
+        <input name = "connection6" type = "radio"
+	       value = "y6" id = "y6" /> Yes <input name = "connection6" type = "radio"
+	       value = "n6" id = "n6" /> No
+      </td></tr>
+        <tr><td> Is Saturday a business day?   
+        <input name = "connection7" type = "radio"
+	       value = "y7" id = "y7" /> Yes <input name = "connection7" type = "radio"
+	       value = "n7" id = "n7" /> No
+      </td></tr>
+
+
+
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
@@ -20,13 +59,19 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr> <td> <input type = "text" name = "sum" value = "" size = "20" /> </td><td> Start time </td> </tr>
+  <tr> <td> The last business day is:  <input type = "text" name = "sum" value = "" size = "20" /> </td> </tr>
 </table>
 </form>
 
 <script type = "text/javascript">
   document.getElementById("addForm").addBtn.onclick = addTwo;
- 
+  document.getElementById("n1").checked = true;
+  document.getElementById("y2").checked = true;
+  document.getElementById("y3").checked = true;
+  document.getElementById("y4").checked = true;
+  document.getElementById("y5").checked = true;
+  document.getElementById("y6").checked = true;
+  document.getElementById("n7").checked = true;
 
   
   function meridiemSwap(merVal){ // changing from am to pm and vise-versa
