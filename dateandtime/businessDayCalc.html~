@@ -58,7 +58,7 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-  <tr> <td> The last business day is:  <input type = "text" name = "sum" value = "" size = "20" /> </td> </tr>
+  <tr> <td> The last business day is:  <input type = "text" name = "finishDate" value = "" size = "20" /> </td> </tr>
 </table>
 </form>
 
@@ -72,7 +72,24 @@
   document.getElementById("y6").checked = true;
   document.getElementById("n7").checked = true;
   
+  function dateToString(month, day, year){
   
+  var dateString = "";	  
+  if (month <10){
+   var dateString = dateString.concat("0");
+   var dateString = dateString.concat(month);}
+  else{
+   var dateString = dateString.concat(month);}
+  var dateString = dateString.concat("/");
+  if (day < 10){
+   var dateString = dateString.concat("0");
+   var dateString = dateString.concat(day);}
+  else{
+   var dateString = dateString.concat(day);}
+  var dateString = dateString.concat("/");
+  var dateString = dateString.concat(year); 
+  return dateString;
+  }
 
 function getDayOfWeek(month, day, year){ //returns day index (number between 0 and 6)
   if (month >= 3 && month <= 12){
@@ -90,7 +107,29 @@ function getDayOfWeek(month, day, year){ //returns day index (number between 0 a
   return ((((Math.floor((13*a-1)/5) + Math.floor(c/4)  + Math.floor(d/4)  + day + c - 2 * d) % 7) + 7) % 7);
  }  
 
+  function addDays(daysToAdd, month, day, year){
+ var daylist = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+ var daysLeft = daylist[month]-day;
+ 
+ var daysToAdd = parseInt(daysToAdd);
+while (daysLeft < daysToAdd) 
+  {
+  	daysToAdd -= daysLeft; 
+  	day = 0;
+  	month += 1; 
+  	if (month > 12) {
+  		month = 1;
+  		year += 1;}
+   if (month == 2 && (year%4==0) && (year%100==0 || (year)%4==0)) 
+	   {daysLeft = 29-day;}
+	 else 
+	 {daysLeft = daylist[month];}
   
+  }
+day += daysToAdd;
+var retArr = new Array(month, day, year);
+return retArr;
+  } // ending addDays
  
  
  function main()
@@ -125,8 +164,8 @@ function getDayOfWeek(month, day, year){ //returns day index (number between 0 a
  }
  
 
-alert();
- /*
+ alert(workDays);
+ 
  while (businessDayCounter < daysAdded) // computing the total number of days that pass by during the business day period
  {
 	 
@@ -142,11 +181,21 @@ alert();
 		}	  
   } 
  
-*/
+var indexTwo = (dayOfWeek-1)%7; // getting the day of the week
  
-  
+ 
+ 
+ if (workDays[indexTwo] != 1)// if first day was not business day, sub 1
+ {
+ 	totalDays -= 1;
 
-  
+ }
+ 
+  alert();
+ var result = addDays(daysAdded, month, day, year);alert(3);
+ var finalDate = dateToString(result[0], result[1], result[2]);
+ alert(1);
+ elt.finishDate.value = finalDate; alert(2);
   } // ending main
 
 </script>
