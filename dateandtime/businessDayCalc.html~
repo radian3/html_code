@@ -138,8 +138,8 @@ return retArr;
    var elt = document.getElementById("addForm");      
    
 
- elt.dateVal.value = "07/26/2015";
- elt.daysAdded.value = 544;
+ elt.dateVal.value = "07/27/2015";
+// elt.daysAdded.value = 544;
 
  
  var dateVal = elt.dateVal.value;
@@ -153,6 +153,7 @@ return retArr;
 
  var businessDayCounter = 0;
  var totalDays = 0;
+
  var index = (dayOfWeek-1)%7;
  var workDays = new Array(); 
  for (var i = 1; i < 8; i++){
@@ -163,8 +164,13 @@ return retArr;
 	  workDays.push(0)}
  }
  
+ if (workDays[dayOfWeek] == 0){
+	 totalDays -= 1;}
+ else{ 
+	 index = (dayOfWeek+6)%7;
+	 totalDays += 1;
+ }
 
- alert(workDays);
  
  while (businessDayCounter < daysAdded) // computing the total number of days that pass by during the business day period
  {
@@ -191,11 +197,11 @@ var indexTwo = (dayOfWeek-1)%7; // getting the day of the week
 
  }
  
-  alert();
- var result = addDays(daysAdded, month, day, year);alert(3);
+  
+ var result = addDays(totalDays, month, day, year);
  var finalDate = dateToString(result[0], result[1], result[2]);
- alert(1);
- elt.finishDate.value = finalDate; alert(2);
+
+ elt.finishDate.value = finalDate; 
   } // ending main
 
 </script>
