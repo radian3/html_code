@@ -9,7 +9,7 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-  <td> <input type = "text" name = "one" value = "" size = "20" /> </td> <td> Enter start time: </td> </tr>
+	  <td>Enter date of day informed of busines day wait (mm/dd/yyyy): </td><td> <input type = "text" name = "one" value = "" size = "20" /> </td></tr>
   <tr>
 	  <td> <input type = "text" name = "two" value = "" size = "20" /> </td> <td> Enter time for task 1: </td></tr>
   <tr>
