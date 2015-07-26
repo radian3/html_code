@@ -9,9 +9,9 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-	  <td>Enter date of day informed of busines day wait (mm/dd/yyyy): </td><td> <input type = "text" name = "one" value = "" size = "20" /> </td></tr>
+	  <td>Enter date of day informed of busines day wait (mm/dd/yyyy): </td> <td> <input type = "text" name = "dateVal" value = "" size = "20" /> </td> </tr>
   <tr>
-	  <td>Enter the amount of business days needed after the first date: </td> <td> <input type = "text" name = "two" value = "" size = "20" /> </td></tr>
+	  <td>Enter the amount of business days needed after the first date: </td><td> <input type = "text" name = "daysAdded" value = "" size = "20" /> </td></tr>
 
   <tr><td> Is Sunday a business day?   
         <input name = "connection1" type = "radio"
@@ -54,8 +54,7 @@
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
-  </td>
-  <td>
+
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
@@ -64,7 +63,7 @@
 </form>
 
 <script type = "text/javascript">
-  document.getElementById("addForm").addBtn.onclick = addTwo;
+  document.getElementById("addForm").addBtn.onclick = main;
   document.getElementById("n1").checked = true;
   document.getElementById("y2").checked = true;
   document.getElementById("y3").checked = true;
@@ -74,99 +73,36 @@
   document.getElementById("n7").checked = true;
 
   
-  function meridiemSwap(merVal){ // changing from am to pm and vise-versa
-  if (merVal == "am")
-  	{merVal = "pm";}
-  
-  else
-  {merVal = "am";}
-  return merVal; 	
- }
+
 
 
   
  
  
- function addTwo()
+ function main()
   {
 
-   var sum = "";
    var elt = document.getElementById("addForm");      
-   var one = elt.one.value;
-   var idxOne = one.indexOf(":");
-   var two = elt.two.value;
-   var idxTwo = two.indexOf(":");
- //  elt.sum.value = one+two;
+   
 
-   if (idxOne == 1){
-    var hrInp = parseFloat(one.substring(0, 1));
-    var minInp = parseFloat(one.substring(2, 4));
-    var meridiem = one.substring(4, 6);
-  }    
-   else{
-    var hrInp = parseFloat(one.substring(0, 2));
-    var minInp = parseFloat(one.substring(3, 5));
-    var meridiem = one.substring(5, 7);
-   }
-  if (idxTwo == 1){
-    var hrInpS = parseFloat(two.substring(0, 1));
-    var minInpS = parseFloat(two.substring(2, 4));
-  }    
-   else{
-    var hrInpS = parseFloat(two.substring(0, 2));
-    var minInpS = parseFloat(two.substring(3, 5));
-   }
+ elt.dateVal.value = "07/26/2015";
+ elt.daysAdded.value = 543;
 
+
+ var dateVal = elt.dateVal.value;
   
-   
-   if (hrInp == 12){
-   var temp = meridiemSwap(meridiem);
-   meridiem = temp;
-   }
-   hrInp = hrInp+hrInpS;
-   minInp = minInp+minInpS;
-   
-   if (minInp >= 60){
-    hrInp = hrInp + (Math.floor(minInp/60));
-    minInp = (minInp%60);
-   }
-   
-   if (hrInp > 12){
-    hrInp = hrInp - 12;
-    var temp = meridiemSwap(meridiem);
-    meridiem = temp;}
-
-   if (hrInp == 12){
-    var temp = meridiemSwap(meridiem);
-    meridiem = temp;}
-   
+ var month = parseFloat(dateVal.substring(0, 2));
+ var day =  parseFloat(dateVal.substring(3, 5));
+ var year =  parseFloat(dateVal.substring(6, 10));
+ var daysAdded = elt.daysAdded.value;
+ alert();
 
  
  
-   var uno = hrInp.toString();
-   if (minInp == 0){	
-    
-   var temp = minInp.toString();
-   var dos = "00";
-   }
-   if (minInp > 0 && minInp < 10){	
-    
-   var temp = minInp.toString();
-   var dos = "0".concat(temp);
-   }
-   if (minInp >= 10){
-    dos = minInp.toString();
-   }
-   var tres = meridiem;
-   var res = uno.concat(":");
-   var resTwo = res.concat(dos);
-   var resThree = resTwo.concat(tres);
-  // alert (resThree);
-   elt.sum.value = resThree;
-
+  
 
   
-  } // ending addTwo
+  } // ending main
 
 </script>
 
