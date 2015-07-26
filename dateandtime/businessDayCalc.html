@@ -71,24 +71,38 @@
   document.getElementById("y5").checked = true;
   document.getElementById("y6").checked = true;
   document.getElementById("n7").checked = true;
-
+  
   
 
-
+function getDayOfWeek(month, day, year){ //returns day index (number between 0 and 6)
+  if (month >= 3 && month <= 12){
+   var a = month - 2;}
+  else{
+   a = month + 10;}	  
+  if (month == 1 || month == 2){
+   var c = year%10+((Math.floor(year/10))%10*10)-1;}
+  else{
+   var c = year%10+((Math.floor(year/10))%10*10);}
+  if (c == 0 && (month == 1 || month == 2)){
+    var d = Math.floor(year/100)-1;}
+   else{
+    var d = Math.floor(year/100);} 
+  return ((((Math.floor((13*a-1)/5) + Math.floor(c/4)  + Math.floor(d/4)  + day + c - 2 * d) % 7) + 7) % 7);
+ }  
 
   
  
  
  function main()
   {
-
+   
    var elt = document.getElementById("addForm");      
    
 
  elt.dateVal.value = "07/26/2015";
- elt.daysAdded.value = 543;
+ elt.daysAdded.value = 544;
 
-
+ 
  var dateVal = elt.dateVal.value;
   
  var month = parseFloat(dateVal.substring(0, 2));
@@ -96,8 +110,39 @@
  var year =  parseFloat(dateVal.substring(6, 10));
  var daysAdded = elt.daysAdded.value;
 
+ var dayOfWeek = getDayOfWeek(month, day, year);
+
+ var businessDayCounter = 0;
+ var totalDays = 0;
+ var index = (dayOfWeek-1)%7;
+ var workDays = new Array(); 
+ for (var i = 1; i < 8; i++){
+
+	 if (document.getElementById("y".concat(i.toString())).checked == true){
+	  workDays.push(1)}
+         else{
+	  workDays.push(0)}
+ }
+ 
+
 
  
+ while (businessDayCounter < daysAdded) // computing the total number of days that pass by during the business day period
+ {
+	 
+  if (workDays[index] == 1) // checking if a business day
+  {
+  	businessDayCounter += 1; // adding to the number of business days
+	  } 	
+  totalDays += 1; // adding to the total number of days in the time period
+  index += 1;
+  if (index > 6) // checking if we reached the last day of the week
+  {
+  	index = 0; // resetting to the first day of the week
+		}	  
+  } 
+ 
+alert();
  
   
 
