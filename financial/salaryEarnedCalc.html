@@ -13,46 +13,17 @@
 <tr>
   <td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
 <td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
-<td> # of (non-overtime) hours worked per week:  <input type = "text" name = "hrsWorked" value = "" size = "20" /> </td> </tr>
-<td> # of overtime hours worked per week:  <input type = "text" name = "hrsWorked" value = "" size = "20" /> </td> </tr>
-<td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
-<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
+<td> # of overtime hours worked per week:  <input type = "text" name = "hrsWorked" value = "0" size = "20" /> </td> </tr>
+<td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
+<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
 
-<tr><td> Is this task done on Sunday?   
-        <input name = "connection1" type = "radio"
-	       value = "y1" id = "y1" /> Yes <input name = "connection1" type = "radio"
-	       value = "n1" id = "n1" /> No
-      </td></tr>
-  <tr><td> Do you work on Monday?   
-        <input name = "connection2" type = "radio"
-	       value = "y2" id = "y2" /> Yes <input name = "connection2" type = "radio"
-	       value = "n2" id = "n2" /> No
-      </td></tr>
-        <tr><td> Do you work on Tuesday?   
-        <input name = "connection3" type = "radio"
-	       value = "y3" id = "y3" /> Yes <input name = "connection3" type = "radio"
-	       value = "n3" id = "n3" /> No
-      </td></tr>
-        <tr><td> Do you work on Wednesday?   
-        <input name = "connection4" type = "radio"
-	       value = "y4" id = "y4" /> Yes <input name = "connection4" type = "radio"
-	       value = "n4" id = "n4" /> No
-      </td></tr>
-        <tr><td> Do you work Thursday?   
-        <input name = "connection5" type = "radio"
-	       value = "y5" id = "y5" /> Yes <input name = "connection5" type = "radio"
-	       value = "n5" id = "n5" /> No
-      </td></tr>
-        <tr><td> Do you work Friday?   
-        <input name = "connection6" type = "radio"
-	       value = "y6" id = "y6" /> Yes <input name = "connection6" type = "radio"
-	       value = "n6" id = "n6" /> No
-      </td></tr>
-        <tr><td> Do you work Saturday?   
-        <input name = "connection7" type = "radio"
-	       value = "y7" id = "y7" /> Yes <input name = "connection7" type = "radio"
-	       value = "n7" id = "n7" /> No
-      </td></tr>
+<tr><td> Hours worked each Sunday: <input name = "y1" type = "text" value = "" id = "y1" /> </td></tr>
+<tr><td> Hours worked each Monday: <input name = "y2" type = "text" value = "" id = "y2" /> </td></tr>
+<tr><td> Hours worked each Tuesday: <input name = "y3" type = "text" value = "" id = "y3" /> </td></tr>
+<tr><td> Hours worked each Wednesday: <input name = "y4" type = "text" value = "" id = "y4" /> </td></tr>
+<tr><td> Hours worked each Thursday: <input name = "y5" type = "text" value = "" id = "y5" /> </td></tr>
+<tr><td> Hours worked each Friday: <input name = "y6" type = "text" value = "" id = "y6" /> </td></tr>
+<tr><td> Hours worked each Saturday: <input name = "y7" type = "text" value = "" id = "y7" /> </td></tr>
 
   <tr>
   <td>
@@ -76,14 +47,6 @@
 
 <script type = "text/javascript">
   document.getElementById("addForm").addBtn.onclick = main;
-    document.getElementById("n1").checked = true;
-  document.getElementById("y2").checked = true;
-  document.getElementById("y3").checked = true;
-  document.getElementById("y4").checked = true;
-  document.getElementById("y5").checked = true;
-  document.getElementById("y6").checked = true;
-  document.getElementById("n7").checked = true;
- 
   
   function output(numDays){
 if (numDays < 7){ // checking if the two dates the user entered were less than a week apart 
@@ -160,6 +123,13 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  function main()
   {
  var elt = document.getElementById("addForm"); 
+ if (elt.y1.value == ''){ elt.y1.value = 0;}
+ if (elt.y2.value == ''){ elt.y2.value = 0;}
+ if (elt.y3.value == ''){ elt.y3.value = 0;}
+ if (elt.y4.value == ''){ elt.y4.value = 0;}
+ if (elt.y5.value == ''){ elt.y5.value = 0;}
+ if (elt.y6.value == ''){ elt.y6.value = 0;}
+ if (elt.y7.value == ''){ elt.y7.value = 0;}
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
  if (finishDateVal == '' || startDateVal == ''){
