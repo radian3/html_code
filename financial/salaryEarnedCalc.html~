@@ -12,10 +12,10 @@
   <tr><td> Start date (mm/dd/yyyy):  <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
 <tr><td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
 <tr><td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
-<tr><td> # of total overtime hours:  <input type = "text" name = "OverHrsWorked" value = "0" size = "20" /> </td> </tr>
-<tr><td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
-<tr><td> Bonus cash rewarded:  <input type = "text" name = "cash" value = "0" size = "20" /> </td> </tr>
-<tr><td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "tax" value = "0" size = "20" /> </td> </tr>
+<tr><td> # of total overtime hours:  <input type = "text" name = "OverHrsWorked" value = "" size = "20" /> </td> </tr>
+<tr><td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
+<tr><td> Bonus cash rewarded:  <input type = "text" name = "cash" value = "" size = "20" /> </td> </tr>
+<tr><td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "tax" value = "" size = "20" /> </td> </tr>
 <tr><td> Hours worked each Sunday: <input name = "y1" type = "text" value = "" id = "y1" /> </td></tr>
 <tr><td> Hours worked each Monday: <input name = "y2" type = "text" value = "" id = "y2" /> </td></tr>
 <tr><td> Hours worked each Tuesday: <input name = "y3" type = "text" value = "" id = "y3" /> </td></tr>
@@ -42,6 +42,7 @@
       <tr style = "position:absolute; top: 253px; left: 670px;"><td> # of days passed by: <input type = "text" name = "r2" value = "" size = "20" /> </td> </tr> 
    
 </table>
+Any input left blank will be automatically made a 0 upon clicking "Calculate".
 </form>
 
 <script type = "text/javascript">
@@ -130,6 +131,12 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  if (elt.y5.value == ''){ elt.y5.value = 0;}
  if (elt.y6.value == ''){ elt.y6.value = 0;}
  if (elt.y7.value == ''){ elt.y7.value = 0;}
+
+ if (elt.OverHrsWorked.value == ''){ elt.OverHrsWorked.value = 0;}
+ if (elt.overtimeHourlyWage.value == ''){ elt.overtimeHourlyWage.value = 0;}
+ if (elt.cash.value == ''){ elt.cash.value = 0;}
+ if (elt.tax.value == ''){ elt.tax.value = 0;}
+ 
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
  var hourlyWage = elt.hourlyWage.value; 
@@ -161,7 +168,7 @@ for (var i = 1; i <= result; i++){
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
 
-elt.r3.value = Math.floor(((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage)+elt.cash.value)*(1-elt.tax.value));
+elt.r3.value = Math.floor(((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage)+parseFloat(elt.cash.value))*(1-elt.tax.value));
 
 elt.daysCalculated.value = output(numOfTaskDays);
 elt.dayscomputed.value = numOfTaskDays;
