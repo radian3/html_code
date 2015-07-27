@@ -5,18 +5,17 @@
 <title> Salary Earned Calculator </title>
 </head>
 <body>
-<h3> Salary Earned Calculator </h3>
+<h3> Salary Earned Calculator Input</h3>
+<h3 style = "position:absolute;left:670px;top:-10px;"> Salary Earned Calculator Output</h3>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
-  <tr>
-  <td> Start date (mm/dd/yyyy):  <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
-<tr>
-  <td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
-<td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
-<td> # of total overtime hours:  <input type = "text" name = "OverHrsWorked" value = "0" size = "20" /> </td> </tr>
-<td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
-<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "tax" value = "0" size = "20" /> </td> </tr>
-
+  <tr><td> Start date (mm/dd/yyyy):  <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
+<tr><td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
+<tr><td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
+<tr><td> # of total overtime hours:  <input type = "text" name = "OverHrsWorked" value = "0" size = "20" /> </td> </tr>
+<tr><td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
+<tr><td> Bonus cash rewarded:  <input type = "text" name = "cash" value = "0" size = "20" /> </td> </tr>
+<tr><td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "tax" value = "0" size = "20" /> </td> </tr>
 <tr><td> Hours worked each Sunday: <input name = "y1" type = "text" value = "" id = "y1" /> </td></tr>
 <tr><td> Hours worked each Monday: <input name = "y2" type = "text" value = "" id = "y2" /> </td></tr>
 <tr><td> Hours worked each Tuesday: <input name = "y3" type = "text" value = "" id = "y3" /> </td></tr>
@@ -32,13 +31,13 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-  <tr style = "position:absolute; top: 37px; left: 670px;"><td> Salary earned through this time: <input type = "text" name = "r3" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 64px; left: 670px;"><td> Pace for yearly salary: <input type = "text" name = "r4" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 91px; left: 670px;"><td> Pace for monthly salary: <input type = "text" name = "r5" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 118px; left: 670px;"><td> Pace for weekly salary: <input type = "text" name = "r6" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 145px; left: 670px;"><td> Pace for daily salary: <input type = "text" name = "r6" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 172px; left: 670px;"><td> Time the task was done:  <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
-   <tr style = "position:absolute; top: 199px; left: 670px;"><td> # of days task done: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 37px; left: 670px;"><td> Salary earned through this time ($): <input type = "text" name = "r3" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 64px; left: 670px;"><td> Pace for yearly salary ($): <input type = "text" name = "r4" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 91px; left: 670px;"><td> Pace for monthly salary ($): <input type = "text" name = "r5" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 118px; left: 670px;"><td> Pace for weekly salary ($): <input type = "text" name = "r6" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 145px; left: 670px;"><td> Pace for daily salary ($): <input type = "text" name = "r7" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 172px; left: 670px;"><td> Time spent working:  <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
+   <tr style = "position:absolute; top: 199px; left: 670px;"><td> # of days worked: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
       <tr style = "position:absolute; top: 226px; left: 670px;"><td> Time passed by:  <input type = "text" name = "r1" value = "" size = "20" /> </td> </tr>
       <tr style = "position:absolute; top: 253px; left: 670px;"><td> # of days passed by: <input type = "text" name = "r2" value = "" size = "20" /> </td> </tr> 
    
@@ -162,11 +161,16 @@ for (var i = 1; i <= result; i++){
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
 
-elt.r3.value = ((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage))*(1-elt.tax.value);
+elt.r3.value = Math.floor(((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage)+parseFloat(elt.cash.value))*(1-elt.tax.value));
+
 elt.daysCalculated.value = output(numOfTaskDays);
 elt.dayscomputed.value = numOfTaskDays;
 elt.r1.value = output(result);
 elt.r2.value = result;
+elt.r4.value = Math.floor(elt.r3.value*365/result);
+elt.r5.value = Math.floor(elt.r3.value*(365/12)/result);
+elt.r6.value = Math.floor(elt.r3.value*7/result);
+elt.r7.value = Math.floor(elt.r3.value/result);
 
   } // ending main
 
