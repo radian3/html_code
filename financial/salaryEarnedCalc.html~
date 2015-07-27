@@ -123,6 +123,7 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  function main()
   {
  var elt = document.getElementById("addForm"); 
+ if (elt.finishDateVal.value == '' || elt.startDateVal.value == '' || elt.hourlyWage.value == '') {return;}
  if (elt.y1.value == ''){ elt.y1.value = 0;}
  if (elt.y2.value == ''){ elt.y2.value = 0;}
  if (elt.y3.value == ''){ elt.y3.value = 0;}
@@ -132,7 +133,7 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  if (elt.y7.value == ''){ elt.y7.value = 0;}
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
- if (finishDateVal == '' || startDateVal == '') {return;} 
+ var hourlyWage = elt.hourlyWage.value; 
  var month = parseFloat(startDateVal.substring(0, 2));
  var day =  parseFloat(startDateVal.substring(3, 5));
  var year =  parseFloat(startDateVal.substring(6, 10));
@@ -142,24 +143,21 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  var yearVal =  parseFloat(finishDateVal.substring(6, 10));
 
   var result = getDays(month, day, year, monthVal, dayVal, yearVal)+1;
-
+var hrTotal = 0;
 var numOfTaskDays = 0;
 var taskDays = new Array(); 
-alert();
+
  for (var i = 1; i < 8; i++){
-	 if (parseFloat(document.getElementById("y".concat(i.toString()))) != 0){
-	  taskDays.push(1);alert();}
-	 
-         else{
-	  taskDays.push(0);}
+         taskDays.push((document.getElementById("y".concat(i.toString())).value));
  }
 
 var dayOfWeek = getDayOfWeek(month, day, year);
-
+alert();
 for (var i = 1; i <= result; i++){
 
- if (taskDays[dayOfWeek] == 1){
-	 numOfTaskDays += 1;}
+ if (taskDays[dayOfWeek] != 0){
+ numOfTaskDays += 1;}
+	// hrTotal += taskDays[dayOfWeek];}
  dayOfWeek += 1;
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
