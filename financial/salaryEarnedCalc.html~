@@ -15,7 +15,7 @@
 <td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
 <td> # of overtime hours worked per week:  <input type = "text" name = "hrsWorked" value = "0" size = "20" /> </td> </tr>
 <td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
-<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
+<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
 
 <tr><td> Hours worked each Sunday: <input name = "y1" type = "text" value = "" id = "y1" /> </td></tr>
 <tr><td> Hours worked each Monday: <input name = "y2" type = "text" value = "" id = "y2" /> </td></tr>
@@ -132,8 +132,7 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
  if (elt.y7.value == ''){ elt.y7.value = 0;}
  var startDateVal = elt.startDateVal.value;
  var finishDateVal = elt.finishDateVal.value;
- if (finishDateVal == '' || startDateVal == ''){
-	 return;} 
+ if (finishDateVal == '' || startDateVal == '') {return;} 
  var month = parseFloat(startDateVal.substring(0, 2));
  var day =  parseFloat(startDateVal.substring(3, 5));
  var year =  parseFloat(startDateVal.substring(6, 10));
@@ -146,11 +145,13 @@ while (month != monthVal || year != yearVal) // we will keep iterating until we 
 
 var numOfTaskDays = 0;
 var taskDays = new Array(); 
+alert();
  for (var i = 1; i < 8; i++){
-	 if (document.getElementById("y".concat(i.toString())).checked == true){
-	  taskDays.push(1)}
+	 if (parseFloat(document.getElementById("y".concat(i.toString()))) != 0){
+	  taskDays.push(1);alert();}
+	 
          else{
-	  taskDays.push(0)}
+	  taskDays.push(0);}
  }
 
 var dayOfWeek = getDayOfWeek(month, day, year);
