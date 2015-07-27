@@ -13,9 +13,9 @@
 <tr>
   <td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
 <td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
-<td> # of overtime hours worked per week:  <input type = "text" name = "hrsWorked" value = "0" size = "20" /> </td> </tr>
+<td> # of total overtime hours:  <input type = "text" name = "OverHrsWorked" value = "0" size = "20" /> </td> </tr>
 <td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
-<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "0" size = "20" /> </td> </tr>
+<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "tax" value = "0" size = "20" /> </td> </tr>
 
 <tr><td> Hours worked each Sunday: <input name = "y1" type = "text" value = "" id = "y1" /> </td></tr>
 <tr><td> Hours worked each Monday: <input name = "y2" type = "text" value = "" id = "y2" /> </td></tr>
@@ -152,21 +152,22 @@ var taskDays = new Array();
  }
 
 var dayOfWeek = getDayOfWeek(month, day, year);
-alert();
+
 for (var i = 1; i <= result; i++){
 
  if (taskDays[dayOfWeek] != 0){
- numOfTaskDays += 1;}
-	// hrTotal += taskDays[dayOfWeek];}
+ numOfTaskDays += 1;
+	 hrTotal += parseFloat(taskDays[dayOfWeek]);}
  dayOfWeek += 1;
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
-
-
+alert(hrTotal);
+elt.r3.value = ((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage))*(1-elt.tax.value);
 elt.daysCalculated.value = output(numOfTaskDays);
 elt.dayscomputed.value = numOfTaskDays;
 elt.r1.value = output(result);
 elt.r2.value = result;
+
   } // ending main
 
 </script>
