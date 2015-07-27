@@ -2,48 +2,53 @@
 
 <html>
 <head>
-<title> Task Day Calculator </title>
+<title> Salary Earned Calculator </title>
 </head>
 <body>
-<h3> Task Day Calculator </h3>
+<h3> Salary Earned Calculator </h3>
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
   <td> Start date (mm/dd/yyyy):  <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
 <tr>
   <td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
+<td> Hourly wage:  <input type = "text" name = "hourlyWage" value = "" size = "20" /> </td> </tr>
+<td> # of (non-overtime) hours worked per week:  <input type = "text" name = "hrsWorked" value = "" size = "20" /> </td> </tr>
+<td> # of overtime hours worked per week:  <input type = "text" name = "hrsWorked" value = "" size = "20" /> </td> </tr>
+<td> Overtime hourly wage:  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
+<td> Tax (ex: 0.13 for 13%):  <input type = "text" name = "overtimeHourlyWage" value = "" size = "20" /> </td> </tr>
 
 <tr><td> Is this task done on Sunday?   
         <input name = "connection1" type = "radio"
 	       value = "y1" id = "y1" /> Yes <input name = "connection1" type = "radio"
 	       value = "n1" id = "n1" /> No
       </td></tr>
-  <tr><td> Is this task done on Monday?   
+  <tr><td> Do you work on Monday?   
         <input name = "connection2" type = "radio"
 	       value = "y2" id = "y2" /> Yes <input name = "connection2" type = "radio"
 	       value = "n2" id = "n2" /> No
       </td></tr>
-        <tr><td> Is this task done on Tuesday?   
+        <tr><td> Do you work on Tuesday?   
         <input name = "connection3" type = "radio"
 	       value = "y3" id = "y3" /> Yes <input name = "connection3" type = "radio"
 	       value = "n3" id = "n3" /> No
       </td></tr>
-        <tr><td> Is this task done on Wednesday?   
+        <tr><td> Do you work on Wednesday?   
         <input name = "connection4" type = "radio"
 	       value = "y4" id = "y4" /> Yes <input name = "connection4" type = "radio"
 	       value = "n4" id = "n4" /> No
       </td></tr>
-        <tr><td> Is this task done on Thursday?   
+        <tr><td> Do you work Thursday?   
         <input name = "connection5" type = "radio"
 	       value = "y5" id = "y5" /> Yes <input name = "connection5" type = "radio"
 	       value = "n5" id = "n5" /> No
       </td></tr>
-        <tr><td> Is this task done on Friday?   
+        <tr><td> Do you work Friday?   
         <input name = "connection6" type = "radio"
 	       value = "y6" id = "y6" /> Yes <input name = "connection6" type = "radio"
 	       value = "n6" id = "n6" /> No
       </td></tr>
-        <tr><td> Is this task done on Saturday?   
+        <tr><td> Do you work Saturday?   
         <input name = "connection7" type = "radio"
 	       value = "y7" id = "y7" /> Yes <input name = "connection7" type = "radio"
 	       value = "n7" id = "n7" /> No
@@ -56,10 +61,16 @@
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr><td> Time the task was done:  <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
-   <tr><td> # of days task done: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
-      <tr><td> Time passed by:  <input type = "text" name = "r1" value = "" size = "20" /> </td> </tr>
-   <tr><td> # of days passed by: <input type = "text" name = "r2" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 37px; left: 670px;"><td> Salary earned through this time: <input type = "text" name = "r3" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 64px; left: 670px;"><td> Pace for yearly salary: <input type = "text" name = "r4" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 91px; left: 670px;"><td> Pace for monthly salary: <input type = "text" name = "r5" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 118px; left: 670px;"><td> Pace for weekly salary: <input type = "text" name = "r6" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 145px; left: 670px;"><td> Pace for daily salary: <input type = "text" name = "r6" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 172px; left: 670px;"><td> Time the task was done:  <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
+   <tr style = "position:absolute; top: 199px; left: 670px;"><td> # of days task done: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
+      <tr style = "position:absolute; top: 226px; left: 670px;"><td> Time passed by:  <input type = "text" name = "r1" value = "" size = "20" /> </td> </tr>
+      <tr style = "position:absolute; top: 253px; left: 670px;"><td> # of days passed by: <input type = "text" name = "r2" value = "" size = "20" /> </td> </tr> 
+   
 </table>
 </form>
 

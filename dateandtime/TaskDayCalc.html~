@@ -9,9 +9,9 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr>
-  <td> Start date (mm/dd/yyyy): </td> <td> <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
+  <td> Start date (mm/dd/yyyy):  <input type = "text" name = "startDateVal" value = "" size = "20" /> </td> </tr>
 <tr>
-  <td> Finish date (mm/dd/yyyy): </td> <td> <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
+  <td> Finish date (mm/dd/yyyy):  <input type = "text" name = "finishDateVal" value = "" size = "20" /> </td> </tr>
 
 <tr><td> Is this task done on Sunday?   
         <input name = "connection1" type = "radio"
@@ -52,13 +52,14 @@
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" />
-  </td>
-  <td>
+
   <input type = "reset" value = "Clear" />
   </td>
   </tr>
-   <tr><td> Time the task was done: </td> <td> <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
-   <tr><td> # of days task done: </td> <td> <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
+   <tr><td> Time the task was done:  <input type = "text" name = "daysCalculated" value = "" size = "20" /> </td> </tr>
+   <tr><td> # of days task done: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
+      <tr><td> Time passed by:  <input type = "text" name = "r1" value = "" size = "20" /> </td> </tr>
+   <tr><td> # of days passed by: <input type = "text" name = "dayscomputed" value = "" size = "20" /> </td> </tr>
 </table>
 </form>
 
@@ -170,7 +171,7 @@ var taskDays = new Array();
          else{
 	  taskDays.push(0)}
  }
-alert();
+
 var dayOfWeek = getDayOfWeek(month, day, year);
 
 for (var i = 1; i <= result; i++){
@@ -181,9 +182,11 @@ for (var i = 1; i <= result; i++){
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
 
-alert(numOfTaskDays);
+
 elt.daysCalculated.value = output(numOfTaskDays);
 elt.dayscomputed.value = numOfTaskDays;
+elt.r1.value = output(result);
+elt.r2.value = result;
   } // ending main
 
 </script>
