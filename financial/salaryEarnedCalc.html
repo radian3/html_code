@@ -168,16 +168,16 @@ for (var i = 1; i <= result; i++){
  if (dayOfWeek > 6){
 	 dayOfWeek = 0;}}
 
-elt.r3.value = Math.floor(((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage)+parseFloat(elt.cash.value))*(1-elt.tax.value));
+elt.r3.value = (((elt.OverHrsWorked.value*elt.overtimeHourlyWage.value)+(hrTotal*hourlyWage)+parseFloat(elt.cash.value))*(1-elt.tax.value)).toFixed(2);
 
 elt.daysCalculated.value = output(numOfTaskDays);
 elt.dayscomputed.value = numOfTaskDays;
 elt.r1.value = output(result);
 elt.r2.value = result;
-elt.r4.value = Math.floor(elt.r3.value*365/result);
-elt.r5.value = Math.floor(elt.r3.value*(365/12)/result);
-elt.r6.value = Math.floor(elt.r3.value*7/result);
-elt.r7.value = Math.floor(elt.r3.value/result);
+elt.r4.value = (elt.r3.value*365/result).toFixed(2);
+elt.r5.value = (elt.r3.value*(365/12)/result).toFixed(2);
+elt.r6.value = (elt.r3.value*7/result).toFixed(2);
+elt.r7.value = (elt.r3.value/result).toFixed(2);
 
   } // ending main
 

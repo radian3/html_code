@@ -43,11 +43,11 @@
  if (elt.tax.value == ''){ elt.tax.value = 0;}
  
 
- elt.r4.value = Math.floor(elt.yearlyWage.value*(1-elt.tax.value));
- elt.r5.value = Math.floor(elt.yearlyWage.value*(1-elt.tax.value)/12);
- elt.r6.value = Math.floor(elt.yearlyWage.value*(1-elt.tax.value)*7/365);
- elt.r7.value = Math.floor(elt.yearlyWage.value*(1-elt.tax.value)/365);
- elt.r3.value = Math.floor(elt.yearlyWage.value*(1-elt.tax.value)*7/(365*elt.h1.value));
+ elt.r4.value = (elt.yearlyWage.value*(1-elt.tax.value)).toFixed(2);
+ elt.r5.value = (elt.yearlyWage.value*(1-elt.tax.value)/12).toFixed(2);
+ elt.r6.value = (elt.yearlyWage.value*(1-elt.tax.value)*7/365).toFixed(2);
+ elt.r7.value = (elt.yearlyWage.value*(1-elt.tax.value)/365).toFixed(2);
+ elt.r3.value = (elt.yearlyWage.value*(1-elt.tax.value)*7/(365*elt.h1.value)).toFixed(2);
 
  
 

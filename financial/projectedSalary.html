@@ -43,10 +43,10 @@
  if (elt.tax.value == ''){ elt.tax.value = 0;}
  
 
- elt.r6.value = Math.floor(elt.hourlyWage.value*elt.h1.value*(1-elt.tax.value));
- elt.r7.value = Math.floor(elt.r6.value/7);
- elt.r4.value = Math.floor(elt.r6.value*365/7);
- elt.r5.value = Math.floor(elt.r6.value*(365/(7*12)));
+ elt.r6.value = (elt.hourlyWage.value*elt.h1.value*(1-elt.tax.value)).toFixed(2);
+ elt.r7.value = (elt.r6.value/7).toFixed(2);
+ elt.r4.value = (elt.r6.value*365/7).toFixed(2);
+ elt.r5.value = (elt.r6.value*(365/(7*12))).toFixed(2);
 
 
  
