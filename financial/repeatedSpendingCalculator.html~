@@ -67,6 +67,8 @@ document.getElementById("addForm").addBtn.onclick = main;
    var cost = elt.cost.value;
    var timeVal = elt.timeVal.value;
    if (cost == '' || timeVal == ''){alert("Fill in the input");return;}
+   if (isNaN(cost) || isNaN(timeVal)){alert("Cost or Time Val input is not a number");return;}
+   if (!isNaN(elt.itemName.value)){alert("Input must be only strings");return;}  
    var timeUnits = elt.timeUnits.value;
  
    if (timeUnits == "Years"){
@@ -101,7 +103,7 @@ document.getElementById("addForm").addBtn.onclick = main;
 	   
 	   if (document.getElementById("response").value.length > 3){
 	     var outStr = document.getElementById("response").value;		
-	   if (outStr.indexOf(elt.itemName.value) == -1){alert(outStr);alert(elt.itemName.value); return;}	  
+	   if (outStr.indexOf(elt.itemName.value) != -1){return;}	  
 	     var outStr = outStr.concat("\n");}
 	   var outStr = outStr.concat(elt.itemName.value.toString());
 	   var outStr = outStr.concat("\t");

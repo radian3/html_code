@@ -67,6 +67,8 @@ document.getElementById("addForm").addBtn.onclick = main;
    var cost = elt.cost.value;
    var timeVal = elt.timeVal.value;
    if (cost == '' || timeVal == ''){alert("Fill in the input");return;}
+   if (isNaN(cost) || isNaN(timeVal)){alert("Cost or Time Val input is not a number");return;}
+   if (!isNaN(elt.itemName.value)){alert("Input contain a letter");return;}  
    var timeUnits = elt.timeUnits.value;
  
    if (timeUnits == "Years"){
