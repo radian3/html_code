@@ -36,13 +36,25 @@
 </table>
 </form>
 
-<p style = "position:absolute; top: 400px; left: 10px;"> Format to copy/paste to Microsoft Excel: <textarea id = "response" rows = "8" cols = "90" name = "s5" value = "" /> </textarea> </p>
-<p style = "position:absolute; top: 550px; lft:1 0px:"> Microsoft Excel headings to copy/paste: <input type = "text" size = "80" name = "headers" value = "Item Name	Cost	Bought Every	Units	Daily Cost	Weekly Cost	Monthly Cost	Yearly Cost" </p>
+<p style = "position:absolute; top: 400px; left: 10px;"> <textarea id = "response" rows = "8" cols = "116" name = "s5" value = "" /> </textarea> </p>
+<p style = "position:absolute; top: 550px; left: 10px;"> <b>Microsoft Excel headings to copy/paste: </b><input type = "text" size = "80" name = "headers" value = "Item Name	Cost	Bought Every	Units	Daily Cost	Weekly Cost	Monthly Cost	Yearly Cost" ></p>
+<p style = "position:absolute; top: 350px; left: 10px;"> <b> Unsaved results to be copy pasted into Microsoft Excel and saved there: </b></p>
+
+
+<p style = "position:absolute; top: 188px; left:10px;"> <b> Input Notes:</b> <br> (1) The item name is required if you want the result to be put in the box below <br> (2) Input the cost of the item <br> (3) Input the value for how frequently the item is purchased, then use the drop-down list to select the time units for that <br> (4) Select whether or not you want the result rounded <br> (5) Press "Calculate" to get your result<br> (6) Press "Clear" to wipe out the input and output or just adjust the input and pres "Calculate" again</p>
+
+
+<p style = "position:absolute; top: 188px; left:870px;"> <b> Beginner instructions for how to save to Excel: </b> <br> (1) Navigate to the headings at the bottom textbox <br> (2) Left click in the headings textbox and press ctrl+a to highlight all the text <br> (3) With all of the text highlighted, press ctrl+c to copy it <br> (4) Open up Microsoft Excel and left click on cell A1 <br> (5) Press ctrl+v to paste the headings into the spreadsheet <br> (6) Come back to this page and navigate to the unsaved results text box <br> (7) Left click in the text area and press ctrl+a and ctrl+c to copy everthing <br> (8) Go back to Cell A2 on the excel spreadsheet and left click in it <br> (9) Press ctrl+v to paste your results into the spreadsheet <br> (10) Adjust the column widths as necessary to make everything fit <br> (11) Use functions to sum up the output columns however you want <br> (12) Save the spreadsheet to your computer and add to it when needed <br> (13) This program is for repeated spending and not for one time spending <br> (14) One time spending purposes must be taken into account seperately</p>
 
 
 <script type = "text/javascript">
 
+window.onbeforeunload = confirmExit;
 
+  function confirmExit()
+  {
+    return "You have attempted to leave this page.  If you have not saved your output in the text area to Excel, your results will be lost.";
+  }
 
 document.getElementById("round").checked = true; 
 document.getElementById("addForm").addBtn.onclick = main;
@@ -89,7 +101,8 @@ document.getElementById("addForm").addBtn.onclick = main;
 	   
 	   if (document.getElementById("response").value.length > 3){
 	     var outStr = document.getElementById("response").value;		
-		   var outStr = outStr.concat("\n");}
+	   if (outStr.indexOf(elt.itemName.value) == -1){alert(outStr);alert(elt.itemName.value); return;}	  
+	     var outStr = outStr.concat("\n");}
 	   var outStr = outStr.concat(elt.itemName.value.toString());
 	   var outStr = outStr.concat("\t");
 	   var outStr = outStr.concat(cost.toString());
