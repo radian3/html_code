@@ -33,7 +33,7 @@
   <tr style = "position:absolute; top: 77px; left: 670px;"><td> Weekly Spending ($): <input type = "text" name = "s2" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 104px; left: 670px;"><td> Monthly Spending ($): <input type = "text" name = "s3" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 131px; left: 670px;"><td> Yearly Spending ($): <input type = "text" name = "s4" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 200px; left: 670px;"><td> Format to copy/paste to Microsoft Excel: <input type = "textarea" name = "s5" value = "" rows = "6" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 400px; left: 10px;"><td> Format to copy/paste to Microsoft Excel: <textarea rows = "5" cols = "90" name = "s5" value = "" /> </textarea> </td> </tr>
 
    
 </table>
@@ -82,8 +82,10 @@ document.getElementById("addForm").addBtn.onclick = main;
 
 
    if (elt.itemName.value != ''){
-	   
-	   var outStr = elt.itemName.value.toString();
+	   var outStr = elt.s5.value;
+	    	   if (elt.s5.value != ''){
+		   var outStr = outStr.concat("\n");}
+	   var outStr = outStr.concat(elt.itemName.value.toString());
 	   var outStr = outStr.concat("\t");
 	   var outStr = outStr.concat(cost.toString());
 	   var outStr = outStr.concat("\t");
