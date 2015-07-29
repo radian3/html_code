@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+<title> Repeated Spending Calculator</title>
+</head>
+<body>
+<h3> Repeated Spending Calculator Input </h3>
+<form id = "addForm"  action = "" method = "post">
+<table border = "0">
+  <tr><td> Item name (optional): <input type = "text" name = "itemName" value = "" size = "20" /> </td> </tr>
+  <tr><td> Time units:         
+<select name = "timeUnits">
+<option selected = "selected"> Years </option>
+<option> Months </option>
+<option> Weeks </option>
+<option> Days </option>
+<option> Hours </option>
+<option> Minutes </option>
+<option> Seconds </option>
+</select></td></tr>
+<tr><td> Time value: <input type = "text" name = "timeVal" value = "" size = "20" /> </td> </tr>
+  <tr>
+  <td>
+  <input type = "button" name = "addBtn" value = "Calculate" /><input type = "reset" value = "Clear" /></td></tr>
+   
+</table>
+</form>
+
+<script type = "text/javascript">
+  document.getElementById("addForm").addBtn.onclick = addTwo;
+  function addTwo()
+  {
+
+   var sum = "";
+   var elt = document.getElementById("addForm");      
+   var one = parseFloat (elt.one.value);
+   var two = parseFloat (elt.two.value);
+   elt.sum.value = one+two 		;
+
+
+
+  }
+</script>
+
+
+</body>
+</html>
+
+
