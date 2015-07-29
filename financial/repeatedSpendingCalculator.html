@@ -32,7 +32,8 @@
 <tr style = "position:absolute; top: 50px; left: 670px;"><td> Daily Spending ($): <input type = "text" name = "s1" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 77px; left: 670px;"><td> Weekly Spending ($): <input type = "text" name = "s2" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 104px; left: 670px;"><td> Monthly Spending ($): <input type = "text" name = "s3" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 131px; left: 670px;"><td> Yearly Spending ($): <input type = "text" name = "s4" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 131px; left: 670px;"><td> Yearly Spending ($): <input type = "text" name = "s4" value = "" size = "20" /> </td> </tr>
+  <tr style = "position:absolute; top: 200px; left: 670px;"><td> Format to copy/paste to Microsoft Excel: <input type = "text" name = "s5" value = "" size = "20" /> </td> </tr>
 
    
 </table>
@@ -79,6 +80,29 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.s2.value = (rawValue/(365/7));
    elt.s1.value = (rawValue/365);}
 
+
+   if (elt.itemName.value != ''){
+	   
+	   var outStr = elt.itemName.value.toString();
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat(cost.toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat(timeVal.toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat(timeUnits.toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat((elt.s1.value).toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat((elt.s2.value).toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat((elt.s3.value).toString());
+	   var outStr = outStr.concat("\t");
+	   var outStr = outStr.concat((elt.s4.value).toString());
+	   var outStr = outStr.concat("\t");  
+  
+
+	   elt.s5.value = outStr;
+   }
 
 
   }
