@@ -23,7 +23,9 @@
 <option value = "Minutes"> Minutes </option>
 <option value = "Seconds"> Seconds </option>
 </select></td></tr>
-  
+
+<tr><td> <input type = "radio" name = "rounding" value = "round" id = "round" size = "20" /> Round to 2 decimals <input type = "radio" name = "rounding" value = "dontround" id = "dontround" size = "20" /> Do not round</td> </tr>
+
   <tr>
   <td>
   <input type = "button" name = "addBtn" value = "Calculate" /> <input type = "reset" value = "Clear" /></td></tr>
@@ -37,7 +39,8 @@
 </form>
 
 <script type = "text/javascript">
-  document.getElementById("addForm").addBtn.onclick = main;
+document.getElementById("round").checked = true; 
+document.getElementById("addForm").addBtn.onclick = main;
   function main()
   {
   
@@ -63,10 +66,18 @@
 	   var rawValue = 365*24*60*cost/timeVal;}
    if (timeUnits == "Seconds"){
 	   var rawValue = 365*24*60*60*cost/timeVal;}
+
+   if (document.getElementById("round").checked == true){
    elt.s4.value = rawValue.toFixed(2);
    elt.s3.value = (rawValue/12).toFixed(2);
    elt.s2.value = (rawValue/(365/7)).toFixed(2);
-   elt.s1.value = (rawValue/365).toFixed(2);
+   elt.s1.value = (rawValue/365).toFixed(2);}
+
+   else{
+   elt.s4.value = rawValue;
+   elt.s3.value = (rawValue/12);
+   elt.s2.value = (rawValue/(365/7));
+   elt.s1.value = (rawValue/365);}
 
 
 
