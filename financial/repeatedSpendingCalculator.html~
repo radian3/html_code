@@ -36,7 +36,8 @@
 </table>
 </form>
 
-<p style = "position:absolute; top: 400px; left: 10px;"> Format to copy/paste to Microsoft Excel: <textarea id = "response" rows = "15" cols = "90" name = "s5" value = "" /> </textarea> </p>
+<p style = "position:absolute; top: 400px; left: 10px;"> Format to copy/paste to Microsoft Excel: <textarea id = "response" rows = "8" cols = "90" name = "s5" value = "" /> </textarea> </p>
+<p style = "position:absolute; top: 550px; lft:1 0px:"> Microsoft Excel headings to copy/paste: <input type = "text" size = "80" name = "headers" value = "Item Name	Cost	Bought Every	Units	Daily Cost	Weekly Cost	Monthly Cost	Yearly Cost" </p>
 
 
 <script type = "text/javascript">
