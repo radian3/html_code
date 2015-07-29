@@ -33,13 +33,16 @@
   <tr style = "position:absolute; top: 77px; left: 670px;"><td> Weekly Spending ($): <input type = "text" name = "s2" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 104px; left: 670px;"><td> Monthly Spending ($): <input type = "text" name = "s3" value = "" size = "20" /> </td> </tr>
   <tr style = "position:absolute; top: 131px; left: 670px;"><td> Yearly Spending ($): <input type = "text" name = "s4" value = "" size = "20" /> </td> </tr>
-  <tr style = "position:absolute; top: 400px; left: 10px;"><td> Format to copy/paste to Microsoft Excel: <textarea rows = "5" cols = "90" name = "s5" value = "" /> </textarea> </td> </tr>
-
-   
 </table>
 </form>
 
+<p style = "position:absolute; top: 400px; left: 10px;"> Format to copy/paste to Microsoft Excel: <textarea id = "response" rows = "8" cols = "90" name = "s5" value = "" /> </textarea> </p>
+
+
 <script type = "text/javascript">
+
+
+
 document.getElementById("round").checked = true; 
 document.getElementById("addForm").addBtn.onclick = main;
   function main()
@@ -80,10 +83,11 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.s2.value = (rawValue/(365/7));
    elt.s1.value = (rawValue/365);}
 
-
+   var outStr = '';
    if (elt.itemName.value != ''){
-	   var outStr = elt.s5.value;
-	   if (elt.s5.value.length > 3){
+	   
+	   if (document.getElementById("response").value.length > 3){
+	     var outStr = document.getElementById("response").value;		
 		   var outStr = outStr.concat("\n");}
 	   var outStr = outStr.concat(elt.itemName.value.toString());
 	   var outStr = outStr.concat("\t");
@@ -102,8 +106,9 @@ document.getElementById("addForm").addBtn.onclick = main;
 	   var outStr = outStr.concat((elt.s4.value).toString());
 	   var outStr = outStr.concat("\t");  
   
-
-	   elt.s5.value = outStr;
+	   
+	   document.getElementById("response").value = outStr;
+	   
    }
 
 
