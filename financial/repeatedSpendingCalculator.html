@@ -11,17 +11,17 @@
 <form id = "addForm"  action = "" method = "post">
 <table border = "0">
   <tr><td> Item name (optional): <input type = "text" name = "itemName" value = "" size = "20" /> </td> </tr>
-  <tr><td> Cost of item ($): <input type = "text" name = "itemName" value = "" size = "20" /> </td> </tr>
+  <tr><td> Cost of item ($): <input type = "text" name = "cost" value = "" size = "20" /> </td> </tr>
 
   <tr><td> Item is purchased every: <input type = "text" name = "timeVal" value = "" size = "1" />        
-<select name = "timeUnits">
+<select id = "timeUnits" name = "timeUnits">
 <option selected = "selected"> Years </option>
-<option> Months </option>
-<option> Weeks </option>
-<option> Days </option>
-<option> Hours </option>
-<option> Minutes </option>
-<option> Seconds </option>
+<option value = "Months"> Months </option>
+<option value = "Weeks"> Weeks </option>
+<option value = "Days"> Days </option>
+<option value = "Hours"> Hours </option>
+<option value = "Minutes"> Minutes </option>
+<option value = "Seconds"> Seconds </option>
 </select></td></tr>
   
   <tr>
@@ -40,10 +40,33 @@
   document.getElementById("addForm").addBtn.onclick = main;
   function main()
   {
-
+  
    
-   var elt = document.getElementById("addForm");      
-   alert();
+   var elt = document.getElementById("addForm"); 
+  
+   var cost = elt.cost.value;
+   var timeVal = elt.timeVal.value;
+   if (cost == '' || timeVal == ''){alert("Fill in the input");return;}
+   var timeUnits = elt.timeUnits.value;
+ 
+   if (timeUnits == "Years"){
+	   var rawValue = cost/timeVal;}
+   if (timeUnits == "Months"){
+	   var rawValue = 12*cost/timeVal;}
+   if (timeUnits == "Weeks"){
+	   var rawValue = (365/7)*cost/timeVal;}
+   if (timeUnits == "Days"){
+	   var rawValue = 365*cost/timeVal;}
+   if (timeUnits == "Hours"){
+	   var rawValue = 365*24*cost/timeVal;}
+   if (timeUnits == "Minutes"){
+	   var rawValue = 365*24*60*cost/timeVal;}
+   if (timeUnits == "Seconds"){
+	   var rawValue = 365*24*60*60*cost/timeVal;}
+   elt.s4.value = rawValue.toFixed(2);
+   elt.s3.value = (rawValue/12).toFixed(2);
+   elt.s2.value = (rawValue/(365/7)).toFixed(2);
+   elt.s1.value = (rawValue/365).toFixed(2);
 
 
 
