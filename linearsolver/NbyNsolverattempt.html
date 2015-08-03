@@ -1,0 +1,38 @@
+<html> 
+<script type = "text/javascript">
+
+  
+
+
+   var str0 = "<head><title> Variable Row Adder </title></head><body><h3> Variable Row Adder </h3><form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\">";
+
+   document.write(str0);
+      document.write("<tr style = \"position:absolute; left:400px; top: 20px;\"><td>  Enter number of rows: <input type = \"text\" name = \"one\" value = \"\" size = \"20\" /> </td> </tr><tr style = \"position:absolute; left:730px; top: 20px;\"><td><input type = \"button\" name = \"addBtn\" value = \"Generate Rows\" /> <input type = \"reset\" value = \"Clear\" /> </td></tr>");
+   for (var i = 1; i <= 100; i++){
+   var str1 = "<tr><td> ";
+   var str2 = "a".concat(i.toString()).concat(": ");
+   var str3 = "<input type = \"text\" name = ";
+   var str4 = String("\"").concat("a").concat(i.toString()).concat(String("\""));
+
+   var str5 = " value = \"\" size = \"20\" /> </td> </tr>";
+   document.write(str1);
+   document.write(str2);
+   document.write(str3);
+   document.write(str4);
+   document.write(str5);
+
+   }
+      document.write("<tr><td><input type = \"button\" name = \"addBtn\" value = \"Calculate\" /> <input type = \"reset\" value = \"Clear\" /> </td></tr>");
+   document.write("</table></form></body>");
+
+  
+</script>
+<script>
+alert();
+</script>
+
+</html>
+
+
+
+
