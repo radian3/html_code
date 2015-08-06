@@ -53,7 +53,8 @@ var den = getDenominator(fraction);
 var greatestCommonDivisor = GCD(num, den);
 var num = num/greatestCommonDivisor;
 var den = den/greatestCommonDivisor;
-if (den == 1){return String(num);}
+if (Math.abs(den) == 1){return String(num/den);}
+if (Math.abs(num)==Math.abs(den)){ return String(num/den);}
 if ((num>0 && den<0) || (num<0 && den<0)){ return String(num*-1).concat("/").concat(String(den*-1));}
 return String(num).concat("/").concat(String(den));}
 
@@ -131,6 +132,7 @@ if (rows == 1){
  var stri = "x1 = ".concat(a[0][1])
  elt.sols.value = stri;
 return;}
+s
 var answers = new Array();
 answers.push(a[rows-1][rows]);
 var k = rows-1;
@@ -138,11 +140,12 @@ for (var j = rows; j > 1; j--){
 var val = a[j-2][rows];
 var counter = 0;
 for (var i = rows-1; i >= k; i--){
- val -= a[j-2][i]*answers[counter]; 
+ val = subtractFractions(val, multiplyFractions(a[j-2][i], answers[counter])); 
  counter += 1;}
 answers.push(val);
 k-=1;
 }
+
 var stri = "";
 var k = rows-1;
 for (i = 0; i < rows-1; i++){
@@ -175,7 +178,7 @@ return a;}
 var inp = parseFloat(elt.rowVal.value);
 
 for (i = 0; i <= inp; i++){
-	a[row][i] /= piv;}
+	a[row][i] = divideFractions(a[row][i],piv);}
 return a;}
 
 function zeroEntry(a, row, col){ // zero out the necessary column entry, adjust the rest of the row
@@ -183,19 +186,19 @@ var elt = document.getElementById("addForm");
 var inp = parseFloat(elt.rowVal.value);	
 var ze = a[row][col];
  for (i = 0; i <=inp; i++){
-  a[row][i] -= ze*a[col][i];}
+  a[row][i] = subtractFractions(a[row][i], multiplyFractions(ze,a[col][i]));}
  return a;}
 
 function checkPivot(a, col){
  var elt = document.getElementById("addForm");
 var inp = parseFloat(elt.rowVal.value);
 
-if (a[col][col] != 0){
+if (parseFloat(a[col][col]) != 0){
 	return a;}
 if (col+1 == inp){
 	return a;}
 for (var i = col+1; i <= inp; i++){
-  if (a[i][col] != 0){	  
+  if (parseFloat(a[i][col]) != 0){	  
   var a = rowSwap(a, col, i); 
   return a;}}
 } // done with check Pivot
@@ -238,7 +241,7 @@ for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows+1; j++){
   var idx = "a".concat((i).toString()).concat(",").concat((j).toString());
-  rowValues.push(parseFloat(document.getElementById(idx).value));}
+  rowValues.push(document.getElementById(idx).value);}
  a.push(rowValues);} 
 solveDim(a);} // done with main
 
