@@ -143,7 +143,11 @@ var rows = parseFloat(elt.rowVal.value);
 	     c.push(a[i][j]);}
 	    b.push(c);}
 	   return b;}
-
+	   
+function stringOfMatrixValue(val){
+           if (getDenominator(val) && getNumerator(val) == 1){return "";}
+	   if (getDenominator(val) == 1){return String(getNumerator(val));}
+	   return "(".concat(val).concat(")");}
 function stringOfMatrix(a){
 
 var elt = document.getElementById("addForm");
@@ -152,10 +156,10 @@ var strOfMatrix = "";
 for (var i = 0; i < rows; i++){
  for (var j = 0; j < rows+1; j++){
          if (getNumerator(a[i][j])==0){continue;}
-	 if (j == 0 && getNumerator(a[i][j])!=0){strOfMatrix = strOfMatrix.concat(a[i][j]).concat("(x1)");}
+	 if (j == 0 && getNumerator(a[i][j])!=0){strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x1)");}
 	 if (j > 0 && j < rows){
-	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(a[i][j]).concat("(x").concat((j+1).toString()).concat(")");}
-	 else{strOfMatrix = strOfMatrix.concat(a[i][j]).concat("(x").concat((j+1).toString()).concat(")");}}
+	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
+	 else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}}
 	 if (j == rows){strOfMatrix = strOfMatrix.concat(" = ").concat(a[i][j]);}}
 strOfMatrix = strOfMatrix.concat('\n');}
 return strOfMatrix;}   
