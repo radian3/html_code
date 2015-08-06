@@ -8,9 +8,14 @@
    for (var j = 0; j < 11; j++){
    var str1 = "<td id = ";
    var str2 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat("+").concat(String("\"")).concat (">");
-   var str3 = "x".concat("<sub>").concat((j+1).toString()).concat("</sub>").concat(" +  </td>");
-   var str4 = "<td><input type = \"text\" id = ";
-   var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
+   if (j < 9){var str3 = "x".concat("<sub>").concat((j+1).toString()).concat("</sub>").concat("  </td>");}
+   if (j == 9){var str3 = "x".concat("<sub>").concat((j+1).toString()).concat("</sub>").concat(" = &nbsp; </td>");}
+   if (j == 10){var str3 = "d".concat("<sub>").concat((i+1).toString()).concat("</sub>").concat(" </td>");}
+   var str4 = "<td id = ";
+
+   var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> + &nbsp; <input type = \"text\"");
+   if (j == 0 || j == 10){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> <input type = \"text\"")};
+   
    var str6 = " name = ";
    var str7 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
    var str8 = " value = \"\" size = \"1\" /> </td>";
