@@ -44,6 +44,86 @@ for (var j = 2; j < 11; j++){
  document.getElementById(temp).style.display = 'none';}
 
 
+
+
+function simplestForm(fraction){
+var num = getNumerator(fraction);
+if (num == 0){return String(0);}
+var den = getDenominator(fraction); 
+var greatestCommonDivisor = GCD(num, den);
+var num = num/greatestCommonDivisor;
+var den = den/greatestCommonDivisor;
+if (den == 1){return String(num);}
+if ((num>0 && den<0) || (num<0 && den<0)){ return String(num*-1).concat("/").concat(String(den*-1));}
+return String(num).concat("/").concat(String(den));}
+
+function divideFractions(fraction1, fraction2){
+var num1 = getNumerator(fraction1);
+var den1 = getDenominator(fraction1); 
+var num2 = getNumerator(fraction2);
+var den2 = getDenominator(fraction2);
+var num = num1*den2; 
+var den = den1*num2;
+return simplestForm(String(num).concat("/").concat(String(den)));}
+
+function multiplyFractions(fraction1, fraction2){
+var num1 = getNumerator(fraction1);
+var den1 = getDenominator(fraction1); 
+var num2 = getNumerator(fraction2);
+var den2 = getDenominator(fraction2);
+var num = num1*num2; 
+var den = den1*den2;
+return simplestForm(String(num).concat("/").concat(String(den)));}
+
+
+function addFractions(fraction1, fraction2){
+var num1 = getNumerator(fraction1);
+var den1 = getDenominator(fraction1); 
+var num2 = getNumerator(fraction2);
+var den2 = getDenominator(fraction2);
+var num = num1*den2+num2*den1;
+var den = den1*den2;
+return simplestForm(String(num).concat("/").concat(String(den)));}
+
+function subtractFractions(fraction1, fraction2){
+var num1 = getNumerator(fraction1);
+var den1 = getDenominator(fraction1); 
+var num2 = getNumerator(fraction2);
+var den2 = getDenominator(fraction2);
+var num = num1*den2-num2*den1;
+var den = den1*den2;
+return simplestForm(String(num).concat("/").concat(String(den)));}
+
+function getNumerator(fraction){
+ var fraction = String(fraction);
+ if (fraction.indexOf("/") == -1){return parseFloat(fraction);}
+return parseFloat(fraction.substring(0, fraction.indexOf("/")));}
+
+  function getDenominator(fraction){
+ var fraction = String(fraction);
+ if (fraction.indexOf("/") == -1){return 1;}
+return parseFloat(fraction.substring(fraction.indexOf("/")+1, fraction.length));}
+
+function GCD(x, y){ 
+   if (x > y){
+    var a = x;
+    var b = y;}
+   else{
+   var a = y;
+   var b = x; }  
+   var q = Math.floor(a/b);
+   var r = a%b;
+   while (r!=0){
+   var a = b;
+   var b = r;
+   var q = Math.floor(a/b);
+   var r = a%b;}
+   return Math.abs(b);} 
+
+
+
+
+
 function backSolveAnswer(a){
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);

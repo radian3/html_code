@@ -238,7 +238,7 @@ for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows+1; j++){
   var idx = "a".concat((i).toString()).concat(",").concat((j).toString());
-  rowValues.push(parseFloat(document.getElementById(idx).value));}
+  rowValues.push(document.getElementById(idx).value);}
  a.push(rowValues);} 
 solveDim(a);} // done with main
 
