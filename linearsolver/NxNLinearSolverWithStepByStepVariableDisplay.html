@@ -168,13 +168,13 @@ function backSolveAnswer(a){
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
 if (rows == 1){
- alert("Now our matrix of \n\n".concat(stringOfMatrix(a)).concat("\nimmediately gives us x1 = ").concat(a[0][1]));
+ alert("Now system of equations: \n\n".concat(stringOfMatrix(a)).concat("\nimmediately gives us x1 = ").concat(a[0][1]));
  var stri = "x1 = ".concat(a[0][1])
  elt.sols.value = stri;
 return;}
 var answers = new Array();
 answers.push(a[rows-1][rows]);
-alert("Now our matrix of \n\n".concat(stringOfMatrix(a)).concat("\nis ready to backsolve."))
+alert("Now our system of equations: \n\n".concat(stringOfMatrix(a)).concat("\nis ready to backsolve."))
 alert("Equation ".concat((rows).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\nimmediately gives us x").concat((rows).toString()).concat(" = ").concat((answers[0]).toString()));
 var k = rows-1;
 var strsols = "";
@@ -211,20 +211,20 @@ backSolveAnswer(a);}
 function solveCol(a, col){
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
-alert("Starting on column ".concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)));
+//alert("Starting on column ".concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)));
 a = checkPivot(a, col);
 var b = copyMatrix(a);
 a = divRow(a, col, a[col][col]);
-if (getNumerator(b[col][col])==1){alert("The entry in equation".concat((col+1).toString()).concat(" column").concat((col+1).toString()).concat(" is already 1. Thus the matrix\n\n").concat(stringOfMatrix(b)).concat("\nremains the same."));}
-else{alert("Dividing every entry in row ".concat((col+1).toString()).concat(" by ").concat(b[col][col]).concat(" (obtained from the value at row ").concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(") of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a)));}
+//if (getNumerator(b[col][col])==1){alert("The entry in equation".concat((col+1).toString()).concat(" column").concat((col+1).toString()).concat(" is already 1. Thus the matrix\n\n").concat(stringOfMatrix(b)).concat("\nremains the same."));}
+if (getNumerator(b[col][col])!=1){alert("Dividing every entry in equation ".concat((col+1).toString()).concat(" by ").concat(" the coefficient of (x").concat((col+1).toString()).concat(") in equation ").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill result in division by ").concat(b[col][col]).concat(", giving us \n\n").concat(stringOfMatrix(a)));}
 if (col == rows-1){
  return a;}
 for (var i = col+1; i < rows; i++){
     var b = copyMatrix(a);
    a = zeroEntry(a, i, col);
-   if (getNumerator(b[i][col]) == 0){
-   alert("Equation".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
-   else{alert("Replacing equation".concat((i+1).toString()).concat(" with equation").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*equation").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill zero out the value of equation").concat((i+1).toString()).concat(" column").concat((col+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
+  // if (getNumerator(b[i][col]) == 0){
+   //alert("Equation".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
+   if (getNumerator(b[i][col])!= 0){alert("Time to cancel out (x".concat((col+1).toString()).concat(") in equation ").concat((i+1).toString()).concat(". Replacing equation").concat((i+1).toString()).concat(" with equation").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*equation").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill cancel out (x").concat((col+1).toString()).concat(") in equation").concat((i+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
 return a;}
 
  function divRow(a, row, piv){ // divide row by pivot
@@ -310,7 +310,7 @@ for (var i = 0; i < rows; i++){
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
-alert(stringOfMatrix(a));
+alert("You enetered: \n\n".concat(stringOfMatrix(a)));
 solveDim(a);} // done with main
 
 
