@@ -124,10 +124,19 @@ function GCD(x, y){
    return Math.abs(b);} 
 
 
-
+   function copyMatrix(a){
+	   var elt = document.getElementById("addForm");
+var rows = parseFloat(elt.rowVal.value);
+	   var b = new Array();
+	   for (var i = 0; i < rows; i++){
+	    var c = new Array();
+	    for (var j = 0; j < rows+1; j++){
+	     c.push(a[i][j]);}
+	    b.push(c);}
+	   return b;}
 
 function stringOfMatrix(a){
-alert();
+
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
 var strOfMatrix = "";
@@ -144,6 +153,8 @@ if (rows == 1){
 return;}
 var answers = new Array();
 answers.push(a[rows-1][rows]);
+alert("Now our matrix of \n\n".concat(stringOfMatrix(a)).concat("\nis ready to backsolve."))
+alert("Row ".concat((rows).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\nimmediately gives us x").concat((rows).toString()).concat(" = ").concat((answers[0]).toString()));
 var k = rows-1;
 for (var j = rows; j > 1; j--){
 var val = a[j-2][rows];
@@ -173,15 +184,19 @@ backSolveAnswer(a);}
 function solveCol(a, col){
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
-alert("Starting on column ".concat((col+1).toString()));
+alert("Starting on column ".concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)));
 a = checkPivot(a, col);
-alert("Dividing every entry in row ".concat((col+1).toString()).concat(" by ").concat(a[col][col]).concat(" (obtained from the value at row ").concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(")"));
-a = divRow(a, col, a[col][col]); 
+var b = copyMatrix(a);
+a = divRow(a, col, a[col][col]);
+alert("Dividing every entry in row ".concat((col+1).toString()).concat(" by ").concat(b[col][col]).concat(" (obtained from the value at row ").concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(") of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a)));
 if (col == rows-1){
  return a;}
 for (var i = col+1; i < rows; i++){
-   alert("Replacing row".concat((i+1).toString()).concat(" with row").concat((i+1).toString()).concat(" - ").concat((a[i][col]).toString()).concat("*row").concat((col+1).toString())); 
-   a = zeroEntry(a, i, col);}	
+    var b = copyMatrix(a);
+   a = zeroEntry(a, i, col);
+   if (getNumerator(b[i][col]) == 0){
+   alert("Row".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
+   else{alert("Replacing row".concat((i+1).toString()).concat(" with row").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*row").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a)));}}	
 return a;}
 
  function divRow(a, row, piv){ // divide row by pivot
@@ -209,9 +224,10 @@ if (parseFloat(a[col][col]) != 0){
 if (col+1 == inp){
 	return a;}
 for (var i = col+1; i <= inp; i++){
-  if (parseFloat(a[i][col]) != 0){	  
-  alert("Found a 0 at row ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping rows ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()))
-  var a = rowSwap(a, col, i); 
+  if (parseFloat(a[i][col]) != 0){
+  var b = copyMatrix(a);	  
+  var a = rowSwap(a, col, i);
+  alert("Found a 0 at row ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping rows ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
   return a;}}
 } // done with check Pivot
 
@@ -255,7 +271,6 @@ for (var i = 0; i < rows; i++){
   var idx = "a".concat((i).toString()).concat(",").concat((j).toString());
   rowValues.push(document.getElementById(idx).value);}
  a.push(rowValues);}
-	alert(stringOfMatrix(a));
 solveDim(a);} // done with main
 
 
