@@ -15,7 +15,7 @@
 
    var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> + &nbsp; <input type = \"text\"");
    if (j == 0){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> <input type = \"text\"")};
-   
+   if (j == 10){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> &nbsp; = &nbsp;  <input type = \"text\"")};
    var str6 = " name = ";
    var str7 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
    var str8 = " value = \"\" size = \"1\" /> </td>";
@@ -44,7 +44,7 @@ document.getElementById(temp).style.display = 'none';
 var temp = temp.concat("+");
 document.getElementById(temp).style.display = 'none';}}
 
-for (var j = 2; j < 11; j++){
+for (var j = 1; j < 10; j++){
  var temp = "a0,".concat(j.toString());
  document.getElementById(temp).style.display = 'none';
  var temp = temp.concat("+");
@@ -254,11 +254,12 @@ for (i = 0; i <= inp; i++){
  return a;}
 
 document.getElementById("addForm").addRows.onclick = addRows;
+
 function addRows(){
 var elt = document.getElementById("addForm");
 var inp = parseFloat(elt.rowVal.value);
 for (var i = 0; i < 10; i++){
- for (var j = 0; j < 11; j++){
+ for (var j = 0; j < 10; j++){
  var temp = "a".concat(i.toString()).concat(",").concat(j.toString());
  if (i < inp && j < inp+1){
 document.getElementById(temp).style.display = '';
@@ -269,6 +270,12 @@ document.getElementById(temp).style.display = '';}
 var temp = temp.concat("+");
 document.getElementById(temp).style.display = 'none';}
 }}
+for (var i = 0; i <inp; i++){
+var temp = "a".concat(i.toString()).concat(",").concat("10");
+document.getElementById(temp).style.display = '';
+var temp = temp.concat("+");
+document.getElementById(temp).style.display = '';
+}
 } // done with addRows
 
 document.getElementById("addForm").compute.onclick = main;
