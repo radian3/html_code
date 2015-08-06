@@ -168,7 +168,7 @@ function backSolveAnswer(a){
 var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
 if (rows == 1){
- alert("Now system of equations: \n\n".concat(stringOfMatrix(a)).concat("\nimmediately gives us x1 = ").concat(a[0][1]));
+ alert("Now our system of equations: \n\n".concat(stringOfMatrix(a)).concat("\nimmediately gives us x1 = ").concat(a[0][1]));
  var stri = "x1 = ".concat(a[0][1])
  elt.sols.value = stri;
 return;}
@@ -178,7 +178,7 @@ alert("Now our system of equations: \n\n".concat(stringOfMatrix(a)).concat("\nis
 alert("Equation ".concat((rows).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\nimmediately gives us x").concat((rows).toString()).concat(" = ").concat((answers[0]).toString()));
 var k = rows-1;
 var strsols = "";
-var strsols = strsols.concat("x").concat((rows).toString()).concat(" = ").concat((a[rows-1][rows]).toString()).concat(", ");
+var strsols = strsols.concat("x").concat((rows).toString()).concat(" = ").concat((a[rows-1][rows]).toString());
 for (var j = rows; j > 1; j--){
 var val = a[j-2][rows];
 var counter = 0;
@@ -188,8 +188,8 @@ for (var i = rows-1; i >= k; i--){
  counter += 1;}
 answers.push(val);
 
-alert("Plugging in ".concat(strsols).concat("into equation").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\ngives us x").concat((i+1).toString()).concat(" = ").concat((val).toString()));
-var strsols = strsols.concat("x").concat((i+1).toString()).concat(" = ").concat((val).toString()).concat(", ");
+alert("Plugging in ".concat(strsols).concat(" into equation").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\ngives us x").concat((i+1).toString()).concat(" = ").concat((val).toString()));
+var strsols = strsols.concat(", x").concat((i+1).toString()).concat(" = ").concat((val).toString()).concat(", ");
 k-=1;
 }
 
@@ -222,9 +222,9 @@ if (col == rows-1){
 for (var i = col+1; i < rows; i++){
     var b = copyMatrix(a);
    a = zeroEntry(a, i, col);
-   if (getNumerator(b[i][col]) == 0){
-   alert("Equation".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
-   else{alert("Time to cancel out (x".concat((col+1).toString()).concat(") in equation ").concat((i+1).toString()).concat(". Replacing equation").concat((i+1).toString()).concat(" with equation").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*equation").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill cancel out (x").concat((col+1).toString()).concat(") in equation").concat((i+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
+  // if (getNumerator(b[i][col]) == 0){
+   //alert("Equation".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
+   if (getNumerator(b[i][col])!= 0){alert("Time to cancel out (x".concat((col+1).toString()).concat(") in equation ").concat((i+1).toString()).concat(". Replacing equation").concat((i+1).toString()).concat(" with equation").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*equation").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill cancel out (x").concat((col+1).toString()).concat(") in equation").concat((i+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
 return a;}
 
  function divRow(a, row, piv){ // divide row by pivot
