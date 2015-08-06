@@ -24,8 +24,10 @@
    document.write(str8);
    }
    document.write("</tr>");}
+   document.write("<tr><td>Solutions in decimal form (if applicable):  <input type = \"text\" name = \"solss\" id = \"sols\" size = \"120\" </td></tr>");
    document.write("<tr><td style = \"position:absolute; top:22px; left: 780px;\"><input type = \"button\" name = \"compute\" value = \"Calculate Solutions\" />  <input type = \"reset\" value = \"Clear\" /> </td></tr>");
-   document.write("<tr style = position:absolute;><td>Solutions:  <input type = \"text\" name = \"sols\" id = \"sols\" size = \"120\" </td></tr>");
+   document.write("<tr style = \"position:absolute;\"><td>Solutions in fractional form (if applicable):  <input type = \"text\" name = \"sols\" id = \"sols\" size = \"120\" </td></tr>");
+
    document.write("</table></form></body>");
 </script>
 <script>
@@ -132,7 +134,6 @@ if (rows == 1){
  var stri = "x1 = ".concat(a[0][1])
  elt.sols.value = stri;
 return;}
-s
 var answers = new Array();
 answers.push(a[rows-1][rows]);
 var k = rows-1;
