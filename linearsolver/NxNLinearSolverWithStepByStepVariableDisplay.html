@@ -13,17 +13,21 @@
    if (j == 10){var str3 = "d".concat("<sub>").concat((i+1).toString()).concat("</sub>").concat(" </td>");}
    var str4 = "<td id = ";
 
-   var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> + &nbsp; <input type = \"text\"");
-   if (j == 0){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> <input type = \"text\"")};
-   if (j == 10){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> &nbsp; = &nbsp;  <input type = \"text\"")};
-   var str6 = " name = ";
-   var str7 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
-   var str8 = " value = \"\" size = \"1\" /> </td>";
+   var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> + &nbsp;");
+   if (j == 0){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat(">")};
+   if (j == 10){var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\"")).concat("> &nbsp; = &nbsp;")};
+   var str6 = "<input type = \"text\" id = ";
+  var str7 = String("\"").concat("a").concat(i.toString()).concat(",,").concat(j.toString()).concat(String("\""));
+   var str8 = " name = ";
+   var str9 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
+   var str10 = " value = \"\" size = \"1\" /> </td>";
    document.write(str4);
    document.write(str5);
    document.write(str6);
    document.write(str7);
    document.write(str8);
+   document.write(str9);
+   document.write(str10);
       document.write(str1);
    document.write(str2);
    document.write(str3);
@@ -285,12 +289,17 @@ var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
 var cols = rows+1;
 var a = new Array();
+//var strtest = "a0".concat(",,").concat("0");
+//alert(document.getElementById(strtest).value);
 for (var i = 0; i < rows; i++){
  var rowValues = new Array();
- for (var j = 0; j < rows+1; j++){
-  var idx = "a".concat((i).toString()).concat(",").concat((j).toString());
+ for (var j = 0; j < rows; j++){
+  var idx = "a".concat((i).toString()).concat(",,").concat((j).toString());
   rowValues.push(document.getElementById(idx).value);}
+ var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
+ rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
+alert(stringOfMatrix(a));
 solveDim(a);} // done with main
 
 
