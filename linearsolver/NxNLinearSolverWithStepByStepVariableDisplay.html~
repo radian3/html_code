@@ -160,7 +160,7 @@ for (var i = 0; i < rows; i++){
 	 if (j > 0 && j < rows){
 	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
 	 else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}}
-	 if (j == rows){strOfMatrix = strOfMatrix.concat(" = ").concat(stringOfMatrixValue(a[i][j]));}}
+	 if (j == rows){strOfMatrix = strOfMatrix.concat(" = ").concat(a[i][j]);}}
 strOfMatrix = strOfMatrix.concat('\n');}
 return strOfMatrix;}   
 

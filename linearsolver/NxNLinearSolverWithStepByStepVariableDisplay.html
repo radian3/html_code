@@ -175,7 +175,7 @@ return;}
 var answers = new Array();
 answers.push(a[rows-1][rows]);
 alert("Now our matrix of \n\n".concat(stringOfMatrix(a)).concat("\nis ready to backsolve."))
-alert("Row ".concat((rows).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\nimmediately gives us x").concat((rows).toString()).concat(" = ").concat((answers[0]).toString()));
+alert("Equation ".concat((rows).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\nimmediately gives us x").concat((rows).toString()).concat(" = ").concat((answers[0]).toString()));
 var k = rows-1;
 var strsols = "";
 var strsols = strsols.concat("x").concat((rows).toString()).concat(" = ").concat((a[rows-1][rows]).toString()).concat(", ");
@@ -188,7 +188,7 @@ for (var i = rows-1; i >= k; i--){
  counter += 1;}
 answers.push(val);
 
-alert("Plugging in ".concat(strsols).concat("into row").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\ngives us x").concat((i+1).toString()).concat(" = ").concat((val).toString()));
+alert("Plugging in ".concat(strsols).concat("into equation").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\ngives us x").concat((i+1).toString()).concat(" = ").concat((val).toString()));
 var strsols = strsols.concat("x").concat((i+1).toString()).concat(" = ").concat((val).toString()).concat(", ");
 k-=1;
 }
@@ -215,7 +215,7 @@ alert("Starting on column ".concat((col+1).toString()).concat(" of \n\n").concat
 a = checkPivot(a, col);
 var b = copyMatrix(a);
 a = divRow(a, col, a[col][col]);
-if (getNumerator(b[col][col])==1){alert("The entry in row".concat((col+1).toString()).concat(" column").concat((col+1).toString()).concat(" is already 1. Thus the matrix\n\n").concat(stringOfMatrix(b)).concat("\nremains the same."));}
+if (getNumerator(b[col][col])==1){alert("The entry in equation".concat((col+1).toString()).concat(" column").concat((col+1).toString()).concat(" is already 1. Thus the matrix\n\n").concat(stringOfMatrix(b)).concat("\nremains the same."));}
 else{alert("Dividing every entry in row ".concat((col+1).toString()).concat(" by ").concat(b[col][col]).concat(" (obtained from the value at row ").concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(") of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a)));}
 if (col == rows-1){
  return a;}
@@ -223,8 +223,8 @@ for (var i = col+1; i < rows; i++){
     var b = copyMatrix(a);
    a = zeroEntry(a, i, col);
    if (getNumerator(b[i][col]) == 0){
-   alert("Row".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
-   else{alert("Replacing row".concat((i+1).toString()).concat(" with row").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*row").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill zero out the value of row").concat((i+1).toString()).concat(" column").concat((col+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
+   alert("Equation".concat((i+1).toString()).concat(" column").concat((i+1).toString()).concat(" already has a 0. Thus the matrix \n\n").concat(stringOfMatrix(a)).concat("\n will remain the same."))  ;}
+   else{alert("Replacing equation".concat((i+1).toString()).concat(" with equation").concat((i+1).toString()).concat(" - ").concat((b[i][col]).toString()).concat("*equation").concat((col+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill zero out the value of equation").concat((i+1).toString()).concat(" column").concat((col+1).toString()).concat(" to give us \n\n").concat(stringOfMatrix(a)));}}	
 return a;}
 
  function divRow(a, row, piv){ // divide row by pivot
@@ -255,7 +255,7 @@ for (var i = col+1; i <= inp; i++){
   if (parseFloat(a[i][col]) != 0){
   var b = copyMatrix(a);	  
   var a = rowSwap(a, col, i);
-  alert("Found a 0 at row ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping rows ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
+  alert("Found a 0 at equation ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping equation ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
   return a;}}
 } // done with check Pivot
 
