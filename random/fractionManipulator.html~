@@ -107,9 +107,6 @@ document.getElementById("addForm").addBtn.onclick = main;
    elt.diff.value = subtractFractions(one, two);
    elt.prod.value = multiplyFractions(one, two);
    elt.quo.value = divideFractions(one, two);
-
-
-
   }
 </script>
 
