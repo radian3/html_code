@@ -8,20 +8,20 @@
    for (var j = 0; j < 11; j++){
    var str1 = "<td id = ";
    var str2 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat("+").concat(String("\"")).concat (">");
-   var str3 = "a".concat("<sub>").concat((i+1).toString()).concat(",").concat((j+1).toString()).concat("</sub>").concat(": </td><td>");
-   var str4 = "<input type = \"text\" id = ";
+   var str3 = "x".concat("<sub>").concat((j+1).toString()).concat("</sub>").concat(" + &nbsp; </td>");
+   var str4 = "<td><input type = \"text\" id = ";
    var str5 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
    var str6 = " name = ";
    var str7 = String("\"").concat("a").concat(i.toString()).concat(",").concat(j.toString()).concat(String("\""));
    var str8 = " value = \"\" size = \"1\" /> </td>";
-   document.write(str1);
-   document.write(str2);
-   document.write(str3);
    document.write(str4);
    document.write(str5);
    document.write(str6);
    document.write(str7);
    document.write(str8);
+      document.write(str1);
+   document.write(str2);
+   document.write(str3);
    }
    document.write("</tr>");}
   
@@ -167,8 +167,9 @@ for (var i = rows-1; i >= k; i--){
  val = subtractFractions(val, multiplyFractions(a[j-2][i], answers[counter])); 
  counter += 1;}
 answers.push(val);
-//var strsols = strsols.concat("x").concat((i+1).toString()).concat(" = ").concat((val).toString()).concat(", ");
+
 alert("Plugging in ".concat(strsols).concat("into row").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(a)).concat("\ngives us x").concat((i+1).toString()).concat(" = ").concat((val).toString()));
+var strsols = strsols.concat("x").concat((i+1).toString()).concat(" = ").concat((val).toString()).concat(", ");
 k-=1;
 }
 
