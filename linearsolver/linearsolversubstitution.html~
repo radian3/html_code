@@ -168,19 +168,19 @@ strOfMatrix = strOfMatrix.concat('\n');}
 return strOfMatrix;}  	   
 
 
-function checkPivot(a, col){
+function checkPivot(a){
  var elt = document.getElementById("addForm");
-var inp = parseFloat(elt.rowVal.value);
+var inp = a.length;
 
-if (parseFloat(a[col][col]) != 0){
+if (getNumerator(a[0][0]) != 0){
 	return a;}
-if (col+1 == inp){
+if (1 == inp){
 	return a;}
-for (var i = col+1; i <= inp; i++){
-  if (parseFloat(a[i][col]) != 0){
+for (var i = 1; i <= inp; i++){
+  if (parseFloat(a[i][0]) != 0){
   var b = copyMatrix(a);	  
-  var a = rowSwap(a, col, i);
-  alert("Found a 0 at equation ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping equation ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
+  var a = rowSwap(a, 0, i);
+  //alert("Found a 0 at equation ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping equation ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
   return a;}}
 } // done with check Pivot
 
@@ -281,14 +281,18 @@ for (var i = 0; i < rows; i++){
 alert("You entered: \n\n".concat(stringOfMatrix(a)));
 if (a.length == 1){elt.sols.value = divideFractions(a[0][1],a[0][0]);return;}
 
-
+a = checkPivot(a);
 var b = new Array();
 var reducedEquations = new Array();
 var solSet = new Array();
 reducedEquations.push(a[0]);
 b = copyMatrix(a);
+alert(stringOfMatrix(b));
 for (var i = 0; i < a.length-1; i++){
+b = checkPivot(b);
+alert(stringOfMatrix(b));
 b = reduceMatrix(b);
+alert(stringOfMatrix(b));
 reducedEquations.push(b[0]);}
 //alert(reducedEquations);
 for (var i = a.length-1; i >= 0; i--){
@@ -298,7 +302,7 @@ for (var i = a.length-1; i >= 0; i--){
 }
 //alert("hey");
 alert(solSet);
-
+elt.sols.value = (solSet);
 } // done with main
 
 
