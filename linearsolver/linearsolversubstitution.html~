@@ -244,17 +244,17 @@ function computeSol(rowEq, solSet){
 	 solSet.push(divideFractions(rowEq[1],rowEq[0]));
 	return solSet;}
  val = rowEq[rowEq.length-1];
-// alert(val);/*
- var j = a.length-2
- for (var i = 0; i < a.length-2; i++){
+ //alert(val);
+ var j = rowEq.length-2
+ for (var i = 0; i < rowEq.length-2; i++){
  val = subtractFractions(val, multiplyFractions(rowEq[j],solSet[i]));
 	 j--;
  
  } 
  val = divideFractions(val, rowEq[0]);
  solSet.push(val);
- */
- alert("hi");
+ 
+//alert("hi");
  
  return solSet;}
 
@@ -271,11 +271,11 @@ for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows; j++){
   var idx = "a".concat((i).toString()).concat(",,").concat((j).toString());
- document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+// document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
   
   rowValues.push(document.getElementById(idx).value);}
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
- document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+ //document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
 alert("You entered: \n\n".concat(stringOfMatrix(a)));
@@ -296,8 +296,8 @@ for (var i = a.length-1; i >= 0; i--){
 	solSet = computeSol(reducedEquations[i], solSet);
 //alert((reducedEquations[i]));
 }
-alert("hey");
-//alert(solSet);
+//alert("hey");
+alert(solSet);
 
 } // done with main
 
