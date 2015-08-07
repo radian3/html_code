@@ -160,7 +160,7 @@ var dim = parseFloat(elt.rowVal.value);
 var strOfMatrix = "";
 for (var i = 0; i < rows; i++){
  for (var j = 0; j < rows+1; j++){
-         if (getNumerator(a[i][j])==0){continue;}
+         if (getNumerator(a[i][j])==0 && j != rows){continue;}
 	 if (j == 0 && getNumerator(a[i][j])!=0){strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((1+dim-rows).toString()).concat(")");}
 	 if (j > 0 && j < rows){
 	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1+dim-rows).toString()).concat(")");}
@@ -321,11 +321,11 @@ for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows; j++){
   var idx = "a".concat((i).toString()).concat(",,").concat((j).toString());
- document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+ //document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
   
   rowValues.push(document.getElementById(idx).value);}
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
- document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+ //document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
 alert("You entered: \n\n".concat(stringOfMatrix(a)));
@@ -350,7 +350,7 @@ reducedEquations.push(b[0]);}
 for (var i = a.length-1; i >= 0; i--){
 	solSet = computeSol(reducedEquations[i], solSet);
 	if (i == a.length-1){alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\nImmediately gives us \n\n").concat(stringOfRow(reducedEquations[i])));}
-	else{alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\n and ").concat(strOfSols(solSet)).concat("Gives us \n\nx").concat((1+1+rows-reducedEquations[i].length).toString()).concat(" = ").concat(solSet[solSet.length-1]));}
+	else{alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\nand ").concat(strOfSols(solSet)).concat("gives us \n\nx").concat((1+1+rows-reducedEquations[i].length).toString()).concat(" = ").concat(solSet[solSet.length-1]));}
 	//alert(strOfSols(solSet));
 }
 var strsols = "";
