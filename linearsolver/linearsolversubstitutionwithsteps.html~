@@ -293,9 +293,20 @@ for (var i = a.length-2; i >= 1; i--){
        }	
        if (i > 1){strVals = strVals.concat(stringOfMatrixValue(a[i])).concat("(x").concat((i+2+rows-a.length).toString()).concat(") - ");	}
         ;}
- strVals = strVals.concat(")").concat("/").concat(stringOfMatrixValue(a[0]));
+strVals = strVals.concat(")")
+if (getNumerator(a[0])!=1 && getDenominator(a[0])!=1){strVals = strVals.concat("/").concat(stringOfMatrixValue(a[0]));}
  return strVals;
  } 
+
+function strOfSols(sols){
+var strsols = ""
+	var elt = document.getElementById("addForm");
+var rows = parseFloat(elt.rowVal.value);
+	for (var i = sols.length-1 ; i >= 1; i--){
+         strsols = strsols.concat("x").concat((rows-i).toString()).concat(" = ").concat((sols[i]).toString()).concat("; ");
+	}
+return strsols;
+}
 
 function main(){
 	var answers = new Array();
@@ -338,7 +349,9 @@ c = reduceMatrix(c);
 reducedEquations.push(b[0]);}
 for (var i = a.length-1; i >= 0; i--){
 	solSet = computeSol(reducedEquations[i], solSet);
-	alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\nImmediately gives us ));
+	if (i == a.length-1){alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\nImmediately gives us \n\n").concat(stringOfRow(reducedEquations[i])));}
+	else{alert("Using the equation\n\n".concat(stringOfRow(reducedEquations[i])).concat("\n\n and ").concat(strOfSols(solSet)).concat("Gives us \n\nx").concat((1+1+rows-reducedEquations[i].length).toString()).concat(" = ").concat(solSet[solSet.length-1]));}
+	//alert(strOfSols(solSet));
 }
 var strsols = "";
 var k = 1;
