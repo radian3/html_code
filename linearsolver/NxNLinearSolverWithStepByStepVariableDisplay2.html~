@@ -159,7 +159,12 @@ for (var i = 0; i < rows; i++){
 	 if (j == 0 && getNumerator(a[i][j])!=0){strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x1)");}
 	 if (j > 0 && j < rows){
 	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
-	 else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}}
+	 else{
+		 
+		 
+	if (getNumerator(a[i][0])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
+			else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");} 
+		       	}}
 	 if (j == rows){strOfMatrix = strOfMatrix.concat(" = ").concat(a[i][j]);}}
 strOfMatrix = strOfMatrix.concat('\n');}
 return strOfMatrix;}   
@@ -186,7 +191,6 @@ var strVals = "x".concat((j-1).toString()).concat(" = ").concat(a[j-2][rows]).co
 var strValues = strVals;
 for (var i = rows-1; i >= k; i--){
  val = subtractFractions(val, multiplyFractions(a[j-2][i], answers[counter])); 
- counter += 1;
  if (i == k){strVals = strVals.concat(stringOfMatrixValue(a[j-2][i])).concat("(x").concat((i+1).toString()).concat(") ");
  strValues = strValues.concat(stringOfMatrixValue(a[j-2][i])).concat("(").concat(answers[counter]).concat(")");}
  if (i > k){strVals = strVals.concat(stringOfMatrixValue(a[j-2][i])).concat("(x").concat((i+1).toString()).concat(") - ");
@@ -317,7 +321,7 @@ for (var i = 0; i < rows; i++){
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
-alert("You enetered: \n\n".concat(stringOfMatrix(a)));
+alert("You entered: \n\n".concat(stringOfMatrix(a)));
 solveDim(a);} // done with main
 
 

@@ -159,7 +159,12 @@ for (var i = 0; i < rows; i++){
 	 if (j == 0 && getNumerator(a[i][j])!=0){strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x1)");}
 	 if (j > 0 && j < rows){
 	 if(getNumerator(a[i][j-1])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
-	 else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}}
+	 else{
+		 
+		 
+	if (getNumerator(a[i][0])!=0){strOfMatrix = strOfMatrix.concat(" + ").concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");}
+			else{strOfMatrix = strOfMatrix.concat(stringOfMatrixValue(a[i][j])).concat("(x").concat((j+1).toString()).concat(")");} 
+		       	}}
 	 if (j == rows){strOfMatrix = strOfMatrix.concat(" = ").concat(a[i][j]);}}
 strOfMatrix = strOfMatrix.concat('\n');}
 return strOfMatrix;}   
@@ -306,8 +311,9 @@ var elt = document.getElementById("addForm");
 var rows = parseFloat(elt.rowVal.value);
 var cols = rows+1;
 var a = new Array();
-//var strtest = "a0".concat(",,").concat("0");
-//alert(document.getElementById(strtest).value);
+var idx = "a".concat((0).toString()).concat(",,").concat((0).toString());
+if (document.getElementById(idx).value == ""){alert("Put in some values");return;}
+
 for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows; j++){
@@ -316,7 +322,7 @@ for (var i = 0; i < rows; i++){
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
-alert("You enetered: \n\n".concat(stringOfMatrix(a)));
+alert("You entered: \n\n".concat(stringOfMatrix(a)));
 solveDim(a);} // done with main
 
 
