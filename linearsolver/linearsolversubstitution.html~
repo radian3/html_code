@@ -194,6 +194,7 @@ return strOfMatrix;}
 function checkPivot(a){
  var elt = document.getElementById("addForm");
 var inp = a.length;
+var dim = parseFloat(elt.rowVal.value);
 
 if (getNumerator(a[0][0]) != 0){
 	return a;}
@@ -201,9 +202,9 @@ if (1 == inp){
 	return a;}
 for (var i = 1; i <= inp; i++){
   if (parseFloat(a[i][0]) != 0){
-  var b = copyMatrix(a);	  
+  //var b = copyMatrix(a);	  
   var a = rowSwap(a, 0, i);
-  //alert("Found a 0 at equation ".concat((col+1).toString()).concat(" column ").concat((col+1).toString()).concat(". Swapping equation ").concat((col+1).toString()).concat(" and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(a))); 
+ // alert("Found a 0 in (x".concat((1+dim-inp).toString()).concat(") of equation 1. Swapping equations 1 and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix2(b)).concat("\nwill give us \n\n").concat(stringOfMatrix2(a))); 
   return a;}}
 } // done with check Pivot
 
@@ -289,16 +290,16 @@ var rows = parseFloat(elt.rowVal.value);
 var cols = rows+1;
 var a = new Array();
 var idx = "a".concat((0).toString()).concat(",,").concat((0).toString());
-if (document.getElementById(idx).value == ""){alert("Put in some values");return;}
+//if (document.getElementById(idx).value == ""){alert("Put in some values");return;}
 for (var i = 0; i < rows; i++){
  var rowValues = new Array();
  for (var j = 0; j < rows; j++){
   var idx = "a".concat((i).toString()).concat(",,").concat((j).toString());
-// document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+ document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
   
   rowValues.push(document.getElementById(idx).value);}
  var idx = "a".concat((i).toString()).concat(",,").concat((10).toString());
- //document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
+ document.getElementById(idx).value = Math.floor((Math.random() * 9) + 1); 
  rowValues.push(document.getElementById(idx).value);
  a.push(rowValues);}
 alert("You entered: \n\n".concat(stringOfMatrix(a)));
@@ -310,11 +311,15 @@ var reducedEquations = new Array();
 var solSet = new Array();
 reducedEquations.push(a[0]);
 b = copyMatrix(a);
+//var c = new Array();
+//c = copyMatrix(b);
 
 for (var i = 0; i < a.length-1; i++){
 b = checkPivot(b);
 b = reduceMatrix(b);
-alert(stringOfMatrix2(b));
+//alert("Solving for (x".concat((rows+1-c.length).toString()).concat(") in equation 1 of \n\n").concat(stringOfMatrix2(c)).concat("Gives us: plugging into for all other equations\n\n").concat(stringOfMatrix2(b)));
+//c = new Arary();
+//c = reduceMatrix(c);
 reducedEquations.push(b[0]);}
 for (var i = a.length-1; i >= 0; i--){
 	solSet = computeSol(reducedEquations[i], solSet);
