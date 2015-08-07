@@ -287,12 +287,12 @@ var reducedEquations = new Array();
 var solSet = new Array();
 reducedEquations.push(a[0]);
 b = copyMatrix(a);
-alert(stringOfMatrix(b));
+//alert(stringOfMatrix(b));
 for (var i = 0; i < a.length-1; i++){
 b = checkPivot(b);
-alert(stringOfMatrix(b));
+//alert(stringOfMatrix(b));
 b = reduceMatrix(b);
-alert(stringOfMatrix(b));
+//alert(stringOfMatrix(b));
 reducedEquations.push(b[0]);}
 //alert(reducedEquations);
 for (var i = a.length-1; i >= 0; i--){
@@ -301,8 +301,14 @@ for (var i = a.length-1; i >= 0; i--){
 //alert((reducedEquations[i]));
 }
 //alert("hey");
-alert(solSet);
-elt.sols.value = (solSet);
+//alert(solSet);
+//var strsols "";
+//var k = 1;
+//for (var i = solSet.length-1; i>0; i--){
+//	strsols = strsols.concat("x").concat((k).toString()).concat(" = ").concat(solSet[i]).concat(", ");
+//	k++;}
+//strsols = strsols.concat("x").concat((k).toString()).concat(" = ").concat(solSet[0]);	
+//elt.sols.value = (strsols);
 } // done with main
 
 

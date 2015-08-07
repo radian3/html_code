@@ -302,7 +302,13 @@ for (var i = a.length-1; i >= 0; i--){
 }
 //alert("hey");
 //alert(solSet);
-elt.sols.value = (solSet);
+var strsols = "";
+var k = 1;
+for (var i = solSet.length-1; i>0; i--){
+	strsols = strsols.concat("x").concat((k).toString()).concat(" = ").concat(solSet[i]).concat(", ");
+	k++;}
+strsols = strsols.concat("x").concat((k).toString()).concat(" = ").concat(solSet[0]);	
+elt.sols.value = (strsols);
 } // done with main
 
 
