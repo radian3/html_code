@@ -6,44 +6,26 @@ document.write("<head><title> Class Schedule Graphic Visualizer </title></head><
 document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr><td id = \"a1\">Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr>");
 var time = ["8:00am", "8:30am", "9:00am", "9:30am", "10:00am", "10:30am", "11:00am", "11:30am", "12:00pm", "12:30pm", "1:00pm", "1:30pm", "2:00pm", "2:30pm", "3:00pm", "3:30pm", "4:00pm", "4:30pm", "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm", "10:30pm",];
 var k = 0;
-for (var i = 0; i < 30; i++){
-        
-	document.write("<tr><td height = \"17\" valign = \"top\" style = \"font-size: 70%;\">");
-       	document.write(time[i]); 
-	document.write("</td>");
-	document.write("<td id = \"a".concat((i).toString()).concat(",").concat((k).toString()).concat("\"></td>"));
-	document.write("<td></td><td></td><td></td><td></td><td></td><td></td></tr>");}
-document.write("</table>");
-/*
-document.write("<table border = \"0\" style = \"position:absolute; left:500px;top:10px;\"><tr><td>Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr>");
-var time = ["8:00am", "9:00am", "10:00am", "11:00am", "12:00pm", "1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm"];
-for (var i = 0; i < 29; i++){
-	document.write("<tr><td height = \"18\" valign = \"top\" style = \"font-size: 70%;\">");
-       	document.write(" "); 
-	document.write("</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");}
-document.write("</table>");*/
-
-
-document.write("</form></body>");		
-
+for (var i = 0; i < 30; i++){        
+	document.write("<tr><td height = \"17\" valign = \"top\" style = \"font-size: 70%;\">".concat(time[i]).concat("</td>"));
+        for (var k = 0; k < 7; k++){
+		document.write("<td id = \"a".concat((i).toString()).concat(",").concat((k).toString()).concat("\"></td>"));}
+	document.write("</tr>");}
+	document.write("</table></form></body>");
 		
-/*<table border = \"1\" style = \"position:absolute; left:500px;\"><tr><td>Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr></table></form></body>");*/
+
 </script>
 <script type = "text/javascript">
 
-document.getElementById("a1,0").style.backgroundColor="blue";
+//document.getElementById("a12,0").style.backgroundColor="blue";
 
   document.getElementById("addForm").addBtn.onclick = main;
   function main()
   {
-
+  alert();
   
    var elt = document.getElementById("addForm");
-   var idx = "a1";
-   document.getElementById(idx).style.color="blue";  
-   var one = parseFloat (elt.one.value);
-   var two = parseFloat (elt.two.value);
-   elt.sum.value = one+two;
+
 
 
 
