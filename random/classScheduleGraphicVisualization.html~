@@ -3,12 +3,16 @@
 <html>
 <script type = "text/javascript">
 document.write("<head><title> Class Schedule Graphic Visualizer </title></head><body><h3 style = \"position:absolute;top:0px;left:500px;\"> Class Schedule Graphic Visualizer </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:500px;top:50px;\"><tr><td>  Enter title: <input type = \"text\" name = \"one\" value = \"\" size = \"20\" /> </td> </tr><tr><td> Select days of Week: <input type = \"checkbox\" name = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" value = \"\" size = \"20\" /> Monday <input type = \"checkbox\" name = \"d3\" value = \"\" size = \"20\" /> Tuesday </td></tr><tr><td><input type = \"checkbox\" name = \"d4\" value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" value = \"\" size = \"20\" /> Thursday <input type = \"checkbox\" name = \"d6\" value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"20\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"20\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> </td></tr></table></form></body></body>");
-document.write("<table border = \"0\" style = \"position:absolute;top:0px;\" ><tr><td>Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr>");
+document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr><td id = \"a1\">Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr>");
 var time = ["8:00am", "8:30am", "9:00am", "9:30am", "10:00am", "10:30am", "11:00am", "11:30am", "12:00pm", "12:30pm", "1:00pm", "1:30pm", "2:00pm", "2:30pm", "3:00pm", "3:30pm", "4:00pm", "4:30pm", "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm", "10:30pm",];
+var k = 0;
 for (var i = 0; i < 30; i++){
+        
 	document.write("<tr><td height = \"17\" valign = \"top\" style = \"font-size: 70%;\">");
        	document.write(time[i]); 
-	document.write("</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");}
+	document.write("</td>");
+	document.write("<td id = \"a".concat((i).toString()).concat(",").concat((k).toString()).concat("\"></td>"));
+	document.write("<td></td><td></td><td></td><td></td><td></td><td></td></tr>");}
 document.write("</table>");
 /*
 document.write("<table border = \"0\" style = \"position:absolute; left:500px;top:10px;\"><tr><td>Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr>");
@@ -26,12 +30,17 @@ document.write("</form></body>");
 /*<table border = \"1\" style = \"position:absolute; left:500px;\"><tr><td>Time</td><td>Sunday</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td></tr></table></form></body>");*/
 </script>
 <script type = "text/javascript">
+
+document.getElementById("a0,0").style.backgroundColor="blue";
+
   document.getElementById("addForm").addBtn.onclick = main;
   function main()
   {
 
   
-   var elt = document.getElementById("addForm");      
+   var elt = document.getElementById("addForm");
+   var idx = "a1";
+   document.getElementById(idx).style.color="blue";  
    var one = parseFloat (elt.one.value);
    var two = parseFloat (elt.two.value);
    elt.sum.value = one+two;
