@@ -1,0 +1,100 @@
+
+
+<html>
+<script type = "text/javascript">
+document.write("<head><title> Class Schedule Table </title></head><body><h3 style = \"position:absolute;left:1070px;top:350px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule Table </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"12\" maxlength = \"17\" /> </td> </tr><tr><td>  Full Course Name: <input type = \"text\" name = \"fullCourseName\" value = \"\" size = \"18\" maxlength = \"40\" /> </td> </tr><tr><td>  Room: <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td> Days per week: <input type = \"checkbox\" name = \"d1\" id = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Monday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Tuesday<input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Thursday </td></tr><tr><td><input type = \"checkbox\" name = \"d6\" id = \"d6\"  value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" id = \"d7\"  value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 360px;\" name = \"timeHelp\" value = \"Click me for example input\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
+document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr style = \"font-size: 130%;\"><td align = \"center\" width = \"180px\">Course</td><td align = \"center\" width = \"180px\">Meeting Information</td><td align = \"center\" width = \"180px\">Full Course Name</td></tr>");
+
+var k = 0;
+for (var i = 0; i < 30; i++){        
+
+	document.write("<tr id = a".concat((i).toString()).concat(">"));
+	for (var k = 0; k < 3; k++){
+		document.write("<td style = \"font-size: 130%;\" id = \"a".concat((i).toString()).concat(",").concat((k).toString()).concat("\">").concat("</td>"));}
+	document.write("</tr>");}
+	document.write("</table></form></body>");
+		
+
+</script>
+<script type = "text/javascript">
+for (var i = 0; i<30; i++){
+
+document.getElementById("a".concat((i).toString())).style.display = 'none';
+
+}
+  document.getElementById("addForm").addBtn.onclick = main;
+  document.getElementById("addForm").timeHelp.onclick = timeHelp;
+  document.getElementById("addForm").tableHelp.onclick = tableHelp;
+  document.getElementById("addForm").saveHelp.onclick = saveHelp;
+
+
+
+  function timeHelp(){
+	  alert("Course Abbreviation: COSC 2425\nFull Course Name: Computer Architecture\nRoom: ENS 115\nDays Per Week: MWF\nEnter start time: 11:30am\nEnter finish time: 12:50pm\n\nThen press \"Add Class\" followed by \"Clear\" and then add another class.");}
+
+
+
+
+
+
+
+
+/*
+
+		        var idx = "a".concat((j+startIdx-1).toString()).concat(",").concat((daysArray[i]-1).toString());
+			document.getElementById(idx).style.backgroundColor=colors[val];
+			document.getElementById(idx).innerHTML = document.getElementById(idx).innerHTML.concat(" ").concat((elt.courseName.value).toString());
+
+*/
+
+
+
+function main()
+  {
+   var elt = document.getElementById("addForm");      
+   var one = elt.start.value;
+   if (elt.courseName.value == ""){alert("Enter a Course abbreviation");return;}
+   if (elt.fullCourseName.value == ""){alert("Enter a Full Course Name");return;}
+   if (elt.room.value == ""){alert("Select a room");return;}	   
+   var two = elt.finish.value;
+
+  var idx = "a".concat(elt.numClasses.value).concat(",").concat("0");
+  if (elt.numClasses.value > 0){
+	  var idx = "a".concat(((parseFloat(elt.numClasses.value)-1).toString())).concat(",").concat("0");
+	  if (document.getElementById(idx).innerHTML == elt.courseName.value){return;}}
+  var daysSelected = "";
+  
+  if (document.getElementById("d1").checked) {daysSelected = daysSelected.concat("Su,");} 
+  if (document.getElementById('d2').checked) {daysSelected = daysSelected.concat("M,");}
+  if (document.getElementById('d3').checked) {daysSelected = daysSelected.concat("Tu,");} 
+  if (document.getElementById('d4').checked) {daysSelected = daysSelected.concat("W,");}
+  if (document.getElementById('d5').checked) {daysSelected = daysSelected.concat("Th,");}
+  if (document.getElementById('d6').checked) {daysSelected = daysSelected.concat("F,");}
+  if (document.getElementById('d7').checked) {daysSelected = daysSelected.concat("Sa,");} 
+  if (daysSelected.length == 0){alert("Select day(s)");return;}
+  daysSelected = daysSelected.substring(0, daysSelected.length-1);
+  
+
+     if (elt.start.value.indexOf(":") == -1 || elt.finish.value.indexOf(":") == -1 || elt.start.value.indexOf("m") == -1 || elt.finish.value.indexOf("m") == -1	){ alert("Invalid start or finish time.");return;}
+ var numClasses = parseFloat(elt.numClasses.value);
+  var idx = "a".concat(elt.numClasses.value).concat(",").concat("0");
+  document.getElementById(idx).innerHTML = elt.courseName.value;
+  var idx = "a".concat(elt.numClasses.value).concat(",").concat("1");
+document.getElementById(idx).innerHTML = daysSelected.concat(" ").concat(elt.start.value.concat("-")).concat(elt.finish.value).concat(" ").concat(elt.room.value);
+  var idx = "a".concat(elt.numClasses.value).concat(",").concat("2");
+  
+  document.getElementById(idx).innerHTML = elt.fullCourseName.value;
+  
+   document.getElementById("a".concat((elt.numClasses.value).toString())).style.display = ''; 
+  var numClasses = parseFloat(elt.numClasses.value);
+  numClasses++;
+  elt.numClasses.value = numClasses;
+ 
+  }
+</script>
+
+
+
+</html>
+
+

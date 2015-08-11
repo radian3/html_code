@@ -2,9 +2,9 @@
 
 <html>
 <script type = "text/javascript">
-document.write("<head><title> Class Schedule Graphic Visualizer </title></head><body><h3 style = \"position:absolute;left:1070px;top:260px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule<br> Graphic Visualizer </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td> Days per week: <input type = \"checkbox\" name = \"d1\" id = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Monday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Tuesday<input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Thursday </td></tr><tr><td><input type = \"checkbox\" name = \"d6\" id = \"d6\"  value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" id = \"d7\"  value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 250px;\" name = \"timeHelp\" value = \"Click me for start/finish time help\"><input type = \"button\" style = \"position:absolute; left: 0px; top: 280px;\" name = \"tableHelp\" value = \"Click me for table help\"><input type = \"button\" style = \"position:absolute; left: 0px; top: 310px;\" name = \"saveHelp\" value = \"Click me info on how to save the table\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
+document.write("<head><title> Class Schedule Graphic Visualizer </title></head><body><h3 style = \"position:absolute;left:1070px;top:337px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule<br> Graphic Visualizer </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td>Room # (optional): <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"10\" /></td></tr><tr><td> Days per week: <input type = \"checkbox\" name = \"d1\" id = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Monday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Tuesday<input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Thursday </td></tr><tr><td><input type = \"checkbox\" name = \"d6\" id = \"d6\"  value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" id = \"d7\"  value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 312px;\" name = \"timeHelp\" value = \"Click me for start/finish time help\"><input type = \"button\" style = \"position:absolute; left: 0px; top: 350px;\" name = \"saveHelp\" value = \"Click me info on how to save the table\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
 document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr><td align = \"center\" width = \"142px\">Sunday</td><td align = \"center\" width = \"142px\">Monday</td><td align = \"center\" width = \"142px\">Tuesday</td><td align = \"center\" width = \"142px\">Wednesday</td><td align = \"center\" width = \"142px\">Thursday</td><td align = \"center\" width = \"142px\">Friday</td><td align = \"center\" width = \"142px\">Saturday</td></tr>");
-var time = ["8:00am", "8:30am", "9:00am", "9:30am", "10:00am", "10:30am", "11:00am", "11:30am", "12:00pm", "12:30pm", "1:00pm", "1:30pm", "2:00pm", "2:30pm", "3:00pm", "3:30pm", "4:00pm", "4:30pm", "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm", "10:30pm",];
+var time = ["8:00am", "8:30am", "9:00am", "9:30am", "10:00am", "10:30am", "11:00am", "11:30am", "12:00pm", "12:30pm", "1:00pm", "1:30pm", "2:00pm", "2:30pm", "3:00pm", "3:30pm", "4:00pm", "4:30pm", "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm", "10:30pm"];
 var k = 0;
 for (var i = 0; i < 30; i++){        
 
@@ -26,14 +26,13 @@ for (var i = 0; i < 30; i++){
   document.getElementById("addForm").saveHelp.onclick = saveHelp;
 
   function saveHelp(){
-	  alert("hi");}
+	  alert("To save the table, look on your keyboard and press the print screen button (may have an abbreviated name such as prt sc). Then, go to Microsoft paint and press ctrl+v or paste and then save the image. Alternatively, you can highlight the table with your mouse and copy paste it to word.");}
 
   function timeHelp(){
 	  alert("The start time is the time the class starts and the finish time is the time that the class finishes. Examples of either input include 12:00pm 1:30pm 9:00am.");}
 
 
- function tableHelp(){
-	 alert("The table is broken up into rows that represent 30 minutes each. For example, the 8:00am row represents the 8:00am-8:30am time slot. Imagine the top part of the row representing 8:00am and the bottom of that row representing 8:30am. If a class starts at 10:20am, this program will have to shade in the entire 10:00am row. If a class ends at 2:50pm, the program will have to shade in the entire 2:30 row.");}
+
 
   function normalizeStart(min){
 	  if (min == 0 || min == 30){ return min;}
@@ -73,12 +72,15 @@ if (val > 9){alert("out of colors");return;}
 var colors = ["#B2FFFF","#FF99FF", "#FF0000", "#00B2B2", "#00FF00", "#0000FF", "#B8B894", "#FF0066", "#FFFF4D", "#A37547"]; // blue red yellow green purple orange gray
 	if (daysArray.length == 0){alert("Select a class day");return;}
 	if (document.getElementById("a".concat((startIdx-1).toString()).concat(",").concat((daysArray[0]-1).toString())).style.backgroundColor==colors[0]){return;}
-
+var counter = 0;
 for (var j = 0; j < colorLength; j++){
 	for (var i = 0; i < daysArray.length; i++){
 		        var idx = "a".concat((j+startIdx-1).toString()).concat(",").concat((daysArray[i]-1).toString());
 			document.getElementById(idx).style.backgroundColor=colors[val];
-			document.getElementById(idx).innerHTML = document.getElementById(idx).innerHTML.concat(" ").concat((elt.courseName.value).toString());
+			if (counter == 0){document.getElementById(idx).innerHTML = (elt.courseName.value).toString();}
+			if (counter == 1){document.getElementById(idx).innerHTML = elt.start.value.substring(0, elt.start.value.indexOf("m")-1).concat("-").concat(elt.finish.value).concat(" ").concat(elt.room.value);}
+			if (counter > 1){document.getElementById(idx).innerHTML = "";}
+			counter++;
 	}}
 
 document.getElementById("numClasses").value = val+1;
