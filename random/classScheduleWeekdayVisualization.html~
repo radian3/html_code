@@ -2,7 +2,7 @@
 
 <html>
 <script type = "text/javascript">
-document.write("<head><title> Class Schedule Graphic Visualizer </title></head><body><h3 style = \"position:absolute;left:1070px;top:337px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule<br> Graphic Visualizer </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td>Room # (optional): <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"10\" /></td></tr><tr><td> Days per week:  <input type = \"checkbox\" name = \"d1\" id = \"d1\"  value = \"\" size = \"20\" /> Monday  <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Tuesday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Thursday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Friday  </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 312px;\" name = \"timeHelp\" value = \"Click me for start/finish time help\"><input type = \"button\" style = \"position:absolute; left: 0px; top: 350px;\" name = \"saveHelp\" value = \"Click me info on how to save the table\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
+document.write("<head><title> Class Schedule Graphic Visualizer </title></head><body><h3 style = \"position:absolute;left:1070px;top:337px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule<br> Graphic Visualizer </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"10\" maxlength = \"37\" /> </td> </tr><tr><td>Room # (optional): <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"10\" /></td></tr><tr><td> Days per week:  <input type = \"checkbox\" name = \"d1\" id = \"d1\"  value = \"\" size = \"20\" /> Monday  <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Tuesday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Thursday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Friday  </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 312px;\" name = \"timeHelp\" value = \"Click me for start/finish time help\"><input type = \"button\" style = \"position:absolute; left: 0px; top: 350px;\" name = \"saveHelp\" value = \"Click me info on how to save the table\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
 document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr><td align = \"center\" width = \"199px\">Monday</td><td align = \"center\" width = \"199px\">Tuesday</td><td align = \"center\" width = \"199px\">Wednesday</td><td align = \"center\" width = \"199px\">Thursday</td><td align = \"center\" width = \"199px\">Friday</td></tr>");
 var time = ["8:00am", "8:30am", "9:00am", "9:30am", "10:00am", "10:30am", "11:00am", "11:30am", "12:00pm", "12:30pm", "1:00pm", "1:30pm", "2:00pm", "2:30pm", "3:00pm", "3:30pm", "4:00pm", "4:30pm", "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm", "10:30pm"];
 var k = 0;
@@ -69,7 +69,7 @@ function colorIn(startIdx, colorLength, daysArray){
 	if (elt.courseName.value == ""){alert("Assign a course abbreviation name");}
 var val = parseFloat(document.getElementById("numClasses").value);
 if (val > 9){alert("out of colors");return;}
-var colors = ["#B2FFFF","#FF99FF", "#FF0000", "#00B2B2", "#00FF00", "#0000FF", "#B8B894", "#FF0066", "#FFFF4D", "#A37547"]; // blue red yellow green purple orange gray
+var colors = ["#B2FFFF","#FF99FF", "#FF0000", "#00B2B2", "#00FF00", "#FFFF33", "#B8B894", "#FF0066", "#FFFF4D", "#A37547"]; // blue red yellow green purple orange gray
 	if (daysArray.length == 0){alert("Select a class day");return;}
 	if (document.getElementById("a".concat((startIdx-1).toString()).concat(",").concat((daysArray[0]-1).toString())).style.backgroundColor==colors[0]){return;}
 var counter = 0;
@@ -80,8 +80,8 @@ for (var j = 0; j < colorLength; j++){
 			if (counter == 0){document.getElementById(idx).innerHTML = (elt.courseName.value).toString();}
 			if (counter == 1){document.getElementById(idx).innerHTML = elt.start.value.substring(0, elt.start.value.indexOf("m")-1).concat("-").concat(elt.finish.value).concat(" ").concat(elt.room.value);}
 			if (counter > 1){document.getElementById(idx).innerHTML = "";}
-			counter++;
-	}}
+			
+	}counter++;}
 
 document.getElementById("numClasses").value = val+1;
 
@@ -129,8 +129,7 @@ function main()
   if (document.getElementById('d3').checked) {daysSelected.push(3);}
   if (document.getElementById('d4').checked) {daysSelected.push(4);}
   if (document.getElementById('d5').checked) {daysSelected.push(5);}
-  if (document.getElementById('d6').checked) {daysSelected.push(6);}
-  if (document.getElementById('d7').checked) {daysSelected.push(7);}
+
   
 //alert(hrInp.toString().concat(":").concat(minInp.toString()).concat(meridiem.toString()));
 //alert(hrInp2.toString().concat(":").concat(minInp2.toString()).concat(meridiem2.toString()));

@@ -2,14 +2,14 @@
 
 <html>
 <script type = "text/javascript">
-document.write("<head><title> Class Schedule Table </title></head><body><h3 style = \"position:absolute;left:1070px;top:350px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule Table </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"12\" maxlength = \"17\" /> </td> </tr><tr><td>  Full Course Name: <input type = \"text\" name = \"fullCourseName\" value = \"\" size = \"18\" maxlength = \"40\" /> </td> </tr><tr><td>  Room: <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td> Days per week: <input type = \"checkbox\" name = \"d1\" id = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Monday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Tuesday<input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Thursday </td></tr><tr><td><input type = \"checkbox\" name = \"d6\" id = \"d6\"  value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" id = \"d7\"  value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 360px;\" name = \"timeHelp\" value = \"Click me for example input\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
-document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr style = \"font-size: 130%;\"><td align = \"center\" width = \"180px\">Course</td><td align = \"center\" width = \"180px\">Meeting Information</td><td align = \"center\" width = \"180px\">Full Course Name</td></tr>");
+document.write("<head><title> Class Schedule Table </title></head><body><h3 style = \"position:absolute;left:1070px;top:350px;\"> Need help? </h3><h3 style = \"position:absolute;top:0px;left:1070px;\"> Class Schedule Table </h3> <form id = \"addForm\"  action = \"\" method = \"post\"><table border = \"0\" style = \"position:absolute;left:1070px;top:80px;\"><tr><td> Unique #: <input type = \"text\" name = \"uniqueNumber\" value = \"\" size = \"12\" </td></tr> <tr><td>  Course abbreviation: <input type = \"text\" name = \"courseName\" value = \"\" size = \"12\" maxlength = \"17\" /> </td> </tr><tr><td>  Full Course Name: <input type = \"text\" name = \"fullCourseName\" value = \"\" size = \"18\" maxlength = \"40\" /> </td> </tr><tr><td>  Room: <input type = \"text\" name = \"room\" value = \"\" size = \"10\" maxlength = \"17\" /> </td> </tr><tr><td> Days per week: <input type = \"checkbox\" name = \"d1\" id = \"d1\" value = \"\" size = \"20\" /> Sunday <input type = \"checkbox\" name = \"d2\" id = \"d2\"  value = \"\" size = \"20\" /> Monday </td></tr></tr><td> <input type = \"checkbox\" name = \"d3\" id = \"d3\"  value = \"\" size = \"20\" /> Tuesday<input type = \"checkbox\" name = \"d4\" id = \"d4\"  value = \"\" size = \"20\" /> Wednesday <input type = \"checkbox\" name = \"d5\" id = \"d5\"  value = \"\" size = \"20\" /> Thursday </td></tr><tr><td><input type = \"checkbox\" name = \"d6\" id = \"d6\"  value = \"\" size = \"20\" /> Friday <input type = \"checkbox\" name = \"d7\" id = \"d7\"  value = \"\" size = \"20\" /> Saturday </td> </tr><tr><td>  Enter start time: <input type = \"text\" name = \"start\" value = \"\" size = \"15\" /> </td> </tr><tr><td>  Enter finish time: <input type = \"text\" name = \"finish\" value = \"\" size = \"15\" /> </td> </tr><tr><td><input type = \"button\" name = \"addBtn\" value = \"Add Class\" /> <input type = \"reset\" value = \"Clear\" /> <input type = \"button\" style = \"position:absolute; left: 0px; top: 360px;\" name = \"timeHelp\" value = \"Click me for example input\"></td></tr><tr style = \"position:absolute;top:430px;\"><td># of classes added: <input type = \"text\" value = \"0\" size = \"3\" id = \"numClasses\"></td></tr></table></form></body></body>");
+document.write("<table border = \"1\" style = \"position:absolute;top:0px;\" ><tr style = \"font-size: 130%;\"><td align = \"center\" width = \"180px\">Unique Number </td><td align = \"center\" width = \"180px\">Course</td><td align = \"center\" width = \"180px\">Meeting Information</td><td align = \"center\" width = \"180px\">Full Course Name</td></tr>");
 
 var k = 0;
 for (var i = 0; i < 30; i++){        
 
 	document.write("<tr id = a".concat((i).toString()).concat(">"));
-	for (var k = 0; k < 3; k++){
+	for (var k = 0; k < 4; k++){
 		document.write("<td style = \"font-size: 130%;\" id = \"a".concat((i).toString()).concat(",").concat((k).toString()).concat("\">").concat("</td>"));}
 	document.write("</tr>");}
 	document.write("</table></form></body>");
@@ -53,6 +53,7 @@ function main()
   {
    var elt = document.getElementById("addForm");      
    var one = elt.start.value;
+   if (elt.uniqueNumber.value == ""){alert("Enter a unique number");return;}
    if (elt.courseName.value == ""){alert("Enter a Course abbreviation");return;}
    if (elt.fullCourseName.value == ""){alert("Enter a Full Course Name");return;}
    if (elt.room.value == ""){alert("Select a room");return;}	   
@@ -77,11 +78,13 @@ function main()
 
      if (elt.start.value.indexOf(":") == -1 || elt.finish.value.indexOf(":") == -1 || elt.start.value.indexOf("m") == -1 || elt.finish.value.indexOf("m") == -1	){ alert("Invalid start or finish time.");return;}
  var numClasses = parseFloat(elt.numClasses.value);
-  var idx = "a".concat(elt.numClasses.value).concat(",").concat("0");
-  document.getElementById(idx).innerHTML = elt.courseName.value;
+   var idx = "a".concat(elt.numClasses.value).concat(",").concat("0");
+  document.getElementById(idx).innerHTML = elt.uniqueNumber.value;
   var idx = "a".concat(elt.numClasses.value).concat(",").concat("1");
-document.getElementById(idx).innerHTML = daysSelected.concat(" ").concat(elt.start.value.concat("-")).concat(elt.finish.value).concat(" ").concat(elt.room.value);
+  document.getElementById(idx).innerHTML = elt.courseName.value;
   var idx = "a".concat(elt.numClasses.value).concat(",").concat("2");
+document.getElementById(idx).innerHTML = daysSelected.concat(" ").concat(elt.start.value.concat("-")).concat(elt.finish.value).concat(" ").concat(elt.room.value);
+  var idx = "a".concat(elt.numClasses.value).concat(",").concat("3");
   
   document.getElementById(idx).innerHTML = elt.fullCourseName.value;
   

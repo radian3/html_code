@@ -80,8 +80,8 @@ for (var j = 0; j < colorLength; j++){
 			if (counter == 0){document.getElementById(idx).innerHTML = (elt.courseName.value).toString();}
 			if (counter == 1){document.getElementById(idx).innerHTML = elt.start.value.substring(0, elt.start.value.indexOf("m")-1).concat("-").concat(elt.finish.value).concat(" ").concat(elt.room.value);}
 			if (counter > 1){document.getElementById(idx).innerHTML = "";}
-			counter++;
-	}}
+			
+	}counter++;}
 
 document.getElementById("numClasses").value = val+1;
 

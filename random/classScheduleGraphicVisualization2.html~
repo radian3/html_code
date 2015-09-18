@@ -79,7 +79,7 @@ for (var j = 0; j < colorLength; j++){
 			document.getElementById(idx).style.backgroundColor=colors[val];
 			if (counter == 0){document.getElementById(idx).innerHTML = (elt.courseName.value).toString();}
 			if (counter == 1){document.getElementById(idx).innerHTML = elt.start.value.substring(0, elt.start.value.indexOf("m")-1).concat("-").concat(elt.finish.value).concat(" ").concat(elt.room.value);}
-			if (counter > 1){document.getElemtnById(idx).innerHTML = "hi";}
+			if (counter > 1){document.getElementById(idx).innerHTML = "";}
 			counter++;
 	}}
 
