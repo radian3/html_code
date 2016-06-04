@@ -177,19 +177,22 @@ function stringOfMatrix(inputtedMatrix){ // making one string of all matrix equa
 
 function checkPivot(inputtedMatrix){ // checks to make sure the leading coefficient of the row is non-zero (otherwise we row swap our row with the closest row that has a non-zero leading coefficient) 
 	if (getNumerator(inputtedMatrix[0][0]) != 0){ // if leading coefficient is non-zero, our entry does not need to be row-swapped
-	 return inputtedMatrix;
+	 return;
 	}
 	if (inputtedMatrix.length == 1){ // if only one equation, we have no other row to check so we can just return
-	 return inputtedMatrix;
+	 return;
 	}
+	alert(inputtedMatrix.length);
+	alert(inputtedMatrix);
 	for (var i = 0; i <= inputtedMatrix.length; i++){
 		if (parseFloat(getNumerator(inputtedMatrix[i][0])) != 0){ // if our row has a non-zero candidate for a pivot...
-			var b = copyMatrix(inputtedMatrix);	  
+			var b = copyMatrix(inputtedMatrix); 
 			rowSwap(inputtedMatrix, 0, i); // swapping with our working row
 			document.getElementById("work").value = document.getElementById("work").value.concat("Found a 0 in (x".concat((1+Dimension-inputtedMatrix.length).toString()).concat(") of equation 1. Swapping equations 1 and ").concat((i+1).toString()).concat(" of \n\n").concat(stringOfMatrix(b)).concat("\nwill give us \n\n").concat(stringOfMatrix(inputtedMatrix)).concat("\n").concat("-".repeat(184)).concat("\n\n")); 
+		 return;
 		}
 	} // for
-} // done with check Pivot
+} // done with check Pivot 
 
 function rowSwap(inputtedMatrix, row1, row2){ // swap row 1 with row2 in the matrix
 	for (i = 0; i <= Dimension; i++){
