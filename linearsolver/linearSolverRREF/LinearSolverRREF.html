@@ -173,7 +173,7 @@ function checkPivot(inputtedMatrix, row, col){ // function to make sure we can m
 
 function rowSwap(inputtedMatrix, row1, row2){ // swap row1 with row2 in our matrix
  var temp;
- for (i = 0; i <= eq; i++){
+ for (i = 0; i <= vb; i++){
 		temp = inputtedMatrix[row1][i];
 		inputtedMatrix[row1][i] = inputtedMatrix[row2][i];
 		inputtedMatrix[row2][i] = temp;
@@ -458,7 +458,7 @@ function infiniteSolutions(inputtedMatrix){ // function to solve an RREF matrix 
   if (answers[i] != 'A'){ // if we have a free variable, it's already in the correct string formatting
 		 continue;
 		} 
-  var pivRow = -1;
+  var pivRow = -1; ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   for (var j = 0; j < equations; j++){
    if (getNumerator(inputtedMatrix[j][i]) == '1'){ // if value is a 1, we store the row
 			 pivRow = j; 
@@ -538,6 +538,7 @@ function main(){ // reads input, does computations, and stores output
 	 alert("Invalid number of variables. Please select an appropriate number and click Generate Dimensions.");
 		return;
 	}
+	pivCols = new Array();
  var inputtedMatrix = new Array();
  readInput(inputtedMatrix);
  convertToRREF(inputtedMatrix);
