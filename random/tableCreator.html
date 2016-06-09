@@ -1,30 +1,65 @@
-<html> <head> <title> Table Creator </title> </head> <body> <h3> Table Creator </h3> <form id = "form1" action = "" method = "post"> <table border = "0"> <tr><td>Dimension: </td><td><input type = "text" name = "Dimension" value = "" size = "1"</td></tr><tr><td><input type = "button" name = "addBtn" value = "Create Table" /> </td> <td> <input type = "reset" value = "Clear" /></td></tr></table> </form> <script type = "text/javascript"> 
+<html> <head> <title> Table Creator </title> </head> <body> <h3> Table Creator </h3> <form id = "form1" action = "" method = "post"> <table border = "0"> <tr><td><input type = "button" name = "addBtn" value = "Create Table" /> </td> </tr></table> </form> <script type = "text/javascript"> 
 document.getElementById("form1").addBtn.onclick = main; 
 
 var tbl  = document.createElement('table');
 
 function main() {  
 
- var elt = document.getElementById("form1");
- var Dimension = elt.Dimension.value;
- var Dimension = parseFloat(elt.Dimension.value);
- var body = document.body;
-    
- while(tbl.hasChildNodes()){
-  tbl.removeChild(tbl.firstChild);
- }
- tbl.style.width  = '100px';
- tbl.style.border = '1px solid black';
+var elt = document.getElementById("form1").value;
+var body = document.body;
 
- for(var i = 0; i < Dimension; i++){
-  var tr = tbl.insertRow();
-  for(var j = 0; j < Dimension; j++){
+var temprows = parseInt(prompt("Enter how many rows you want: "));	
+	if (temprows > 100){
+		var response = prompt("You entered an rows value bigger than 100. Are you sure you want to continue (yes/no)?");
+		if (response.toLowerCase() != "yes"){
+		 return;
+		}  
+	}
+	if (isNaN(temprows) || temprows < 1){
+	 return; // if user hit cancel
+	}
+	var tempcols = parseInt(prompt("Enter how many columns you want: "));	
+	if (tempcols > 100){
+ 	var response = prompt("You entered a column value bigger than 100. Are you sure you want to continue (yes/no)?");
+	 if (response.toLowerCase() != "yes"){
+	  return;
+	 }  
+	}
+	if (isNaN(tempcols) || tempcols < 1){
+ 	return; // if user hit cancel
+	}
+	rows = temprows;
+	cols = tempcols;
+	if (rows > 100){
+	 var response = prompt("You rrowsuested for there to be more than 100 rowsuations. Are you sure you want to continue (yes/no)?");
+	 if (response == "no"){
+		 return;
+		}  
+	}
+	if (cols > 100){
+	 var response = prompt("You rrowsuested for there to be more than 100 variables. Are you sure you want to continue (yes/no)?");
+	 if (response == "no"){
+		 return;
+		}  
+	}
+	var body = document.body;  
+	while(tbl.hasChildNodes()){
+	 tbl.removeChild(tbl.firstChild);
+	}
+	body.appendChild(tbl);
+	 tbl.style.width  = '100px';
+ tbl.style.border = '1px solid black';
+	var varStr = "";
+	for(var i = 0; i < rows; i++){
+		var tr = tbl.insertRow();
+		for(var j = 0; j < cols; j++){
    var td = tr.insertCell();
    td.appendChild(document.createTextNode("(" + i.toString() + "," + j.toString() + ")"));
    td.style.border = '1px solid black';
-        }
-    }
- body.appendChild(tbl);
+		} // inner for
+	} // outer for
+	body.appendChild(tbl);
+
     
 
     
