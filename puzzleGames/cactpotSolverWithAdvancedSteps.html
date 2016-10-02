@@ -648,6 +648,12 @@ function chooseSecondSquare(currentBoard){
 	} // for
 	var expectation;
 	for (var i = 0; i < unusedIdx.length; i++){
+	 if (i == 0 || i == unusedIdx.length-1){
+		 isNumStepsLow = 1;
+		} // if
+		else{
+		 isNumStepsLow = 0;
+		} // else
 	 var total = 0;
 	 for (var j = 0; j < unusedNumbersArray.length; j++){
 		 currentBoard[unusedIdx[i]] = unusedNumbersArray[j];
@@ -660,9 +666,6 @@ function chooseSecondSquare(currentBoard){
 		currentBoard[unusedIdx[i]] = -1;
 		numSteps++;
 		addBoard(currentBoard, currentColors, currentBackGroundColors);
-		if (numSteps > 300000){
-		 isNumStepsLow = 0;
-		}
 	} // for
 	var max = -1;
 	var idx = -1;
