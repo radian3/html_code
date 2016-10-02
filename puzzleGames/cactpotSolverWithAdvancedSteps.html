@@ -58,6 +58,7 @@ var currentColors = ["black", "black", "black", "black", "black", "black", "blac
 var listOfBoardColors = [];
 var backGroundColorList = [];
 var currentBackGroundColors = ["", "", "", "", "", "", "", "", ""];
+var isNumStepsLow = 1;
 
 
 
@@ -73,9 +74,9 @@ document.getElementById("third").onclick = resumeAtThirdFixedNum;
 document.getElementById("fourth").onclick = resumeAtFourthFixedNum;
 
 	generateSolution();
+	numMoves++;
 	addBoard(board, currentColors, currentBackGroundColors);
 	var idxOfSecondNum = listOfBoards.length-1;
-	numMoves++;
 	generateSolution();
 	addBoard(board, currentColors, currentBackGroundColors);
 	var idxOfThirdNum = listOfBoards.length-1;
@@ -242,6 +243,10 @@ function setBoard(){
 } // setBoard
 
 function addBoard(passedBoard, passedColors, passedBackGround){
+ if (isNumStepsLow == 0 && numMoves == 1){
+	 return;
+	}
+ 
  var tempBoard = [];
 	var tempColors = [];
 	var tempBG = [];
@@ -656,7 +661,7 @@ function chooseSecondSquare(currentBoard){
 		numSteps++;
 		addBoard(currentBoard, currentColors, currentBackGroundColors);
 		if (numSteps > 300000){
-		 break;
+		 isNumStepsLow = 0;
 		}
 	} // for
 	var max = -1;
